@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/gif" href="animated_favicon1.gif">  
+  <%= stylesheet_link_tag  "application" %>
+  <%#= stylesheet_link_tag "foundation" %>
+  <%#= stylesheet_link_tag    "mobile" if mobile_device? %>
+  <%= javascript_include_tag  "application" %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="row display">
+    <!-- Column 1 -->
+    <div class="col1 blueHot">
+      <div class="logoMain">
+        <%= image_tag("logoMain.png", :alt => "logo not here?") %>
+      </div>
+    </div>
+    <!-- Column 2 -->
+    <div class="col2 redHot">
+      <ul class="navbar">
+        <li class="active">
+          <h1 id="fittext1" class="navText">
+            <a href="#">HOME</a>
+            <!-- %= link_to "HOME", home_path % -->
+          </h1>
+        </li>
+        <li>
+          <h1 id="fittext2" class="navText"><a href="#">Mixes</a></h1>
+        </li>
+        <li>
+          <h1 id="fittext3" class="navText"><a href="#">Photo &amp; Video</a></h1>
+        </li>
+        <li>
+          <h1 id="fittext4" class="navText"><a href="#">Private Events</a></h1>
+        </li>
+        <li>
+          <h1 id="fittext5" class="navText">
+            <a href="#">RADIO</a>
+            <!-- %= link_to "RADIO", radio_path % -->
+          </h1>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Column 3 Home/Blog showing all entries -->
+<div class="col3">
+  <div class="homeWrapper">
+
+    <div class="bgHome">
+      <%= image_tag("bgHome.jpg", :alt => "bgHome") %>
+    </div>
+    <div id="ticker">
+      
+    </div>
+    <div class="blogWrapper">
+      <%= yield %> <!-- Column 3 -->
+    </div>
+  </div>
+</div>
+
+<footer></footer>
+
+<!-- Scripts! -->
+
+</body>
+</html>
+<script type="text/javascript">
+  $("#fittext1").fitText(.6);
+  $("#fittext2").fitText(.6);
+  $("#fittext3").fitText(.6);
+  $("#fittext4").fitText(.6);
+  $("#fittext5").fitText(.6);
+</script>
+<script type="text/javascript">
+  // $('a.sc-player, div.sc-player').scPlayer();
+</script>

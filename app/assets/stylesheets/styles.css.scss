@@ -1,0 +1,715 @@
+//                 ,,        ,,             
+// MMP""MM""YMM   *MM      `7MM             
+// P'   MM   `7    MM        MM             
+//      MM  ,6"Yb. MM,dMMb.  MM  .gP"Ya     
+//      MM 8)   MM MM    `Mb MM ,M'   Yb    
+//      MM  ,pm9MM MM     M8 MM 8M""""""    
+//      MM 8M   MM MM.   ,M9 MM YM.    ,    
+//    .JMML`Moo9^YoP^YbmdP'.JMML.`Mbmmd' 
+//                                                                     
+//              ,...    
+//            .d' ""    
+//            dM`       
+//   ,pW"Wq. mMMmm      
+//  6W'   `Wb MM        
+//  8M     M8 MM        
+//  YA.   ,A9 MM        
+//   `Ybmd9'.JMML.
+//
+//                                                                                            
+//    .g8"""bgd                  mm                     mm          
+//  .dP'     `M                  MM                     MM          
+//  dM'       `,pW"Wq.`7MMpMMMbmmMMmm .gP"Ya `7MMpMMMbmmMMmm ,pP"Ybd
+//  MM        6W'   `Wb MM    MM MM  ,M'   Yb  MM    MM MM   8I   `"
+//  MM.       8M     M8 MM    MM MM  8M""""""  MM    MM MM   `YMMMa.
+//  `Mb.     ,YA.   ,A9 MM    MM MM  YM.    ,  MM    MM MM   L.   I8
+//    `"bmmmd' `Ybmd9'.JMML  JMML`Mbmo`Mbmmd'.JMML  JMML`MbmoM9mmmP'
+//
+//
+// 3. Foundation Defaults
+// 1. Colors
+// 2. Fonts
+// 
+// 4. Isotope Defaults
+// 5. Custom, very funky, styles
+
+
+// Foundation Colors Settings
+$mainColor: #2ba6cb;
+$secondaryColor: #e9e9e9;
+$alertColor: #c60f13;
+$successColor: #5da423;
+$txtColor: #90D8EE;
+$highlightColor: #ffff99;
+$black: #000;
+$white: #fff;
+$shinyEdge: rgba(#fff, .5);
+$darkEdge: rgba(#000, .2);
+
+// My Colors
+$redHot: #BE4D4B;
+$blueHot: #90D8EE;
+$greenHot: #58F802;
+$grey1: #333333;
+
+// `7MM"""YMM                  mm           
+//   MM    `7                  MM           
+//   MM   d  ,pW"Wq.`7MMpMMMbmmMMmm ,pP"Ybd 
+//   MM""MM 6W'   `Wb MM    MM MM   8I   `" 
+//   MM   Y 8M     M8 MM    MM MM   `YMMMa. 
+//   MM     YA.   ,A9 MM    MM MM   L.   I8 
+// .JMML.    `Ybmd9'.JMML  JMML`MbmoM9mmmP' 
+//
+//Font Settings
+
+@font-face {
+  font-family: 'Existence-Light';
+  src: url('fonts/Existence-Light.otf');
+}
+
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url('fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+  font-family: 'Metropolis1920';
+  src: url('fonts/Metropolis1920.otf');
+}
+
+@font-face {
+  font-family: 'SS_Adec2.0_main';
+  src: url('fonts/SS_Adec2.0_main.otf');
+}
+
+
+@font-face {
+  font-family: 'BonvenoCFLight';
+  src: url('fonts/BonvenoCF-Light-webfont.eot');
+  src: url('fonts/BonvenoCF-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/BonvenoCF-Light-webfont.woff') format('woff'),
+       url('fonts/BonvenoCF-Light-webfont.ttf') format('truetype'),
+       url('fonts/BonvenoCF-Light-webfont.svg#BonvenoCFLight') format('svg');
+}
+
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400);
+
+$fontSmoothing: antialiased;
+$navText: 'SS_Adec2.0_main', sans-serif;
+$navTextWeight: 100;
+$navTextColor: $blueHot;
+$navLetterSpacing: .06em;
+// $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $headerFontWeight: bold;
+// $headerFontStyle: normal;
+// $headerFontColor: #222;
+// $bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $bodyFontWeight: normal;
+// $bodyFontStyle: normal;
+// $bodyFontColor: $txtColor;
+
+//Twitter Font Settings
+$twitterDateFont: 'Raleway', sans-serif;
+$twitterDateSize: .8em;
+$twitterDateColor: $redHot;
+
+$twitterBodyFont: 'Raleway', sans-serif;
+$twitterBodyColor: $blueHot;
+$twitterBodySize: .8em;
+
+$twitterLinkFont: 'Raleway', sans-serif;
+$twitterLinkColor: $redHot;
+
+//Text Direction Settings
+$textDirection: ltr; // Controls default global text direction, 'rtl' or 'ltr'
+
+//Button Settings
+$buttonRadius: 3px;
+$btnBase: 10px;
+
+$tinyBtnBase: $btnBase - 5;
+$smallBtnBase: $btnBase - 3;
+$largeBtnBase: $btnBase + 5;
+
+//Form Settings
+$formSpacing: 12px;
+$labelFontWeight: 500;
+$labelFontColor: lighten(#000, 30%);
+$labelBtmMargin: 3px;
+$inputFontColor: rgba(0,0,0,0.75);
+$inputFontSize: 14px;
+$inputBgColor: #fff;
+$inputFocusBgColor: darken(#fff, 2%);
+$inputBorderColor: darken(#fff, 20%);
+$inputFocusBorderColor: darken(#fff, 30%);
+$inputBorderStyle: solid;
+$inputBorderWidth: 1px;
+$inputBorderRadius: 2px;
+$fieldsetBorderRadius: 3px;
+
+//Custom Form Settings
+$custFormBorderColor: #ccc;
+$custFormBgColor: #fff;
+$custCheckColor: #222;
+$custSelectCurrentFontColor: #141414;
+$custSelectBgColor: #fff;
+$custSelectBorderColor: #ddd;
+$custSelectTriangleColor: #aaa;
+$custSelectTriangleColorOpen: #222;
+$custSelectDropHeight: 200px;
+$custDropdownBgColor: #fff;
+$custDropdownBorderColor: darken(#fff, 20%);
+$custDropdownFontColor: #555;
+$custDropdownSelectedBgColor: lighten(#2ba6cb, 40%);
+$custDropdownSelectedFontColor: #000;
+$custFormDisabledBgColor: #ddd;
+
+//Tab Settings
+$tabHeight: 40px;
+$tabTermFontSize: 12px;
+
+//Nav Bar Settings
+$navBarHeight: 40px;
+$navFlyoutBaseWidth: 250px;
+
+//Top Bar Settings
+$topBarBgColor: #222;
+$topBarHeight: 45px;
+$topBarHeightMobile: 45px;
+$topBarBtmMargin: 30px;
+$topBarTitleWeight: bold;
+$topBarTitleSize: 17px;
+$topBarLinkColor: #fff;
+$topBarLinkWeight: bold;
+$topBarLinkSize: 13px;
+$topBarDropBgColor: #222;
+$topBarDropLinkColor: #fff;
+$topBarDropToggleSize: 5px;
+$topBarDropToggleColor: #fff;
+$topBarDropToggleAlpha: 0.5;
+$topBarSearchWidth: 200px;
+$topBarBreakPoint: 940px; // Change to 9999px for always mobile layout
+$topBarNavToggleSize: 8px;
+$topBarNavToggleColor: #fff;
+
+//UI Settings
+$thumbRadius: 3px;
+$progBarHeight: 25px;
+$progBarBorderColor: darken(#fff, 20%);
+$progBarBorderSize: 1px;
+$progBarPad: 2px;
+$linkListBottomMargin: 17px -22px;
+$tableBorderRadius: 3px;
+$alertBorderRadius: 3px;
+
+//Tooltip Settings
+$hasTipBorderBottom: dotted 1px #ccc;
+$hasTipFontWeight: bold;
+$hasTipFontColor: #333;
+$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%);
+$hasTipFontColorHover: $mainColor;
+$tooltipBackgroundColor: #000;
+$tooltipBackgroundOpacity: 0.85;
+$tooltipFontSize: 12px;
+$tooltipFontWeight: bold;
+$tooltipFontColor: #fff;
+$tapToCloseFontSize: 10;
+$tapToCloseFontWeight: normal;
+$tapToCloseFontColor: #888;
+$tooltipFontSizeScreenSm: 14;
+$tooltipBgOpacityScreenSm: 0.85;
+$tooltipBorderRadius: 4px;
+
+//Pricing Table Settings
+$priceTableBorder: solid 1px #ddd;
+$priceTitleBgColor: #ddd;
+$priceTitlePadding: 15px 20px;
+$priceTitleAlign: center;
+$priceTitleColor: #333;
+$priceTitleWeight: bold;
+$priceTitleSize: 16px;
+
+$priceMoneyBgColor: #eee;
+$priceMoneyPadding: 15px 20px;
+$priceMoneyAlign: center;
+$priceMoneyColor: #333;
+$priceMoneyWeight: normal;
+$priceMoneySize: 20px;
+
+$priceBgColor: #fff;
+$priceDescColor: #777;
+$priceDescPadding: 15px;
+$priceDescAlign: center;
+$priceDescFontSize: 12px;
+$priceDescWeight: normal;
+$priceDescLineHeight: 1.4;
+$priceDescBtmBorder: dotted 1px #ddd;
+
+$priceItemColor: #333;
+$priceItemPadding: 15px;
+$priceItemAlign: center;
+$priceItemFontSize: 14px;
+$priceItemWeight: normal;
+$priceItemBtmBorder: dotted 1px #ddd;
+
+$priceCtaBgColor: #f5f5f5;
+$priceCtaAlign: center;
+$priceCtaPadding: 20px;
+
+//Orbit Settings
+$orbitCaptionBgColorOldBrowser: #000;
+$orbitCaptionBgColor: rgba(0,0,0,.6);
+$orbitCaptionFontColor: #fff;
+$orbitBulletNavColor: #999;
+$orbitBulletNavColorActive: #222;
+$orbitHasThumbBorderColor: #000;
+$orbitHasThumbBorderWidth: 2px;
+$orbitHasThumbBorderStyle: solid;
+$orbitSlideNumBgColor: rgba(0,0,0,0.7);
+$orbitSlideNumFontColor: #fff;
+$orbitSlideNumPadding: 5px;
+
+// Clearing Settings
+$clearingBg: rgba(0,0,0,0.8);
+$clearingOldBrowserBg: rgb(0,0,0);
+$clearingCaptionBg: rgba(0,0,0,0.7);
+$clearingCaptionOldBrowserBg: rgb(0,0,0);
+$clearingCaptionFontColor: #fff;
+$clearingCloseColor: #fff;
+$clearingArrowColor: #fff;
+$clearingArrowSize: 16px;
+$clearingCarouselBg: rgba(0,0,0,0.75);
+$clearingCarouselOldBrowserBg: rgb(0,0,0);
+$clearingCarouselHeight: 150px;
+$clearingActiveImgHeight: 75%;
+$clearingCarouselThumbWidth: 175px;
+$clearingCarouselThumbActiveBorder: 4px solid rgb(255,255,255);
+$clearingImgBg: rgba(0,0,0,0.75);
+$clearingImgOldBrowserBg: rgb(0,0,0);
+
+//Joyride Settings
+$tipBg: rgba(0,0,0,0.8);
+$tipBgIE8: #000;
+$tipFontColor: #fff;
+$tipHeaderWeight: bold;
+$tipDefaultWidth: 300px;
+$tipBorderRadius: 4px;
+$tipPadding: 18px 20px 24px;
+$tipNubSize: 14px;
+$tipFontSize: 14px;
+$tipTimerWidth: 50px;
+$tipTimerHeight: 3px;
+$tipTimerBorder: solid 1px #555;
+$tipTimerColor: #666;
+$tipCloseColor: #777;
+$tipCloseSize: 20px;
+$tipCloseWeight: normal;
+$tipScreenFill: rgba(0,0,0,0.5);
+
+//Modular Scale Settings
+
+//$ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE
+$baseFontSize: 14px;
+$importantModNum: 44px;
+$base-size: $baseFontSize $importantModNum;
+// Produced the following list of values: 14, 17, 23, 27, 37, 44, 59, 71, 95, 115;
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale by scottkellum
+
+
+
+
+
+
+
+// Text Direction Settings
+$textDirection: ltr; // Controls default global text direction, 'rtl' or 'ltr'
+$defaultFloat: left; // Change this to 'right' for right-to-left languages
+$defaultOpposite: right; // Change this to 'left' for right-to-left languages
+
+// Button Settings
+$buttonRadius: 3px;
+$btnBase: 10px;
+$tinyBtnBase: $btnBase - 5;
+$smallBtnBase: $btnBase - 3;
+$largeBtnBase: $btnBase + 5;
+
+// Typography Settings
+$headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headerFontWeight: bold;
+$headerFontColor: #222;
+$bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$bodyFontWeight: normal;
+$bodyFontColor: $txtColor;
+
+// Modular Scale
+
+// $baseFontSize: 14px;
+// $importantModNum: 44px;
+
+// Top Bar Settings
+$topBarBgColor: #222;
+$topBarHeight: 45px;
+$topBarBtmMargin: 30px;
+$topBarTitleWeight: bold;
+$topBarTitleSize: ms(1);
+$topBarLinkColor: #fff;
+$topBarLinkWeight: bold;
+$topBarLinkSize: ms(0) - 1;
+$topBarDropToggleSize: 5px;
+$topBarSearchWidth: 200px;
+$topBarBreakPoint: 940px;
+$topBarNavToggleSize: 8px;
+
+// Form Settings
+$formSpacing: 12px;
+
+// Tab Settings
+$tabHeight: 40px;
+
+// Nav Bar Settings
+$navBarHeight: 40px;
+$navFlyoutBaseWidth: 250px;
+
+// UI Settings
+$thumbRadius: 3px;
+
+// Tooltip Settings
+$hasTipBorderBottom: dotted 1px #ccc;
+$hasTipFontWeight: bold;
+$hasTipFontColor: #333;
+$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%);
+$hasTipFontColorHover: $mainColor;
+$tooltipBackgroundColor: #000;
+$tooltipBackgroundOpacity: 0.85;
+$tooltipFontSize: 12;
+$tooltipFontWeight: bold;
+$tooltipFontColor: #fff;
+$tapToCloseFontSize: 10;
+$tapToCloseFontWeight: normal;
+$tapToCloseFontColor: #888;
+$tooltipFontSizeScreenSmall: 14;
+$tooltipBackgroundOpacityScreenSmall: 0.85;
+
+
+
+// Grid Settings
+//$rowWidth: 1000px;
+//$columnGutter: 30px;
+$totalColumns: 12;
+$mobileTotalColumns: 4;
+
+                                                       
+//   ,,                                                   
+//   db                   mm                              
+//                        MM                              
+// `7MM ,pP"Ybd  ,pW"Wq.mmMMmm ,pW"Wq.`7MMpdMAo.  .gP"Ya  
+//   MM 8I   `" 6W'   `Wb MM  6W'   `Wb MM   `Wb ,M'   Yb 
+//   MM `YMMMa. 8M     M8 MM  8M     M8 MM    M8 8M"""""" 
+//   MM L.   I8 YA.   ,A9 MM  YA.   ,A9 MM   ,AP YM.    , 
+// .JMMLM9mmmP'  `Ybmd9'  `Mbmo`Ybmd9'  MMbmmd'   `Mbmmd' 
+//                                      MM                
+//                                    .JMML.              
+
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+      -ms-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+ul {
+  list-style: none;
+}
+
+//   ,,                                         
+// `7MM                                         
+//   MM                                         
+//   MMpMMMb.  ,pW"Wq.`7MMpMMMb.pMMMb.  .gP"Ya  
+//   MM    MM 6W'   `Wb MM    MM    MM ,M'   Yb 
+//   MM    MM 8M     M8 MM    MM    MM 8M"""""" 
+//   MM    MM YA.   ,A9 MM    MM    MM YM.    , 
+// .JMML  JMML.`Ybmd9'.JMML  JMML  JMML.`Mbmmd' 
+
+body {
+  background: black;
+  margin: 0;
+  border: 0;
+}
+
+.wrapper {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.row {
+  width: 100%;
+
+}
+
+blockquote {
+  margin: 10px;
+}
+
+//                    ,,            
+//                  `7MM            
+//                    MM       __,  
+//  ,p6"bo   ,pW"Wq.  MM      `7MM  
+// 6M'  OO  6W'   `Wb MM        MM  
+// 8M       8M     M8 MM        MM  
+// YM.    , YA.   ,A9 MM        MM  
+//  YMbmd'   `Ybmd9'.JMML.    .JMML.
+
+.col1 {
+  position: fixed;
+  width: 17%;
+  height: 800px;
+  //background-color: $blueHot;
+  float: left;
+  z-index: 100;
+  opacity: .5;
+
+  .logoMain {
+    margin: 4px;
+
+     img {
+      margin-top: 20px;
+      width: 100%;
+      height: auto;
+      //background-color: white;
+      //box-shadow: inset -8px 0px 8px #222;
+    }
+  }
+}
+
+//                    ,,               
+//                  `7MM               
+//                    MM               
+//  ,p6"bo   ,pW"Wq.  MM       pd*"*b. 
+// 6M'  OO  6W'   `Wb MM      (O)   j8 
+// 8M       8M     M8 MM          ,;j9 
+// YM.    , YA.   ,A9 MM       ,-='    
+//  YMbmd'   `Ybmd9'.JMML.    Ammmmmmm
+
+.col2 {
+  position: fixed;
+  margin-left: 17%;
+
+  // background:
+  // linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+  // linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+  // linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+  // linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+  // linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+  // linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  
+background:
+linear-gradient(324deg, #232927 4%,   transparent 4%) -70px 43px,
+linear-gradient( 36deg, #232927 4%,   transparent 4%) 30px 43px,
+linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px,
+linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px,
+linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px,
+linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px,
+
+linear-gradient(324deg, #232927 4%,   transparent 4%) -20px 93px,
+linear-gradient( 36deg, #232927 4%,   transparent 4%) 80px 93px,
+linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px,
+linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px,
+linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px,
+linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px;
+background-color: black;
+background-size: 100px 100px;
+
+  background-color: black;
+  box-shadow: 
+    inset 80px 0px 150px black,
+    inset -80px 0px 150px black;
+  float: left;
+  width: 20%;
+  overflow: hidden;
+  padding-bottom: 200px;
+
+  .navbar {
+   // border-bottom: 1px solid #BFE9E9;
+    padding: 0;
+
+    li {
+
+      a {
+        letter-spacing: $navLetterSpacing;
+        color: $navTextColor;
+        display: block;
+        //color: $navTextColor;
+        font-family: $navText;
+        font-weight: $navTextWeight;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: .68;
+      }
+    }
+  }
+}
+
+a:focus, a:hover {
+  color: $redHot !important;
+  opacity: 1 !important;
+  text-shadow: -3px 3px 4px $redHot !important;
+}
+
+
+//                    ,,               
+//                  `7MM               
+//                    MM               
+//  ,p6"bo   ,pW"Wq.  MM       pd""b.  
+// 6M'  OO  6W'   `Wb MM      (O)  `8b 
+// 8M       8M     M8 MM           ,89 
+// YM.    , YA.   ,A9 MM         ""Yb. 
+//  YMbmd'   `Ybmd9'.JMML.          88 
+//                            (O)  .M' 
+//                             bmmmd'  
+
+
+
+.col3 {
+  margin-left: 37%;
+  height: auto;
+  float: left;
+  width: 55%;
+  height: 100%;
+
+  //HOME
+
+  .homeWrapper .bgHome img {
+    margin-left: 20%;
+    width: 70%;
+    height: auto;
+    opacity: .3;
+    position: absolute;
+    z-index: 0;
+  }
+
+  //RADIO
+
+  .radioWrapper {
+
+    .bgRadio img {
+      //margin-top: 15%;
+      margin-left: 16%;
+      width: 55%;
+      height: auto;
+      opacity: .7;
+      overflow-x: hidden;
+      position: absolute;
+    }
+  }
+}
+
+#ticker {
+  width: 400px;
+  color: white;
+  position: relative;
+  z-index: 200;
+  line-height: 1.0em;
+
+  .tweet_list { //ul
+
+    .tweet_odd, .tweet_even { //li
+      margin-bottom: 60px;
+      //background: #222;
+      //padding: 15px;
+      float: left;
+      
+      a {
+        color: $twitterLinkColor;
+        font-family: $twitterLinkFont;
+        margin-bottom: 5px;
+      }
+
+      a.tweet_avatar {
+
+        img {
+         float: left;
+         padding: 7px 15px 15px 0;
+         width: 59px;
+         height: 59px;
+        }
+      }
+
+      .tweet_time {
+
+        a {
+          float: left;
+          display: block;
+          padding-bottom: 2px;
+          font-family: $twitterDateFont;
+          color: $twitterDateColor;
+          font-size: $twitterDateSize;
+        }
+      }
+
+      .tweet_text { 
+        font-family: $twitterBodyFont;
+        color: $twitterBodyColor;
+        font-size: $twitterBodySize;
+      }
+    }
+  }
+}
+
+.blogWrapper {
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+// @media only screen and (max-width: 767px) {
+//   .col1 {
+//     width: 300px;
+
+//     img {
+//       width: 100px;
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
