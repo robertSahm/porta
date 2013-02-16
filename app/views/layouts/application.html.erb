@@ -9,6 +9,12 @@
   <%= javascript_include_tag  "application" %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- script src="http://connect.soundcloud.com/sdk.js" ></script -->
+  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+  <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
 </head>
 
 <body>
@@ -69,13 +75,30 @@
 
 </body>
 </html>
-<script type="text/javascript">
-  $("#fittext1").fitText(.6);
-  $("#fittext2").fitText(.6);
-  $("#fittext3").fitText(.6);
-  $("#fittext4").fitText(.6);
-  $("#fittext5").fitText(.6);
+
+
+<script>
+  $("#fittext1").fitText(.7);
+  $("#fittext2").fitText(.7);
+  $("#fittext3").fitText(.7);
+  $("#fittext4").fitText(.7);
+  $("#fittext5").fitText(.7);
+
+// (function() {
+//   SC.initialize({
+//     client_id: '6dad2a3b64a95f8b991f4c18ac5a8c3b',
+//     redirect_uri: 'http://soundcloud.com/portarock/'
+//     });
+//   });
+
+//   // update user's profile description
+//   SC.connect(function() {
+//      SC.put('/me', {
+//        user: { description: 'I am using the SoundCloud API!' }
+//      }
+//   )});
+
+
+
 </script>
-<script type="text/javascript">
-  // $('a.sc-player, div.sc-player').scPlayer();
-</script>
+
