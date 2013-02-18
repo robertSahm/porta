@@ -24,4 +24,8 @@
 //   });
 // });
 
-
+// $("iframe").ready(function (){
+//     // do something once the iframe is loaded
+//     alert("Iframe is loaded");
+//     $('#twitter-widget-0').css("background-color'", "red");
+// });

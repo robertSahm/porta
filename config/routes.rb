@@ -8,8 +8,7 @@ Porta::Application.routes.draw do
 # method/action = same thing
   
 # match '/', to: 'home#home'
-# match '/home', to: 'home#home'
-# match '/radio', to: 'home#radio'
+
 
 
   # root :to => 'refinery/blog/posts#index'
@@ -20,8 +19,11 @@ Porta::Application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   root :to => 'refinery/blog/posts#index' 
+  # match '/home', to: 'home#home'
+  
   mount Refinery::Core::Engine, :at => '/'
-
+  # match 'refinery/radio', to: 'home#radio'
+ 
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

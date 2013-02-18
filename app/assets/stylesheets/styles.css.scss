@@ -604,6 +604,13 @@ linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
 //                            (O)  .M' 
 //                             bmmmd'  
 
+
+iframe.twitter-tweet {
+  max-width: 60% !important;
+  min-width: 400px !important;
+}
+
+
 #body_content_title {
   font-size: 3em;
   display: none;
@@ -612,8 +619,8 @@ linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
 h1, h1 a {
   color: #eee;
   text-decoration: none;
-  font-family: "SS_Adec2.0_text";
-  //font-size: 1em;
+  font-family: "SS_Adec2.0_main";
+  font-size: 1.2em;
   font-weight: normal;
   letter-spacing: .2em;
 }
