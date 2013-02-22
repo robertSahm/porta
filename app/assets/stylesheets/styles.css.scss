@@ -35,32 +35,18 @@
 
 
 // Foundation Colors Settings
-$mainColor: #2ba6cb;
-$secondaryColor: #e9e9e9;
-$alertColor: #c60f13;
-$successColor: #5da423;
-$txtColor: #90D8EE;
-$highlightColor: #ffff99;
-$black: #000;
-$white: #fff;
-$shinyEdge: rgba(#fff, .5);
-$darkEdge: rgba(#000, .2);
+// $mainColor: #2ba6cb;
+// $secondaryColor: #e9e9e9;
+// $alertColor: #c60f13;
+// $successColor: #5da423;
+// $txtColor: #90D8EE;
+// $highlightColor: #ffff99;
+// $black: #000;
+// $white: #fff;
+// $shinyEdge: rgba(#fff, .5);
+// $darkEdge: rgba(#000, .2);
 
-// My Colors
-$redHot: #BE4D4B;
-$blueHot: #90D8EE;
-$greenHot: #58F802;
-$grey1: #333333;
-
-// `7MM"""YMM                  mm           
-//   MM    `7                  MM           
-//   MM   d  ,pW"Wq.`7MMpMMMbmmMMmm ,pP"Ybd 
-//   MM""MM 6W'   `Wb MM    MM MM   8I   `" 
-//   MM   Y 8M     M8 MM    MM MM   `YMMMa. 
-//   MM     YA.   ,A9 MM    MM MM   L.   I8 
-// .JMML.    `Ybmd9'.JMML  JMML`MbmoM9mmmP' 
-//
-//Font Settings
+//Font imports
 
 @font-face {
   font-family: 'Existence-Light';
@@ -104,11 +90,65 @@ $grey1: #333333;
 
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400);
 
+// My Colors
+$red: #BE4D4B;
+$blue: #00BFFF;
+$greenHot: #58F802;
+$grey1: #333333;
+
+// Navbar type 
+
 $fontSmoothing: antialiased;
 $navText: 'SS_Adec2.0_main', sans-serif;
 $navTextWeight: 100;
-$navTextColor: $blueHot;
+$navTextColor: $blue;
 $navLetterSpacing: .06em;
+
+// blog type
+
+$blogH1Color: white;
+$blogH1Font: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$blogH1Weight: 700;
+$blogH1size: .7em;
+$blogH1LetterSpacing: .19em;
+$blogH1HoverColor: $red;
+
+
+
+.blog_post h1 a {
+  color: $blogH1Color;
+  text-decoration: none;
+  font-family: $blogH1Font;
+  font-weight: $blogH1Weight;
+  font-size: $blogH1size;
+  letter-spacing: $blogH1LetterSpacing;
+
+  &:hover {
+    color: $blogH1HoverColor;
+  }
+}
+
+
+// twitter posts
+
+blockquote {
+  padding-left: 0px !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.twitter-tweet p {
+  color: white;
+}
+
+.details { // posted on..
+  color: #777;
+  padding-bottom: 15px;
+}
+
+.comment_count {
+  color: #777;
+}
 // $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $headerFontWeight: bold;
 // $headerFontStyle: normal;
@@ -121,14 +161,14 @@ $navLetterSpacing: .06em;
 //Twitter Font Settings
 $twitterDateFont: 'Raleway', sans-serif;
 $twitterDateSize: .8em;
-$twitterDateColor: $redHot;
+$twitterDateColor: $red;
 
 $twitterBodyFont: 'Raleway', sans-serif;
-$twitterBodyColor: $blueHot;
+$twitterBodyColor: $blue;
 $twitterBodySize: .8em;
 
 $twitterLinkFont: 'Raleway', sans-serif;
-$twitterLinkColor: $redHot;
+$twitterLinkColor: $red;
 
 // Grid Settings
                                              
@@ -193,21 +233,15 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
-
-
-
-blockquote {
-
-}
-
-//                              ,,        ,,                  
-//                              db      `7MM                  
-//                                        MM                  
-//  ,pW"Wq.`7M'   `MF`7Mb,od8 `7MM   ,M""bMM  .gP"Ya  ,pP"Ybd 
-// 6W'   `Wb VA   ,V   MM' "'   MM ,AP    MM ,M'   Yb 8I   `" 
-// 8M     M8  VA ,V    MM       MM 8MI    MM 8M"""""" `YMMMa. 
-// YA.   ,A9   VVV     MM       MM `Mb    MM YM.    , L.   I8 
-//  `Ybmd9'     W    .JMML.   .JMML.`Wbmd"MML.`Mbmmd' M9mmmP' 
+    
+//                                  ,,        ,,                  
+//                                  db      `7MM                  
+//                                            MM                  
+//      ,pW"Wq.`7M'   `MF`7Mb,od8 `7MM   ,M""bMM  .gP"Ya  ,pP"Ybd 
+//     6W'   `Wb VA   ,V   MM' "'   MM ,AP    MM ,M'   Yb 8I   `" 
+//     8M     M8  VA ,V    MM       MM 8MI    MM 8M"""""" `YMMMa. 
+//     YA.   ,A9   VVV     MM       MM `Mb    MM YM.    , L.   I8 
+//      `Ybmd9'     W    .JMML.   .JMML.`Wbmd"MML.`Mbmmd' M9mmmP' 
 
 
 .row {
@@ -225,34 +259,13 @@ blockquote {
 
 
 .col1 {
-  // width: 27%;
-  //position: relative;
-  //height: 800px;
-  background-color: $blueHot;
-  //float: left;
-  z-index: 100;
-
-  background:
-linear-gradient(324deg, #006080 4%,   transparent 4%) -70px 43px,
-linear-gradient( 36deg, #006080 4%,   transparent 4%) 30px 43px,
-linear-gradient( 72deg, #582423 8.5%, transparent 8.5%) 30px 43px,
-linear-gradient(288deg, #582423 8.5%, transparent 8.5%) -70px 43px,
-linear-gradient(216deg, #582423 7.5%, transparent 7.5%) -70px 23px,
-linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 30px 23px,
-
-linear-gradient(324deg, #006080 4%,   transparent 4%) -20px 93px,
-linear-gradient( 36deg, #006080 4%,   transparent 4%) 80px 93px,
-linear-gradient( 72deg, #582423 8.5%, transparent 8.5%) 80px 93px,
-linear-gradient(288deg, #582423 8.5%, transparent 8.5%) -20px 93px,
-linear-gradient(216deg, #582423 7.5%, transparent 7.5%) -20px 73px,
-linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
-  
-  background-size: 100px 100px;
-  background-color: #006080;
-  box-shadow: 
-    //inset  60px 0px 80px black,
-    inset -90px 0px 80px black,
-    inset   0px -80px 80px black;
+z-index: 100;
+// background-color: $blue; 
+background-size: 100px 100px;
+// box-shadow: 
+//   //inset  60px 0px 80px black,
+//   inset -90px 0px 80px black,
+//   inset   0px -80px 80px black;
 
   img {
     position: relative;
@@ -277,46 +290,52 @@ linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
 //  YMbmd'   `Ybmd9'.JMML.    Ammmmmmm
 
 .col2 {
-  //position: fixed;
-  //margin-left: 17%;
-  //border-right: 1px solid $navTextColor;
- 
-  //width: 20%;
   overflow: hidden;
   padding-bottom: 200px;
 
   .navbar {
-   // border-bottom: 1px solid #BFE9E9;
     padding: 0;
 
     li {
-
       margin-top: 40px;
+      padding-right: 20px;
+      border-right: 3px solid $blue;
+      -webkit-transition: border .2s linear;  
+         -moz-transition: border .2s linear;  
+           -o-transition: border .2s linear;  
+          -ms-transition: border .2s linear;  
+              transition: border .2s linear;  
 
-      a {
+      &:hover {
+        border-right: 10px solid $red;
+      }
+
+      a, a:link, a:visited {
         letter-spacing: $navLetterSpacing;
-        color: $navTextColor;
-        display: block;
         //color: $navTextColor;
+        display: block;
         font-family: $navText;
         font-weight: $navTextWeight;
         text-decoration: none;
         text-transform: uppercase;
         text-align: right;
         //opacity: .68;
-        text-shadow: -10px -10px 15px black;
-                      
+        //text-shadow: -10px -10px 15px $red;
+
+        color: $blue;
+        -webkit-transition: color .2s linear;  
+           -moz-transition: color .2s linear;  
+             -o-transition: color .2s linear;  
+            -ms-transition: color .2s linear;  
+                transition: color .2s linear;   
+
+        &:hover, &:active{
+          color: $red;
+        }               
       }
     }
   }
 }
-
-// a:focus, a:hover {
-//   color: $redHot !important;
-//   opacity: 1 !important;
-//   text-shadow: -3px 3px 4px $redHot !important;
-// }
-
 
 //                    ,,               
 //                  `7MM               
@@ -330,51 +349,34 @@ linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
 //                             bmmmd'  
 
 
-iframe.twitter-tweet {
-  max-width: 60% !important;
-  min-width: 400px !important;
+
+img.bgHome {
+  position: absolute;
+  margin-left: 30%;
+  width: 50%;
+  height: auto;
+  opacity: .3;
+  float: left;
+  z-index: -100;
 }
 
-
-#body_content_title {
-  font-size: 3em;
-  display: none;
-}
-
-h1, h1 a {
-  color: #eee;
-  text-decoration: none;
-  font-family: "SS_Adec2.0_main";
-  font-size: 1.2em;
-  font-weight: normal;
-  letter-spacing: .2em;
-}
-
-h2, p {
-  color: white;
-}
-
-#page {
-
+img.bgHome2 {
+  position: absolute;
+  margin-left: -50%;
+  margin-top: 35%;
+  width: 52%;
+  height: auto;
+  //opacity: .9;
+  float: left;
+  z-index: -100;
 }
 
 .col3 {
-  //margin-left: 37%;
-  //height: auto;
+  padding-left: 30px;
   float: left;
-  //width: 55%;
-  //height: 100%;
 
   //HOME
 
-  .homeWrapper .bgHome img {
-    margin-left: 20%;
-    width: 70%;
-    height: auto;
-    opacity: .3;
-    position: absolute;
-    z-index: 0;
-  }
 
   //RADIO
 
@@ -392,77 +394,51 @@ h2, p {
   }
 }
 
-// #ticker {
-//   width: 400px;
-//   color: white;
-//   position: relative;
-//   z-index: 200;
-//   line-height: 1.0em;
+iframe.twitter-tweet {
+  max-width: 60% !important;
+  min-width: 400px !important;
+}
 
-//   .tweet_list { //ul
 
-//     .tweet_odd, .tweet_even { //li
-//       margin-bottom: 60px;
-//       //background: #222;
-//       //padding: 15px;
-//       float: left;
-      
-//       a {
-//         color: $twitterLinkColor;
-//         font-family: $twitterLinkFont;
-//         margin-bottom: 5px;
-//       }
-
-//       a.tweet_avatar {
-
-//         img {
-//          float: left;
-//          padding: 7px 15px 15px 0;
-//          width: 59px;
-//          height: 59px;
-//         }
-//       }
-
-//       .tweet_time {
-
-//         a {
-//           float: left;
-//           display: block;
-//           padding-bottom: 2px;
-//           font-family: $twitterDateFont;
-//           color: $twitterDateColor;
-//           font-size: $twitterDateSize;
-//         }
-//       }
-
-//       .tweet_text { 
-//         font-family: $twitterBodyFont;
-//         color: $twitterBodyColor;
-//         font-size: $twitterBodySize;
-//       }
-//     }
-//   }
-// }
+#body_content_title {
+  font-size: 3em;
+  display: none;
+}
 
 
 
+#page {
+
+}
 
 
+@media only screen and (max-width: 768px) {
 
+  img.bgHome {
+    display: none;
+    position: absolute;
+    margin-left: 0%;
+    margin-top: 50%;
+    width: 50%;
+    height: auto;
+    opacity: .3;
+    float: left;
+    z-index: -100;
+  }
 
+  img.bgHome2 {
+    position: absolute;
+    display: block;
+    margin-left: 8%;
+    margin-top: 35%;    
+    width: 50%;
+    height: auto;
+    //opacity: .9;
+    float: left;
+    z-index: -100;
 
-
-
-// @media only screen and (max-width: 767px) {
-//   .col1 {
-//     width: 300px;
-
-//     img {
-//       width: 100px;
-//     }
-//   }
-// }
-
+  }
+}
 
 
 

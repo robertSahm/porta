@@ -16,7 +16,7 @@
           
           <!-- COLUMN TWO -->
   
-          <div class="col2 two columns mobile-two redHot">
+          <div class="col2 two columns mobile-one redHot">
             <ul class="navbar">
               <li class="active">
                 <h1 id="fittext1" class="navText">
@@ -41,7 +41,6 @@
               <li>
                 <h1 id="fittext6" class="navText">
                   <a href="#">CONTACT</a>
-                  <!-- %= link_to "RADIO", radio_path % -->
                 </h1>
               </li>
             </ul>
@@ -50,8 +49,14 @@
           <!-- COLUMN 3 -->
           
           <section id="page">
+          <div class="homeWrapper">
+            <%#= image_tag("bgHome.jpg", :alt => "bgHome", :class => "bgHome") %>
+            <%= image_tag("bgHome2.jpg", :alt => "bgHome2", :class => "bgHome2") %>
+          </div>
+          <div class="mixesWrapper">
+            
+          </div>
             <div class="col3 seven mobile-four colums">
-              <%= image_tag("bgHome.jpg", :alt => "bgHome") %>
               <%= yield %>
             </div>
           </section>  
@@ -68,12 +73,12 @@
 </html>
 
 <script>
-  $("#fittext1").fitText(.73);
-  $("#fittext2").fitText(.73);
-  $("#fittext3").fitText(.73);
-  $("#fittext4").fitText(.73);
-  $("#fittext5").fitText(.73);
-  $("#fittext6").fitText(.73);
+  $("#fittext1").fitText(.45);
+  $("#fittext2").fitText(.45);
+  $("#fittext3").fitText(.45);
+  $("#fittext4").fitText(.45);
+  $("#fittext5").fitText(.45);
+  $("#fittext6").fitText(.45);
 // (function() {
 // SC.initialize({
 // client_id: '6dad2a3b64a95f8b991f4c18ac5a8c3b',
