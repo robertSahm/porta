@@ -199,7 +199,7 @@ GEM
     warden (1.1.1)
       rack (>= 1.0)
     will_paginate (3.0.4)
-    zurb-foundation (3.2.4)
+    zurb-foundation (3.2.5)
       compass (>= 0.12.2)
       modular-scale (= 1.0.6)
       rake
@@ -212,6 +212,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
   jquery-rails (~> 2.0.0)
+  modular-scale
   pg
   rails (= 3.2.11)
   refinerycms (~> 2.0.0)
@@ -219,4 +220,4 @@ DEPENDENCIES
   refinerycms-i18n (~> 2.0.0)
   sqlite3 (~> 1.3.5)
   uglifier (>= 1.0.3)
-  zurb-foundation
+  zurb-foundation (~> 3.2.5)

@@ -102,7 +102,6 @@ $grey1: #333333;
        url('fonts/BonvenoCF-Light-webfont.svg#BonvenoCFLight') format('svg');
 }
 
-
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400);
 
 $fontSmoothing: antialiased;
@@ -131,286 +130,8 @@ $twitterBodySize: .8em;
 $twitterLinkFont: 'Raleway', sans-serif;
 $twitterLinkColor: $redHot;
 
-//Text Direction Settings
-$textDirection: ltr; // Controls default global text direction, 'rtl' or 'ltr'
-
-//Button Settings
-$buttonRadius: 3px;
-$btnBase: 10px;
-
-$tinyBtnBase: $btnBase - 5;
-$smallBtnBase: $btnBase - 3;
-$largeBtnBase: $btnBase + 5;
-
-//Form Settings
-$formSpacing: 12px;
-$labelFontWeight: 500;
-$labelFontColor: lighten(#000, 30%);
-$labelBtmMargin: 3px;
-$inputFontColor: rgba(0,0,0,0.75);
-$inputFontSize: 14px;
-$inputBgColor: #fff;
-$inputFocusBgColor: darken(#fff, 2%);
-$inputBorderColor: darken(#fff, 20%);
-$inputFocusBorderColor: darken(#fff, 30%);
-$inputBorderStyle: solid;
-$inputBorderWidth: 1px;
-$inputBorderRadius: 2px;
-$fieldsetBorderRadius: 3px;
-
-//Custom Form Settings
-$custFormBorderColor: #ccc;
-$custFormBgColor: #fff;
-$custCheckColor: #222;
-$custSelectCurrentFontColor: #141414;
-$custSelectBgColor: #fff;
-$custSelectBorderColor: #ddd;
-$custSelectTriangleColor: #aaa;
-$custSelectTriangleColorOpen: #222;
-$custSelectDropHeight: 200px;
-$custDropdownBgColor: #fff;
-$custDropdownBorderColor: darken(#fff, 20%);
-$custDropdownFontColor: #555;
-$custDropdownSelectedBgColor: lighten(#2ba6cb, 40%);
-$custDropdownSelectedFontColor: #000;
-$custFormDisabledBgColor: #ddd;
-
-//Tab Settings
-$tabHeight: 40px;
-$tabTermFontSize: 12px;
-
-//Nav Bar Settings
-$navBarHeight: 40px;
-$navFlyoutBaseWidth: 250px;
-
-//Top Bar Settings
-$topBarBgColor: #222;
-$topBarHeight: 45px;
-$topBarHeightMobile: 45px;
-$topBarBtmMargin: 30px;
-$topBarTitleWeight: bold;
-$topBarTitleSize: 17px;
-$topBarLinkColor: #fff;
-$topBarLinkWeight: bold;
-$topBarLinkSize: 13px;
-$topBarDropBgColor: #222;
-$topBarDropLinkColor: #fff;
-$topBarDropToggleSize: 5px;
-$topBarDropToggleColor: #fff;
-$topBarDropToggleAlpha: 0.5;
-$topBarSearchWidth: 200px;
-$topBarBreakPoint: 940px; // Change to 9999px for always mobile layout
-$topBarNavToggleSize: 8px;
-$topBarNavToggleColor: #fff;
-
-//UI Settings
-$thumbRadius: 3px;
-$progBarHeight: 25px;
-$progBarBorderColor: darken(#fff, 20%);
-$progBarBorderSize: 1px;
-$progBarPad: 2px;
-$linkListBottomMargin: 17px -22px;
-$tableBorderRadius: 3px;
-$alertBorderRadius: 3px;
-
-//Tooltip Settings
-$hasTipBorderBottom: dotted 1px #ccc;
-$hasTipFontWeight: bold;
-$hasTipFontColor: #333;
-$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%);
-$hasTipFontColorHover: $mainColor;
-$tooltipBackgroundColor: #000;
-$tooltipBackgroundOpacity: 0.85;
-$tooltipFontSize: 12px;
-$tooltipFontWeight: bold;
-$tooltipFontColor: #fff;
-$tapToCloseFontSize: 10;
-$tapToCloseFontWeight: normal;
-$tapToCloseFontColor: #888;
-$tooltipFontSizeScreenSm: 14;
-$tooltipBgOpacityScreenSm: 0.85;
-$tooltipBorderRadius: 4px;
-
-//Pricing Table Settings
-$priceTableBorder: solid 1px #ddd;
-$priceTitleBgColor: #ddd;
-$priceTitlePadding: 15px 20px;
-$priceTitleAlign: center;
-$priceTitleColor: #333;
-$priceTitleWeight: bold;
-$priceTitleSize: 16px;
-
-$priceMoneyBgColor: #eee;
-$priceMoneyPadding: 15px 20px;
-$priceMoneyAlign: center;
-$priceMoneyColor: #333;
-$priceMoneyWeight: normal;
-$priceMoneySize: 20px;
-
-$priceBgColor: #fff;
-$priceDescColor: #777;
-$priceDescPadding: 15px;
-$priceDescAlign: center;
-$priceDescFontSize: 12px;
-$priceDescWeight: normal;
-$priceDescLineHeight: 1.4;
-$priceDescBtmBorder: dotted 1px #ddd;
-
-$priceItemColor: #333;
-$priceItemPadding: 15px;
-$priceItemAlign: center;
-$priceItemFontSize: 14px;
-$priceItemWeight: normal;
-$priceItemBtmBorder: dotted 1px #ddd;
-
-$priceCtaBgColor: #f5f5f5;
-$priceCtaAlign: center;
-$priceCtaPadding: 20px;
-
-//Orbit Settings
-$orbitCaptionBgColorOldBrowser: #000;
-$orbitCaptionBgColor: rgba(0,0,0,.6);
-$orbitCaptionFontColor: #fff;
-$orbitBulletNavColor: #999;
-$orbitBulletNavColorActive: #222;
-$orbitHasThumbBorderColor: #000;
-$orbitHasThumbBorderWidth: 2px;
-$orbitHasThumbBorderStyle: solid;
-$orbitSlideNumBgColor: rgba(0,0,0,0.7);
-$orbitSlideNumFontColor: #fff;
-$orbitSlideNumPadding: 5px;
-
-// Clearing Settings
-$clearingBg: rgba(0,0,0,0.8);
-$clearingOldBrowserBg: rgb(0,0,0);
-$clearingCaptionBg: rgba(0,0,0,0.7);
-$clearingCaptionOldBrowserBg: rgb(0,0,0);
-$clearingCaptionFontColor: #fff;
-$clearingCloseColor: #fff;
-$clearingArrowColor: #fff;
-$clearingArrowSize: 16px;
-$clearingCarouselBg: rgba(0,0,0,0.75);
-$clearingCarouselOldBrowserBg: rgb(0,0,0);
-$clearingCarouselHeight: 150px;
-$clearingActiveImgHeight: 75%;
-$clearingCarouselThumbWidth: 175px;
-$clearingCarouselThumbActiveBorder: 4px solid rgb(255,255,255);
-$clearingImgBg: rgba(0,0,0,0.75);
-$clearingImgOldBrowserBg: rgb(0,0,0);
-
-//Joyride Settings
-$tipBg: rgba(0,0,0,0.8);
-$tipBgIE8: #000;
-$tipFontColor: #fff;
-$tipHeaderWeight: bold;
-$tipDefaultWidth: 300px;
-$tipBorderRadius: 4px;
-$tipPadding: 18px 20px 24px;
-$tipNubSize: 14px;
-$tipFontSize: 14px;
-$tipTimerWidth: 50px;
-$tipTimerHeight: 3px;
-$tipTimerBorder: solid 1px #555;
-$tipTimerColor: #666;
-$tipCloseColor: #777;
-$tipCloseSize: 20px;
-$tipCloseWeight: normal;
-$tipScreenFill: rgba(0,0,0,0.5);
-
-//Modular Scale Settings
-
-//$ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE
-$baseFontSize: 14px;
-$importantModNum: 44px;
-$base-size: $baseFontSize $importantModNum;
-// Produced the following list of values: 14, 17, 23, 27, 37, 44, 59, 71, 95, 115;
-// http://www.modularscale.com by Tim Brown
-// https://github.com/scottkellum/modular-scale by scottkellum
-
-
-
-
-
-
-
-// Text Direction Settings
-$textDirection: ltr; // Controls default global text direction, 'rtl' or 'ltr'
-$defaultFloat: left; // Change this to 'right' for right-to-left languages
-$defaultOpposite: right; // Change this to 'left' for right-to-left languages
-
-// Button Settings
-$buttonRadius: 3px;
-$btnBase: 10px;
-$tinyBtnBase: $btnBase - 5;
-$smallBtnBase: $btnBase - 3;
-$largeBtnBase: $btnBase + 5;
-
-// Typography Settings
-$headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$headerFontWeight: bold;
-$headerFontColor: #222;
-$bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$bodyFontWeight: normal;
-$bodyFontColor: $txtColor;
-
-// Modular Scale
-
-// $baseFontSize: 14px;
-// $importantModNum: 44px;
-
-// Top Bar Settings
-$topBarBgColor: #222;
-$topBarHeight: 45px;
-$topBarBtmMargin: 30px;
-$topBarTitleWeight: bold;
-$topBarTitleSize: ms(1);
-$topBarLinkColor: #fff;
-$topBarLinkWeight: bold;
-$topBarLinkSize: ms(0) - 1;
-$topBarDropToggleSize: 5px;
-$topBarSearchWidth: 200px;
-$topBarBreakPoint: 940px;
-$topBarNavToggleSize: 8px;
-
-// Form Settings
-$formSpacing: 12px;
-
-// Tab Settings
-$tabHeight: 40px;
-
-// Nav Bar Settings
-$navBarHeight: 40px;
-$navFlyoutBaseWidth: 250px;
-
-// UI Settings
-$thumbRadius: 3px;
-
-// Tooltip Settings
-$hasTipBorderBottom: dotted 1px #ccc;
-$hasTipFontWeight: bold;
-$hasTipFontColor: #333;
-$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%);
-$hasTipFontColorHover: $mainColor;
-$tooltipBackgroundColor: #000;
-$tooltipBackgroundOpacity: 0.85;
-$tooltipFontSize: 12;
-$tooltipFontWeight: bold;
-$tooltipFontColor: #fff;
-$tapToCloseFontSize: 10;
-$tapToCloseFontWeight: normal;
-$tapToCloseFontColor: #888;
-$tooltipFontSizeScreenSmall: 14;
-$tooltipBackgroundOpacityScreenSmall: 0.85;
-
-
-
 // Grid Settings
-//$rowWidth: 1000px;
-//$columnGutter: 30px;
-$totalColumns: 12;
-$mobileTotalColumns: 4;
-
-                                                       
+                                             
 //   ,,                                                   
 //   db                   mm                              
 //                        MM                              
@@ -473,13 +194,24 @@ body {
   overflow-x: hidden;
 }
 
-.row {
-  width: 100%;
+
+
+blockquote {
 
 }
 
-blockquote {
-  margin: 10px;
+//                              ,,        ,,                  
+//                              db      `7MM                  
+//                                        MM                  
+//  ,pW"Wq.`7M'   `MF`7Mb,od8 `7MM   ,M""bMM  .gP"Ya  ,pP"Ybd 
+// 6W'   `Wb VA   ,V   MM' "'   MM ,AP    MM ,M'   Yb 8I   `" 
+// 8M     M8  VA ,V    MM       MM 8MI    MM 8M"""""" `YMMMa. 
+// YA.   ,A9   VVV     MM       MM `Mb    MM YM.    , L.   I8 
+//  `Ybmd9'     W    .JMML.   .JMML.`Wbmd"MML.`Mbmmd' M9mmmP' 
+
+
+.row {
+  width: 100%;
 }
 
 //                    ,,            
@@ -491,53 +223,16 @@ blockquote {
 // YM.    , YA.   ,A9 MM        MM  
 //  YMbmd'   `Ybmd9'.JMML.    .JMML.
 
+
 .col1 {
-  position: fixed;
-  width: 17%;
-  height: 800px;
-  //background-color: $blueHot;
-  float: left;
+  // width: 27%;
+  //position: relative;
+  //height: 800px;
+  background-color: $blueHot;
+  //float: left;
   z-index: 100;
-  opacity: .5;
 
-  .logoMain {
-    margin: 4px;
-
-     img {
-      position: relative;
-      margin-top: 20px;
-      width: 100%;
-      //max-width: 100px;
-      height: auto;
-      margin-left: auto;
-      //background-color: white;
-      //box-shadow: inset -8px 0px 8px #222;
-    }
-  }
-}
-
-//                    ,,               
-//                  `7MM               
-//                    MM               
-//  ,p6"bo   ,pW"Wq.  MM       pd*"*b. 
-// 6M'  OO  6W'   `Wb MM      (O)   j8 
-// 8M       8M     M8 MM          ,;j9 
-// YM.    , YA.   ,A9 MM       ,-='    
-//  YMbmd'   `Ybmd9'.JMML.    Ammmmmmm
-
-.col2 {
-  position: fixed;
-  margin-left: 17%;
-
-  // background:
-  // linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-  // linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-  // linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-  // linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-  // linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-  // linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  
-background:
+  background:
 linear-gradient(324deg, #006080 4%,   transparent 4%) -70px 43px,
 linear-gradient( 36deg, #006080 4%,   transparent 4%) 30px 43px,
 linear-gradient( 72deg, #582423 8.5%, transparent 8.5%) 30px 43px,
@@ -555,10 +250,38 @@ linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
   background-size: 100px 100px;
   background-color: #006080;
   box-shadow: 
-    inset  60px 0px 80px black,
-    inset -60px 0px 80px black;
-  float: left;
-  width: 20%;
+    //inset  60px 0px 80px black,
+    inset -90px 0px 80px black,
+    inset   0px -80px 80px black;
+
+  img {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    //max-width: 100px;
+    height: auto;
+    margin-left: auto;
+    //background-color: white;
+    //box-shadow: inset -8px 0px 8px #222;
+  }
+  
+}
+
+//                    ,,               
+//                  `7MM               
+//                    MM               
+//  ,p6"bo   ,pW"Wq.  MM       pd*"*b. 
+// 6M'  OO  6W'   `Wb MM      (O)   j8 
+// 8M       8M     M8 MM          ,;j9 
+// YM.    , YA.   ,A9 MM       ,-='    
+//  YMbmd'   `Ybmd9'.JMML.    Ammmmmmm
+
+.col2 {
+  //position: fixed;
+  //margin-left: 17%;
+  //border-right: 1px solid $navTextColor;
+ 
+  //width: 20%;
   overflow: hidden;
   padding-bottom: 200px;
 
@@ -567,6 +290,8 @@ linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
     padding: 0;
 
     li {
+
+      margin-top: 40px;
 
       a {
         letter-spacing: $navLetterSpacing;
@@ -577,7 +302,7 @@ linear-gradient(144deg, #582423 7.5%, transparent 7.5%) 80px 73px;
         font-weight: $navTextWeight;
         text-decoration: none;
         text-transform: uppercase;
-        text-align: center;
+        text-align: right;
         //opacity: .68;
         text-shadow: -10px -10px 15px black;
                       
@@ -625,13 +350,20 @@ h1, h1 a {
   letter-spacing: .2em;
 }
 
+h2, p {
+  color: white;
+}
+
+#page {
+
+}
 
 .col3 {
-  margin-left: 37%;
-  height: auto;
+  //margin-left: 37%;
+  //height: auto;
   float: left;
-  width: 55%;
-  height: 100%;
+  //width: 55%;
+  //height: 100%;
 
   //HOME
 
@@ -713,14 +445,8 @@ h1, h1 a {
 // }
 
 
-.blogWrapper {
-  position: relative;
-}
 
 
-#twitter-widget {
-  background-color: red !important;
-}
 
 
 
@@ -736,10 +462,6 @@ h1, h1 a {
 //     }
 //   }
 // }
-
-
-
-
 
 
 

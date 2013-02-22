@@ -1,105 +1,95 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="icon" type="image/gif" href="animated_favicon1.gif">  
-  <%= stylesheet_link_tag  "application" %>
-  <%#= stylesheet_link_tag "foundation" %>
-  <%#= stylesheet_link_tag    "mobile" if mobile_device? %>
-  <%= javascript_include_tag  "application" %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- script src="http://connect.soundcloud.com/sdk.js" ></script -->
-  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
-  <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<%= render '/refinery/html_tag' %>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container" class="container">
 
-
-
-</head>
-
-<body>
-<div class="wrapper">
-  <div class="row display">
-    <!-- Column 1 -->
-    <div class="col1 blueHot">
-      <div class="logoMain">
-        <%= image_tag("logoMain.png", :alt => "logo not here?") %>
-      </div>
-    </div>
-    <!-- Column 2 -->
-    <div class="col2 redHot">
-      <ul class="navbar">
-        <li class="active">
-          <h1 id="fittext1" class="navText">
-            <!-- <a href="#">HOME</a> -->
-
-          </h1>
-        </li>
-        <li>
-          <h1 id="fittext2" class="navText"><a href="#">Mixes</a></h1>
-        </li>
-        <li>
-          <h1 id="fittext3" class="navText"><a href="#">Photo &amp; Video</a></h1>
-        </li>
-        <li>
-          <h1 id="fittext4" class="navText"><a href="#">Private Events</a></h1>
-        </li>
-        <li>
-          <h1 id="fittext5" class="navText">
-            <!-- <a href="#">RADIO</a> -->
-            
-            <!-- %= link_to "RADIO", radio_path % -->
-          </h1>
-        </li>
-      </ul>
-    </div>
-    
-    <!-- Column 3 Home/Blog showing all entries -->
-<div class="col3">
-  <div class="homeWrapper">
-
-    <div class="bgHome">
-      <%= image_tag("bgHome.jpg", :alt => "bgHome") %>
-    </div>
-    <div id="ticker">
+      <header id="header">
+      </header>
       
-    </div>
-    <div class="blogWrapper">
-      <%= yield %> <!-- Column 3 -->
-    </div>
+       <!-- COLUMN 1 -->
+        <div class="row">
+          <div class="col1 three mobile-two columns">
+            <%= image_tag("logoMain.png", :alt => "logo not here?") %>
+          </div>
+          
+          <!-- COLUMN TWO -->
+  
+          <div class="col2 two columns mobile-two redHot">
+            <ul class="navbar">
+              <li class="active">
+                <h1 id="fittext1" class="navText">
+                  <a href="#">HOME</a>
+                </h1>
+              </li>
+              <li>
+                <h1 id="fittext2" class="navText"><a href="#">Mixes</a></h1>
+              </li>
+              <li>
+                <h1 id="fittext3" class="navText"><a href="#">Photo<br />/Video</a></h1>
+              </li>
+              <li>
+                <h1 id="fittext4" class="navText"><a href="#">Private Events</a></h1>
+              </li>
+              <li>
+                <h1 id="fittext5" class="navText">
+                  <a href="#">RADIO</a>
+                  <!-- %= link_to "RADIO", radio_path % -->
+                </h1>
+              </li>
+              <li>
+                <h1 id="fittext6" class="navText">
+                  <a href="#">CONTACT</a>
+                  <!-- %= link_to "RADIO", radio_path % -->
+                </h1>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- COLUMN 3 -->
+          
+          <section id="page">
+            <div class="col3 seven mobile-four colums">
+              <%= image_tag("bgHome.jpg", :alt => "bgHome") %>
+              <%= yield %>
+            </div>
+          </section>  
+        </div>
+    </div> <!-- close big-ass row -->
+      <footer>
+        <%= render '/refinery/footer' -%>
+      </footer>
+
+
+    <%= render '/refinery/javascripts' %>
   </div>
-</div>
-
-<footer></footer>
-
-<!-- Scripts! -->
-
-</body>
+  </body>
 </html>
 
-
 <script>
-  $("#fittext1").fitText(.8);
-  $("#fittext2").fitText(.8);
-  $("#fittext3").fitText(.8);
-  $("#fittext4").fitText(.8);
-  $("#fittext5").fitText(.8);
-
+  $("#fittext1").fitText(.73);
+  $("#fittext2").fitText(.73);
+  $("#fittext3").fitText(.73);
+  $("#fittext4").fitText(.73);
+  $("#fittext5").fitText(.73);
+  $("#fittext6").fitText(.73);
 // (function() {
-//   SC.initialize({
-//     client_id: '6dad2a3b64a95f8b991f4c18ac5a8c3b',
-//     redirect_uri: 'http://soundcloud.com/portarock/'
-//     });
-//   });
+// SC.initialize({
+// client_id: '6dad2a3b64a95f8b991f4c18ac5a8c3b',
+// redirect_uri: 'http://soundcloud.com/portarock/'
+// });
+// });
 
-//   // update user's profile description
-//   SC.connect(function() {
-//      SC.put('/me', {
-//        user: { description: 'I am using the SoundCloud API!' }
-//      }
-//   )});
+// // update user's profile description
+// SC.connect(function() {
+// SC.put('/me', {
+// user: { description: 'I am using the SoundCloud API!' }
+// }
+// )});
 
 
 
 </script>
+
 
