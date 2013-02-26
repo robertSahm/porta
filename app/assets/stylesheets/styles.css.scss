@@ -78,7 +78,6 @@
   src: url('fonts/SS_Adec2.0_text.otf');
 }
 
-
 @font-face {
   font-family: 'BonvenoCFLight';
   src: url('fonts/BonvenoCF-Light-webfont.eot');
@@ -88,7 +87,18 @@
        url('fonts/BonvenoCF-Light-webfont.svg#BonvenoCFLight') format('svg');
 }
 
+@font-face {font-family: 'Code-Pro-Light-Demo';
+  src: url('fontsfonts/25FD00_0_0.eot');
+  src: url('fontsfonts/25FD00_0_0.eot?#iefix') 
+  format('embedded-opentype'),
+  url('fonts/25FD00_0_0.woff') 
+  format('woff'),
+  url('fonts/25FD00_0_0.ttf') 
+  format('truetype');}
+
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400);
+
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900,900italic);
 
 // My Colors
 $red: #BE4D4B;
@@ -96,67 +106,126 @@ $blue: #00BFFF;
 $greenHot: #58F802;
 $grey1: #333333;
 
-// Navbar type 
+// link formatting
 
+a { color: $blue; text-decoration: none; line-height: inherit; }
+
+a:hover { color: #2795b6; }
+
+a:focus { color: #2795b6; }
+
+
+// Navbar type 
 $fontSmoothing: antialiased;
-$navText: 'SS_Adec2.0_main', sans-serif;
-$navTextWeight: 100;
+// $navText: 'SS_Adec2.0_text', sans-serif;
+$navText: 'Code-Pro-Light-Demo';
+$navTextWeight: normal;
 $navTextColor: $blue;
-$navLetterSpacing: .06em;
+$navLetterSpacing: normal;
+$navLineHeight: 1em;
+$navLetterSpacing: .28em;
+
+.headerCaps {
+  //font-family: 'SS_Adec2.0_main';
+  font-size: 1.3em;
+}
 
 // blog type
-
-$blogH1Color: white;
-$blogH1Font: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$blogH1Weight: 700;
-$blogH1size: .7em;
-$blogH1LetterSpacing: .19em;
+$blogH1Color: #863533;
+// $blogH1Font: "Playfair Display";
+$blogH1Font: "Code-Pro-Light-Demo";
+$blogH1Weight: normal;
+$blogH1size: .58em;
+$blogH1lineheight: 1em;
+$blogH1LetterSpacing: .06em;
 $blogH1HoverColor: $red;
+$blogH1fontstyle: normal;
+$blogH1padding: 0px;
+
+.blog_post { 
+  background-color: #1B1519;
+  margin-top: 20px;
+  padding: 15px 25px 0px 15px;
+
+  p {
+    color: #C7FAFF !important;
+    padding: 0px 0px 25px 0px;
+  }
+
+  p img {
+    padding: 0;
+    margin-bottom: -13px;
+    background-color: 0;
+    width: 100%;
+  }
+
+  header {
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+
+    .details { // posted on..
+      color: #555;
+      padding-top: 10px;
+      line-height: 1.2em;
+
+      time {
+        display: none;
+      }
+
+      .filed_in {
+
+      }
+    }
+  }
+
+  footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    p a {
+      background-color: #292821;
+      color: #166788;
+      padding: 7px 10px 6px 10px;
+      font-size: 90%;
 
 
+      &:hover {
+        color: $blue;
+      }
+    }
 
-.blog_post h1 a {
-  color: $blogH1Color;
-  text-decoration: none;
-  font-family: $blogH1Font;
-  font-weight: $blogH1Weight;
-  font-size: $blogH1size;
-  letter-spacing: $blogH1LetterSpacing;
-
-  &:hover {
-    color: $blogH1HoverColor;
+    .comment_count {
+      display: none;
+      // display: block;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 15px;
+      color: #777;
+      font-size: 90%;
+    }
+  }
+  
+  h1 a {
+    color: $blogH1Color;
+    text-decoration: none;
+    font-family: $blogH1Font;
+    font-weight: $blogH1Weight;
+    font-size: $blogH1size;
+    letter-spacing: $blogH1LetterSpacing;
+    font-style: $blogH1fontstyle;
+    padding: $blogH1padding;
+    line-height: $blogH1lineheight;
+    display: block;
+  
+    &:hover {
+      color: $blogH1HoverColor;
+    }
   }
 }
 
 
-// twitter posts
 
-blockquote {
-  padding-left: 0px !important;
-  border-left: none !important;
-  border-right: none !important;
-}
-
-.twitter-tweet p {
-  color: white;
-}
-
-.details { // posted on..
-  color: #777;
-  padding-bottom: 15px;
-}
-
-.comment_count {
-  color: #777;
-}
-// $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $headerFontWeight: bold;
-// $headerFontStyle: normal;
-// $headerFontColor: #222;
-// $bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $bodyFontWeight: normal;
-// $bodyFontStyle: normal;
-// $bodyFontColor: $txtColor;
 
 //Twitter Font Settings
 $twitterDateFont: 'Raleway', sans-serif;
@@ -170,8 +239,27 @@ $twitterBodySize: .8em;
 $twitterLinkFont: 'Raleway', sans-serif;
 $twitterLinkColor: $red;
 
-// Grid Settings
-                                             
+// twitter posts
+blockquote.twitter-tweet {
+  padding-left: 0px !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.twitter-tweet p {
+  color: white;
+}
+
+
+// $headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $headerFontWeight: bold;
+// $headerFontStyle: normal;
+// $headerFontColor: #222;
+// $bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $bodyFontWeight: normal;
+// $bodyFontStyle: normal;
+// $bodyFontColor: $txtColor;
+                         
 //   ,,                                                   
 //   db                   mm                              
 //                        MM                              
@@ -248,6 +336,41 @@ body {
   width: 100%;
 }
 
+// BACKGROUNDS
+
+img.bgHome {
+  position: absolute;
+  margin-left: -5%;
+  margin-top: 80%;
+  width: 44%;
+  height: auto;
+  opacity: .7;
+  float: left;
+  z-index: -110;
+}
+
+img.bgHome2 {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 25%;
+  width: 44%;
+  height: auto;
+  opacity: .7;
+  float: left;
+  z-index: -100;
+}
+
+img.bgHome3 {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 24%;
+  width: 35%;
+  height: auto;
+  opacity: .7;
+  float: left;
+  z-index: -110;
+}
+
 //                    ,,            
 //                  `7MM            
 //                    MM       __,  
@@ -259,15 +382,10 @@ body {
 
 
 .col1 {
-z-index: 100;
-// background-color: $blue; 
-background-size: 100px 100px;
-// box-shadow: 
-//   //inset  60px 0px 80px black,
-//   inset -90px 0px 80px black,
-//   inset   0px -80px 80px black;
+  z-index: 100;
 
   img {
+    opacity: 1;
     position: relative;
     margin-top: 20px;
     width: 100%;
@@ -277,6 +395,12 @@ background-size: 100px 100px;
     //background-color: white;
     //box-shadow: inset -8px 0px 8px #222;
   }
+
+  .gcal {
+    position: relative;
+    float: left;
+  }
+
   
 }
 
@@ -291,15 +415,15 @@ background-size: 100px 100px;
 
 .col2 {
   overflow: hidden;
-  padding-bottom: 200px;
+  padding: 0;
 
   .navbar {
     padding: 0;
 
     li {
-      margin-top: 40px;
-      padding-right: 20px;
-      border-right: 3px solid $blue;
+      margin-top: 30px;
+      padding-right: 5px;
+      border-right: 0px solid $blue;
       -webkit-transition: border .2s linear;  
          -moz-transition: border .2s linear;  
            -o-transition: border .2s linear;  
@@ -307,7 +431,7 @@ background-size: 100px 100px;
               transition: border .2s linear;  
 
       &:hover {
-        border-right: 10px solid $red;
+        border-right: 15px solid $red;
       }
 
       a, a:link, a:visited {
@@ -316,9 +440,9 @@ background-size: 100px 100px;
         display: block;
         font-family: $navText;
         font-weight: $navTextWeight;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: right;
+        line-height: $navLineHeight;
+        text-align: left;
+
         //opacity: .68;
         //text-shadow: -10px -10px 15px $red;
 
@@ -331,6 +455,7 @@ background-size: 100px 100px;
 
         &:hover, &:active{
           color: $red;
+          //font-size: 1.3em;
         }               
       }
     }
@@ -348,32 +473,14 @@ background-size: 100px 100px;
 //                            (O)  .M' 
 //                             bmmmd'  
 
-
-
-img.bgHome {
-  position: absolute;
-  margin-left: 30%;
-  width: 50%;
-  height: auto;
-  opacity: .3;
-  float: left;
-  z-index: -100;
-}
-
-img.bgHome2 {
-  position: absolute;
-  margin-left: -50%;
-  margin-top: 35%;
-  width: 52%;
-  height: auto;
-  //opacity: .9;
-  float: left;
-  z-index: -100;
-}
-
 .col3 {
   padding-left: 30px;
+  padding-right: 12%;
+  padding-top: 1%;
   float: left;
+  //background-color: #161B1E;
+  //background-color: #1B1519;
+  //background-color: #1B1519;
 
   //HOME
 
@@ -392,6 +499,10 @@ img.bgHome2 {
       position: absolute;
     }
   }
+}
+
+iframe {
+  margin-bottom: 15px;
 }
 
 iframe.twitter-tweet {
@@ -426,24 +537,21 @@ iframe.twitter-tweet {
     z-index: -100;
   }
 
-  img.bgHome2 {
+  img.bgHome3 {
     position: absolute;
     display: block;
-    margin-left: 8%;
-    margin-top: 35%;    
-    width: 50%;
+    margin-left: 13%;
+    width: 45%;
     height: auto;
     //opacity: .9;
     float: left;
     z-index: -100;
 
   }
+
+  .col2 {
+
+  }
 }
-
-
-
-
-
-
 
 
