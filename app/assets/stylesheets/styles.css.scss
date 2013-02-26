@@ -224,9 +224,6 @@ $blogH1padding: 0px;
   }
 }
 
-
-
-
 //Twitter Font Settings
 $twitterDateFont: 'Raleway', sans-serif;
 $twitterDateSize: .8em;
@@ -384,16 +381,13 @@ img.bgHome3 {
 .col1 {
   z-index: 100;
 
-  img {
+  .logoImg {
     opacity: 1;
     position: relative;
     margin-top: 20px;
     width: 100%;
-    //max-width: 100px;
     height: auto;
     margin-left: auto;
-    //background-color: white;
-    //box-shadow: inset -8px 0px 8px #222;
   }
 
   .gcal {
@@ -423,7 +417,7 @@ img.bgHome3 {
     li {
       margin-top: 30px;
       padding-right: 5px;
-      border-right: 0px solid $blue;
+      border-left: 0px solid $blue;
       -webkit-transition: border .2s linear;  
          -moz-transition: border .2s linear;  
            -o-transition: border .2s linear;  
@@ -431,7 +425,7 @@ img.bgHome3 {
               transition: border .2s linear;  
 
       &:hover {
-        border-right: 15px solid $red;
+        border-left: 25px solid $red;
       }
 
       a, a:link, a:visited {
@@ -442,6 +436,7 @@ img.bgHome3 {
         font-weight: $navTextWeight;
         line-height: $navLineHeight;
         text-align: left;
+        padding-left: 10px;
 
         //opacity: .68;
         //text-shadow: -10px -10px 15px $red;
@@ -503,6 +498,10 @@ img.bgHome3 {
 
 iframe {
   margin-bottom: 15px;
+  width: 100%;
+  min-height: 300px;
+  max-height: 600px;
+
 }
 
 iframe.twitter-tweet {
@@ -516,7 +515,13 @@ iframe.twitter-tweet {
   display: none;
 }
 
+.tagMix {
 
+}
+
+.tagPhoto {
+
+}
 
 #page {
 
@@ -524,6 +529,10 @@ iframe.twitter-tweet {
 
 
 @media only screen and (max-width: 768px) {
+
+  img.logoImg {
+    max-width: 200px;
+  }
 
   img.bgHome {
     display: none;
@@ -538,18 +547,15 @@ iframe.twitter-tweet {
   }
 
   img.bgHome3 {
+    display: none;
     position: absolute;
-    display: block;
-    margin-left: 13%;
+    //display: block;
+    margin-left: 90px;
     width: 45%;
     height: auto;
     //opacity: .9;
     float: left;
     z-index: -100;
-
-  }
-
-  .col2 {
 
   }
 }

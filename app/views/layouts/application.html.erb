@@ -15,7 +15,7 @@
        <!-- COLUMN 1 -->
         <div class="row">
           <div class="col1 three mobile-two columns">
-            <%= image_tag("logoMain.png", :alt => "logo not here?") %>
+            <%= image_tag("logoMain.png", :alt => "logo not here?", :class=> "logoImg") %>
 
             <div class="gcal">
 
@@ -28,12 +28,12 @@
             <ul class="navbar">
               <li class="active">
                 <h1 id="fittext1" class="navText">
-                  <a href="#"><span class="headerCaps">H</span>OME</a>
+                  <a href="/"><span class="headerCaps">H</span>OME</a>
                 </h1>
               </li>
               <li>
                 <h1 id="fittext2" class="navText">
-                  <a href="#"><span class="headerCaps">M</span>ixes</a></h1>
+                  <a href="/blog/tagged/3/mix"><span class="headerCaps">M</span>ixes</a></h1>
               </li>
               <li>
                 <h1 id="fittext3" class="navText">
@@ -49,44 +49,42 @@
                   <!-- %= link_to "RADIO", radio_path % -->
                 </h1>
               </li>
-              <li>
+<!--               <li>
                 <h1 id="fittext6" class="navText">
                   <a href="#"><span class="headerCaps">C</span>ONTACT</a>
                 </h1>
               </li>
-            </ul>
+ -->            </ul>
           </div>
   
           <!-- COLUMN 3 -->
           
           <section id="page">
-          <div class="homeWrapper">
-          </div>
-          <div class="mixesWrapper">
-            
-          </div>
+            <div class="homeWrapper">
+            </div>
+            <div class="mixesWrapper">
+            </div>
             <div class="col3 seven mobile-four colums">
               <%= yield %>
-
             </div>
           </section>  
         </div>
-    </div> <!-- close big-ass row -->
+      </div> <!-- close big-ass row -->
       <footer>
         <%= render '/refinery/footer' %>
       </footer>
-    <%= render '/refinery/javascripts' %>
-  </div>
+      <%= render '/refinery/javascripts' %>
+    </div>
   </body>
 </html>
 
 <script>
-  $("#fittext1").fitText(.71, { minFontSize: '15px', maxFontSize: '35px' });
-  $("#fittext2").fitText(.71, { minFontSize: '15px', maxFontSize: '35px' });
-  $("#fittext3").fitText(.71, { minFontSize: '15px', maxFontSize: '35px' });
-  $("#fittext4").fitText(.71, { minFontSize: '15px', maxFontSize: '35px' });
-  $("#fittext5").fitText(.71, { minFontSize: '15px', maxFontSize: '35px' });
-  $("#fittext6").fitText(.71, { minFontSize: '15px', maxFontSize: '35px' });
+  $("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+  $("#fittext2").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+  $("#fittext3").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+  $("#fittext4").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+  $("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+  $("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 </script>
 
 
