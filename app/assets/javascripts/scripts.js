@@ -1,3 +1,21 @@
+$(function() {
+	//if ($(".header h1 a:contains('music')").length);
+			$(".blog_post:contains('mix')").addClass('tagMix');
+});
+
+$(function() {
+	//if ($(".header h1 a:contains('jamaica')").length);
+			$(".blog_post:contains('photo')").addClass('tagPhoto');
+});
+
+$(function() {
+	//if ($(".header h1 a:contains('jamaica')").length);
+			$(".blog_post:contains('video')").addClass('tagVideo');
+});
+
+
+
+
 
 // $(function() {
 // 	$('.blog_post').find('.tagged a').css('color', "green");
@@ -59,15 +77,7 @@
 // 		}
 // });
 
-$(function() {
-	//if ($(".header h1 a:contains('music')").length);
-			$(".blog_post:contains('mix')").addClass('tagMix');
-});
 
-$(function() {
-	//if ($(".header h1 a:contains('jamaica')").length);
-			$(".blog_post:contains('photo')").addClass('tagPhoto');
-});
 
 
 
