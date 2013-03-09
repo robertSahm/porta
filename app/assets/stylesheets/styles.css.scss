@@ -119,6 +119,7 @@ a:focus { color: #2795b6; }
 
 
 // Navbar type 
+
 $fontSmoothing: antialiased;
 // $navText: 'SS_Adec2.0_text', sans-serif;
 $navText: 'Code-Pro-Light-Demo';
@@ -149,7 +150,7 @@ $blogH1padding: 0px;
   max-width: 720px; //perfect width for initial mobile snap
   width: 92%;
   background-color: #1B1519;
-  margin: 20px 20px 20px 5px;
+  margin: 20px 20px 0px 5px;
   padding: 10px 20px 0px 20px;
   //width: 95%;
 
@@ -265,7 +266,7 @@ $blogH1padding: 0px;
     iframe {
       margin-bottom: 20px;
       width: 100%;
-      min-height: 400px;
+      //min-height: 166px;
     }
 
     h1 {
@@ -334,6 +335,7 @@ $blogH1padding: 0px;
 }
 
 .tagMix {
+  border-top: 5px solid $red;
 
   iframe {
     margin-bottom: 15px;
@@ -342,6 +344,8 @@ $blogH1padding: 0px;
 }
 
 .tagPhoto {
+    border-top: 5px solid $blue;
+    background-color: $bgColor1;
 
   .details {
     display: none;
@@ -350,6 +354,7 @@ $blogH1padding: 0px;
 
 .tagVideo {
   background-color: $bgColor1;
+  border-top: 5px solid $blue;
 
   .details {
     display: none;
@@ -364,6 +369,7 @@ $blogH1padding: 0px;
 } 
 
 .tagTweet {
+  border-top: 5px solid $red;
 
 }
 

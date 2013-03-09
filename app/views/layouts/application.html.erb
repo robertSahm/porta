@@ -1,81 +1,69 @@
 <!DOCTYPE html>
-<%= render '/refinery/html_tag' %>
+  <%= render '/refinery/html_tag' %>
   <%= render '/refinery/head' %>
   <body>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container" class="container">
-
       <header id="header">
       </header>
-
-        <%= image_tag("bgHome3.jpg", :alt => "bgHome3", :class => "bgHome3") %>
-
+      <%= image_tag("bgHome3.jpg", :alt => "bgHome3", :class => "bgHome3") %>
         <!-- SITE WRAPPER -->
-        <div class="row siteWrapper"> 
-
-          <!-- COLUMN 1 -->
-          <div class="col1 three mobile-two columns">
-            <%= image_tag("logoMain.png", :alt => "logo not here?", :class=> "  logoImg") %>
-            <div class="gcal">
-            </div>
+      <div class="row siteWrapper"> 
+        <!-- COLUMN 1 -->
+        <div class="col1 three mobile-two columns">
+          <%= image_tag("logoMain.png", :alt => "logo goes here", :class=> "logoImg") %>
+          <div class="gcal">
           </div>
-
-          <!-- COLUMN TWO -->
-          <div class="col2 two columns mobile-two">
-            <ul class="navbar">
-              <li class="active">
-                <h1 id="fittext1" class="navText">
-                  <a href="#" class="clickHome"><span class="headerCaps">H</span>OME</a>
-                </h1>
-              </li>
-              <li>
-                <h1 id="fittext2" class="navText">
-                  <!-- <a href="/blog/tagged/3/mix" class="clickMix"> -->
-                  <a href="" class="clickMix"><span class="headerCaps">M</span>ixes</a></h1>
-              </li>
-              <li>
-                <h1 id="fittext3" class="navText">
-                  <a href="#" class="clickPhotoVideo"><span class="headerCaps">P</span>hoto<br /><span class="headerCaps">V</span>ideo</a></h1>
-              </li>
-              <li>
-                <h1 id="fittext4" class="navText">
-                  <a href="#"><span class="headerCaps">P</span>rivate<br /><span class="headerCaps">E</span>vents</a></h1>
-              </li>
-              <li>
-                <h1 id="fittext5" class="navText">
-                  <a href="#"><span class="headerCaps">R</span>ADIO</a>
-                  <!-- %= link_to "RADIO", radio_path % -->
-                </h1>
-              </li>
-<!--               <li>
-                <h1 id="fittext6" class="navText">
-                  <a href="#"><span class="headerCaps">C</span>ONTACT</a>
-                </h1>
-              </li>
- -->        </ul>
-          </div>
-        <!-- close FIRST row -->
-     
-      <!-- BLOG ROW (IF FIXED POSITION) -->
-      <div class="row siteWrapper">
-        <div class="five columns">
         </div>
-        <section id="page">
-          <div class="seven columns column3">
-            <div classs="mobile-four columns">
-            <%= yield %>
-            </div>
+        <!-- COLUMN TWO -->
+        <div class="col2 two columns mobile-two">
+          <ul class="navbar">
+            <li class="active">
+              <h1 id="fittext1" class="navText">
+                <a href="#" class="clickHome"><span class="headerCaps">H</span>OME</a>
+              </h1>
+            </li>
+            <li>
+              <h1 id="fittext2" class="navText">
+                <!-- <a href="/blog/tagged/3/mix" class="clickMix"> -->
+                <a href="" class="clickMix"><span class="headerCaps">M</span>ixes</a></h1>
+            </li>
+            <li>
+              <h1 id="fittext3" class="navText">
+                <a href="#" class="clickPhotoVideo"><span class="headerCaps">P</span>hoto<br /><span class="headerCaps">V</span>ideo</a></h1>
+            </li>
+            <li>
+              <h1 id="fittext4" class="navText">
+                <a href="" class=""><span class="headerCaps">P</span>rivate<br /><span class="headerCaps">E</span>vents</a></h1>
+            </li>
+            <li>
+              <h1 id="fittext5" class="navText">
+                <a href="#"><span class="headerCaps">R</span>ADIO</a>
+                <!-- %= link_to "RADIO", radio_path % -->
+              </h1>
+            </li>
+          </ul>
+        </div>
+        <!-- close FIRST row -->
+        <!-- BLOG ROW (IF FIXED POSITION) -->
+        <div class="row siteWrapper">
+          <div class="five columns">
           </div>
-        </section>  
+          <section id="page">
+            <div class="seven columns column3 blogWrapper">
+              <div classs="mobile-four columns">
+                <%= yield %>
+              </div>
+            </div>
+          </section>  
+        </div>
+        <footer>
+          <%= render '/refinery/footer' %>
+        </footer>
+        <%= render '/refinery/javascripts' %>
       </div>
-
-      <footer>
-        <%= render '/refinery/footer' %>
-      </footer>
-      <%= render '/refinery/javascripts' %>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
 
 <script>
   $("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });

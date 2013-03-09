@@ -3,39 +3,36 @@
 // 			$(".blog_post:contains('no comments')").addClass('displayNone');
 // });
 
-var container = $(".column3");
+
+// ISOTOPE JOUNX
+var container = $(".blogWrapper");
 
 $(window).load(function(){
+
 	$(container).isotope({
 	  	// options
 	  	itemSelector : '.blog_post',
-	  	// containerStyle: {
-	  	// 	position: 'relative',
-	  	// 	//overflow: 'auto'
-	  	// },
-	  	animationOptions: {
-	      duration: 750,
-	      easing: 'easeOut',
-	      queue: false
-	    },
+	  	  containerStyle: {
+	  	  position: 'relative',
+	  	  overflow: 'display'
+	  	},
+	  animationOptions: {
+	     duration: 750,
+	     queue: false
+	   },
+	   animationEngine : 'css',
 	    masonry: { 
-	    	gutterWidth: 20,
-	    	columnWidth: container.width() / 5 
+	    	//gutterWidth: 20,
+	    	//columnWidth: container.width() / 5 
 	    },
-			resizable: false
-	  	//layoutMode: 'masonry'
+			resizable: true,
+	  	walayoutMode: 'straightDown'
 	});
 	return false;
 });
 
-$(window).load(function(){
-	$(function() {
-		$(".isotope-item").css("right", "30");
-	});
-});
-
+// NAV FILTERS
 $(function() {
-
 	$("a.clickMix").click(function() {
 		$('.column3').isotope({ filter: '.tagMix' 
 		});
@@ -52,57 +49,30 @@ $(function() {
 		return false;
 	});
 });
-// var $container = $("#blog_posts");
 
-// var size = function () {
-//     console.log('wee!');
-//     $container.isotope({
-//         masonry: {
-//             columnWidth: $container.width() / 3
-//         }
-//     });
-// }
-
-// $container.imagesLoaded(function () {
-//     $container.isotope({
-//         itemSelector: ".blog_post",
-//         animationEngine: "jquery",
-//         //.blog_postsortBy: "random",
-//         resizable: true,
-//         masonry: {
-//             columnWidth: $container.width() / 3
-//         }
-//     });
-
-//     size();
-// });
-
-// $(window).smartresize(size);
-// $(size); // this is an issue, because the images haven't yet loaded!
-
-
+// ADD CLASSES TO SPECIFIC TYPES OF BLOG POSTS
 $(function() {
-	//if ($(".header h1 a:contains('music')").length);
-			$(".blog_post:contains('mix')").addClass('tagMix');
+	$(".blog_post:contains('mix')").addClass('tagMix');
 });
 
 $(function() {
-	//if ($(".header h1 a:contains('music')").length);
-			$(".blog_post:contains('tweet')").addClass('tagTweet');
+	$(".blog_post:contains('tweet')").addClass('tagTweet');
 });
 
 $(function() {
-	//if ($(".header h1 a:contains('jamaica')").length);
-			$(".blog_post:contains('photo')").addClass('tagPhoto');
+	$(".blog_post:contains('photo')").addClass('tagPhoto');
 });
 
 $(function() {
-	//if ($(".header h1 a:contains('jamaica')").length);
-			$(".blog_post:contains('video')").addClass('tagVideo');
+	$(".blog_post:contains('video')").addClass('tagVideo');
 });
 
 
+$(function() {
+	$(".blog_post:contains('video')").addClass('tagVideo');
+});
 
+//E X T R A  S H A I Z
 
 
 // $(function() {
