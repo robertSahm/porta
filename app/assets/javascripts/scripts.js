@@ -1,6 +1,94 @@
+// $(function() {
+// 	//if ($(".header h1 a:contains('jamaica')").length);
+// 			$(".blog_post:contains('no comments')").addClass('displayNone');
+// });
+
+var container = $(".column3");
+
+$(window).load(function(){
+	$(container).isotope({
+	  	// options
+	  	itemSelector : '.blog_post',
+	  	// containerStyle: {
+	  	// 	position: 'relative',
+	  	// 	//overflow: 'auto'
+	  	// },
+	  	animationOptions: {
+	      duration: 750,
+	      easing: 'easeOut',
+	      queue: false
+	    },
+	    masonry: { 
+	    	gutterWidth: 20,
+	    	columnWidth: container.width() / 5 
+	    },
+			resizable: false
+	  	//layoutMode: 'masonry'
+	});
+	return false;
+});
+
+$(window).load(function(){
+	$(function() {
+		$(".isotope-item").css("right", "30");
+	});
+});
+
+$(function() {
+
+	$("a.clickMix").click(function() {
+		$('.column3').isotope({ filter: '.tagMix' 
+		});
+		return false;
+	});
+	$("a.clickPhotoVideo").click(function() {
+		$('.column3').isotope({ filter: '.tagPhoto' 
+		});
+		return false;
+	});
+	$('a.clickHome').click(function(){
+  	$('.column3').isotope({ filter: '*' 
+		});
+		return false;
+	});
+});
+// var $container = $("#blog_posts");
+
+// var size = function () {
+//     console.log('wee!');
+//     $container.isotope({
+//         masonry: {
+//             columnWidth: $container.width() / 3
+//         }
+//     });
+// }
+
+// $container.imagesLoaded(function () {
+//     $container.isotope({
+//         itemSelector: ".blog_post",
+//         animationEngine: "jquery",
+//         //.blog_postsortBy: "random",
+//         resizable: true,
+//         masonry: {
+//             columnWidth: $container.width() / 3
+//         }
+//     });
+
+//     size();
+// });
+
+// $(window).smartresize(size);
+// $(size); // this is an issue, because the images haven't yet loaded!
+
+
 $(function() {
 	//if ($(".header h1 a:contains('music')").length);
 			$(".blog_post:contains('mix')").addClass('tagMix');
+});
+
+$(function() {
+	//if ($(".header h1 a:contains('music')").length);
+			$(".blog_post:contains('tweet')").addClass('tagTweet');
 });
 
 $(function() {
