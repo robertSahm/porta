@@ -157,22 +157,6 @@ $blogH1padding: 0px;
   &:hover {
     background-color: #111;
     //width: 700px;
-
-    h1 a {
-      color: $red;
-    }
-  }
-
-  p {
-    color: #C7FAFF !important;
-    padding: 0px 0px 25px 0px;
-  }
-
-  p img {
-    padding: 0;
-    margin-bottom: -13px;
-    background-color: 0;
-    width: 100%;
   }
 
   header {
@@ -180,17 +164,48 @@ $blogH1padding: 0px;
     padding-bottom: 5px;
     margin-bottom: 15px;
 
+    h1 a {
+      color: $blogH1Color;
+      text-decoration: none;
+      font-family: $blogH1Font;
+      font-weight: $blogH1Weight;
+      font-size: $blogH1size;
+      letter-spacing: $blogH1LetterSpacing;
+      font-style: $blogH1fontstyle;
+      padding: $blogH1padding;
+      line-height: $blogH1lineheight;
+      display: block;
+    }
+
     .details { // posted on..
       color: #555;
       padding-top: 10px;
       line-height: 1.2em;
 
       time {
-        display: none;
+        //display: none;
       }
 
       .filed_in {
 
+      }
+    }
+  } // end header
+
+  .postContent {
+
+    p {
+      color: white;
+
+      a {
+
+      }
+
+      img {
+        padding: 0;
+        margin-bottom: -13px;
+        background-color: 0;
+        width: 100%;
       }
     }
   }
@@ -200,12 +215,11 @@ $blogH1padding: 0px;
     padding-bottom: 0;
 
     p { 
-      display: none;
-      width: 90px;
+      color: white;
+      width: 200px;
       margin-bottom: 0;
 
       a {
-        //display: none;
         background-color: #292821;
         color: #166788;
         padding: 7px 10px 6px 10px;
@@ -218,27 +232,16 @@ $blogH1padding: 0px;
     }
 
     .comment_count {
-      //display: none;
-      //text-align: right;
       margin-top: 0;
       padding-top: 0;
       padding-bottom: 15px;
       color: #777;
       font-size: 90%;
     }
-  }
-  
-  h1 a {
-    color: $blogH1Color;
-    text-decoration: none;
-    font-family: $blogH1Font;
-    font-weight: $blogH1Weight;
-    font-size: $blogH1size;
-    letter-spacing: $blogH1LetterSpacing;
-    font-style: $blogH1fontstyle;
-    padding: $blogH1padding;
-    line-height: $blogH1lineheight;
-    display: block;
+
+    aside.tagged {
+      color: white;
+    }
   }
 }
 
@@ -291,7 +294,6 @@ $blogH1padding: 0px;
 }
 
 #next_prev_article {
-  display: none;
   margin-top: 100px;
 }
 
@@ -348,7 +350,7 @@ $blogH1padding: 0px;
     background-color: $bgColor1;
 
   .details {
-    display: none;
+    
   }
 }
 
@@ -357,7 +359,7 @@ $blogH1padding: 0px;
   border-top: 5px solid $blue;
 
   .details {
-    display: none;
+    //display: none;
   }
 
   iframe {
@@ -642,10 +644,6 @@ img.bgHome3 {
 }
 
 #body_content_right{
-  display: none;
-}
-
-.displayNone {
   display: none;
 }
 
