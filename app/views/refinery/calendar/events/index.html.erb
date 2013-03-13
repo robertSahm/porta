@@ -1,6 +1,12 @@
-<% content_for :body_content_left do %>
+<% content_for :body do %>
   <section id="events">
     <%= render @events %>
+  </section>
+  <section id="calendar">
+    <% date = Date.today %>
+    <%= calendar(:year => date.year,
+             :month => date.month,
+             :table_id  => 'tcalendar') %>
   </section>
 <% end %>
 
