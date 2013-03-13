@@ -96,9 +96,9 @@
   url('fonts/25FD00_0_0.ttf') 
   format('truetype');}
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400);
+// @import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400);
 
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display:900,900italic);
+// @import url(http://fonts.googleapis.com/css?family=Playfair+Display:900,900italic);
 
 // My Colors
 $red: #BE4D4B;
@@ -134,9 +134,29 @@ $navLetterSpacing: .28em;
   font-size: 1.3em;
 }
 
+h2 {
+  color: $blue;
+}
+
+p {
+  color: #999;
+}
+
+// Fixes font display issues on webkit browsers
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  h1 a {
+    font-weight: 700 !important;
+    color: $blue !important;
+  }
+
+  h1.eventsHeaderText a {
+    color: $red !important;
+  }
+} 
+
 // blog type
 $blogH1Color: #863533;
-// $blogH1Font: "Playfair Display";
 $blogH1Font: "Code-Pro-Light-Demo";
 $blogH1Weight: normal;
 $blogH1size: .51em;
@@ -152,6 +172,7 @@ $blogH1padding: 0px;
   background-color: #1B1519;
   margin: 20px 20px 0px 5px;
   padding: 10px 20px 0px 20px;
+  float: left;
   //width: 95%;
 
   &:hover {
@@ -211,8 +232,17 @@ $blogH1padding: 0px;
   }
 
   footer {
+    display: block;
+    float: left;
     margin-bottom: 0;
     padding-bottom: 0;
+
+    .noComments {
+      display: none;
+    }
+    .readMore {
+        display: none;
+      }
 
     p { 
       color: white;
@@ -240,7 +270,12 @@ $blogH1padding: 0px;
     }
 
     aside.tagged {
+      float: left;
       color: white;
+      //width: 200px;
+      border: 1px solid #555;
+      padding:7px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -294,6 +329,7 @@ $blogH1padding: 0px;
 }
 
 #next_prev_article {
+  display: none;
   margin-top: 100px;
 }
 
@@ -497,7 +533,7 @@ body {
 // BACKGROUNDS
 
 img.bgHome {
-  position: fixed;
+  //position: fixed;
   margin-left: -5%;
   margin-top: 80%;
   width: 44%;
@@ -519,7 +555,7 @@ img.bgHome2 {
 }
 
 img.bgHome3 {
-  position: fixed;
+  position: absolute;
   margin-left: 40px;
   margin-top: 24%;
   width: 35%;
@@ -538,10 +574,9 @@ img.bgHome3 {
 // YM.    , YA.   ,A9 MM        MM  
 //  YMbmd'   `Ybmd9'.JMML.    .JMML.
 
-
 .col1 {
   z-index: 100;
-  position: fixed;
+  //position: fixed;
 
   .logoImg {
     opacity: 1;
@@ -551,14 +586,40 @@ img.bgHome3 {
     height: auto;
     margin-left: auto;
   }
+}
 
-  .gcal {
-    position: relative;
-    float: left;
+//                                      mm           
+//                                      MM           
+//  .gP"Ya `7M'   `MF'.gP"Ya `7MMpMMMbmmMMmm ,pP"Ybd 
+// ,M'   Yb  VA   ,V ,M'   Yb  MM    MM MM   8I   `" 
+// 8M""""""   VA ,V  8M""""""  MM    MM MM   `YMMMa. 
+// YM.    ,    VVV   YM.    ,  MM    MM MM   L.   I8 
+//  `Mbmmd'     W     `Mbmmd'.JMML  JMML`MbmoM9mmmP'
+
+.colEvents {
+  margin-top: 90%;
+  width: 170%;
+  border: 1px solid $blue;
+
+  .eventsHeader {
+    text-align: center;
+    
+    .eventsHeaderText a { //h1
+      color: $red;
+      font-weight: normal;
+      font-family: $navText;
+      font-size: .7em;
+
+    }
   }
 
-  
+  .eventsBox {
+    border: 1px solid $red;
+    height: 400px;
+  }
 }
+
+    
 
 //                    ,,               
 //                  `7MM               
@@ -571,8 +632,8 @@ img.bgHome3 {
 
 .col2 {
   padding: 0;
-  position: fixed;
-  margin-left: 26%;
+  //position: fixed;
+  //margin-left: 26%;
 
   .navbar {
     padding: 0;
@@ -678,6 +739,10 @@ img.bgHome3 {
     }
   }
 
+  .colEvents {
+    display: none;
+  }
+
   .col2 {
     margin-left: 50.8%;
     position: absolute;
@@ -724,7 +789,7 @@ img.bgHome3 {
 
   img.bgHome3 {
     //display: none;
-    position: absolute;
+    //position: absolute;
     //display: block;
     margin-top: 40%;
     margin-left: 90px;

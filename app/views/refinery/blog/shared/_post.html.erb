@@ -24,15 +24,17 @@
       <% end %>
     </section>
     <footer>
-      <p>
-        <%= link_to t('read more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %>
+      <p class="readMore">
+        <%= link_to t('Read More', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %>
       </p>
       <aside class='comment_count'>
         <% if Refinery::Blog::Post.comments_allowed? %>
           <% if post.comments.any? %>
              (<%= pluralize(post.comments.approved.count, t('singular', :scope => 'refinery.blog.shared.comments')) %>)
           <% else %>
-                (<%= t('none', :scope => 'refinery.blog.shared.comments') %>)
+            <div class="noComments">
+              (<%= t('none', :scope => 'refinery.blog.shared.comments') %>)
+            </div>
           <% end %>
         <% end %>
       </aside>

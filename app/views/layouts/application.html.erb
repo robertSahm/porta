@@ -12,9 +12,18 @@
         <!-- COLUMN 1 -->
         <div class="col1 three mobile-two columns">
           <%= image_tag("logoMain.png", :alt => "logo goes here", :class=> "logoImg") %>
-          <div class="gcal">
+          <div class="colEvents">
+            <div class="eventsHeader">
+              <h1 class="eventsHeaderText">
+                <a href="">Upcoming Events</a>
+              </h1>
+            </div>
+            <div class="eventsBox">
+              
+            </div>
           </div>
-        </div>
+        </div> <!-- END COLUMN 1 LOGO STUFF -->
+
         <!-- COLUMN TWO -->
         <div class="col2 two columns mobile-two">
           <ul class="navbar">
@@ -58,7 +67,8 @@
           </section>  
         </div>
         <footer>
-          <%= render '/refinery/footer' %>
+
+          <%#= render '/refinery/footer' %>
         </footer>
         <%= render '/refinery/javascripts' %>
       </div>

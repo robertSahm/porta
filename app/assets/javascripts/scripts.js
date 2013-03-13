@@ -5,50 +5,50 @@
 
 
 // ISOTOPE JOUNX
-var container = $(".blogWrapper");
+// var container = $(".blogWrapper");
 
-$(window).load(function(){
+// $(window).load(function(){
 
-	$(container).isotope({
-	  	// options
-	  	itemSelector : '.blog_post',
-	  	  containerStyle: {
-	  	  position: 'relative',
-	  	  overflow: 'display'
-	  	},
-	  animationOptions: {
-	     duration: 750,
-	     queue: false
-	   },
-	   animationEngine : 'css',
-	    masonry: { 
-	    	//gutterWidth: 20,
-	    	//columnWidth: container.width() / 5 
-	    },
-			resizable: true,
-	  	walayoutMode: 'straightDown'
-	});
-	return false;
-});
+// 	$(container).isotope({
+// 	  	// options
+// 	  	itemSelector : '.blog_post',
+// 	  	  containerStyle: {
+// 	  	  position: 'relative',
+// 	  	  overflow: 'display'
+// 	  	},
+// 	  animationOptions: {
+// 	     duration: 750,
+// 	     queue: false
+// 	   },
+// 	   animationEngine : 'css',
+// 	    masonry: { 
+// 	    	//gutterWidth: 20,
+// 	    	//columnWidth: container.width() / 5 
+// 	    },
+// 			resizable: true,
+// 	  	walayoutMode: 'straightDown'
+// 	});
+// 	return false;
+// });
 
-// NAV FILTERS
-$(function() {
-	$("a.clickMix").click(function() {
-		$('.column3').isotope({ filter: '.tagMix' 
-		});
-		return false;
-	});
-	$("a.clickPhotoVideo").click(function() {
-		$('.column3').isotope({ filter: '.tagPhoto' 
-		});
-		return false;
-	});
-	$('a.clickHome').click(function(){
-  	$('.column3').isotope({ filter: '*' 
-		});
-		return false;
-	});
-});
+// // NAV FILTERS
+// $(function() {
+// 	$("a.clickMix").click(function() {
+// 		$('.column3').isotope({ filter: '.tagMix' 
+// 		});
+// 		return false;
+// 	});
+// 	$("a.clickPhotoVideo").click(function() {
+// 		$('.column3').isotope({ filter: '.tagPhoto' 
+// 		});
+// 		return false;
+// 	});
+// 	$('a.clickHome').click(function(){
+//   	$('.column3').isotope({ filter: '*' 
+// 		});
+// 		return false;
+// 	});
+// });
 
 // ADD CLASSES TO SPECIFIC TYPES OF BLOG POSTS
 $(function() {
