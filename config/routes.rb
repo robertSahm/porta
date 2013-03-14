@@ -20,7 +20,8 @@ Porta::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   # 
   root :to => 'refinery/blog/posts#index'
-  # match :to => 'refinery/calendar/events#index
+  # root :to => 'refinery/calendar/events#index'
+  # match :to => 'refinery/calendar/events#index'
   # match '/', to: 'refinery/calendar/events#index'
   mount Refinery::Core::Engine, :at => '/'
 
