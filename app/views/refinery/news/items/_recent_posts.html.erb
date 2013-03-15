@@ -1,0 +1,15 @@
+<nav id="recent_news_items">
+  <ul>
+  <% @items.each do |item| %>
+    <li> 
+      <article class="news_item_truncated">
+        <h2>
+        	<%= link_to item.title, refinery.news_item_path(item) %>
+        </h2>
+        <%= truncate  item.body, :length => 200,
+                     :preserve_html_tags => true %>
+      </article>
+    </li>
+    <% end %>
+  </ul>
+</nav>

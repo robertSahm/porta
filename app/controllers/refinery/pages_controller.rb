@@ -16,7 +16,7 @@ module Refinery
     # you can access the pages with the following URLs:
     #
     #  GET /pages/calendar
-    #   GET /pages
+    #  GET /pages
     #
     #   GET /pages/mission
     #   GET /about/mission

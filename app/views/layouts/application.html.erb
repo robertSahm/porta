@@ -19,7 +19,10 @@
               </h1>
             </div>
             <div class="eventsBox">
-              <%= render 'refinery/calendar/events' %>
+              <%#= render '/refinery/content_page' %>
+              <% @items = Refinery::News::Item.latest(10) %>
+              <%= render :partial => '/refinery/news/items/recent_posts' %>
+              
             </div>
           </div>
         </div> <!-- END COLUMN 1 LOGO STUFF -->
@@ -61,7 +64,7 @@
           <section id="page">
             <div class="seven columns column3 blogWrapper">
               <div classs="mobile-four columns">
-                <%= yield %>
+                <%= render '/refinery/content_page' %>
               </div>
             </div>
           </section>  
@@ -75,7 +78,7 @@
     </body>
   </html>
 
-<script>
+<script type="text/javascript">
   $("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
   $("#fittext2").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
   $("#fittext3").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
@@ -83,5 +86,4 @@
   $("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
   $("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 </script>
-
 

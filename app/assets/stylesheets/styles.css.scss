@@ -46,6 +46,17 @@
 // $shinyEdge: rgba(#fff, .5);
 // $darkEdge: rgba(#000, .2);
 
+
+
+
+
+
+
+
+
+
+
+
 //Font imports
 
 @font-face {
@@ -598,24 +609,41 @@ img.bgHome3 {
 
 .colEvents {
   margin-top: 90%;
+  margin-left: 10%;
   width: 170%;
-  border: 1px solid $blue;
 
   .eventsHeader {
-    text-align: center;
+    text-align: left;
     
     .eventsHeaderText a { //h1
       color: $red;
       font-weight: normal;
       font-family: $navText;
       font-size: .7em;
-
     }
   }
 
   .eventsBox {
-    border: 1px solid $red;
-    height: 400px;
+
+    #recent_news_items {
+
+      ul {
+
+        li {
+
+          img {
+            padding: 20px 0;
+            //width: 75%;
+            display: block;
+            //margin: 0 auto;
+
+            &:hover {
+
+            }
+          }
+        }
+      }
+    }
   }
 }
 
