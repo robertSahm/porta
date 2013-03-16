@@ -22,7 +22,6 @@
               <%#= render '/refinery/content_page' %>
               <% @items = Refinery::News::Item.latest(10) %>
               <%= render :partial => '/refinery/news/items/recent_posts' %>
-              
             </div>
           </div>
         </div> <!-- END COLUMN 1 LOGO STUFF -->
@@ -32,25 +31,31 @@
           <ul class="navbar">
             <li class="active">
               <h1 id="fittext1" class="navText">
-                <a href="" class="clickHome"><span class="headerCaps">H</span>OME</a>
+                <a href="/" class="clickHome"><span class="headerCaps">H</span>OME</a>
               </h1>
             </li>
             <li>
               <h1 id="fittext2" class="navText">
                 <!-- <a href="/blog/tagged/3/mix" class="clickMix"> -->
-                <a href="" class="clickMix"><span class="headerCaps">M</span>ixes</a></h1>
+                <a href="/blog/categories/mix" class="clickMix"><span class="headerCaps">M</span>ixes</a></h1>
             </li>
             <li>
               <h1 id="fittext3" class="navText">
-                <a href="#" class="clickPhotoVideo"><span class="headerCaps">P</span>hoto<br /><span class="headerCaps">V</span>ideo</a></h1>
+                <a href="/blog/categories/photo" class="clickPhoto"><span class="headerCaps">P</span>hoto<br /><span class="headerCaps">V</span>ideo</a></h1>
             </li>
             <li>
               <h1 id="fittext4" class="navText">
-                <a href="" class=""><span class="headerCaps">P</span>rivate<br /><span class="headerCaps">E</span>vents</a></h1>
+                <a href="/private-events" class=""><span class="headerCaps">P</span>rivate<br /><span class="headerCaps">E</span>vents</a></h1>
             </li>
             <li>
               <h1 id="fittext5" class="navText">
                 <a href="#"><span class="headerCaps">R</span>ADIO</a>
+                <!-- %= link_to "RADIO", radio_path % -->
+              </h1>
+            </li>
+            <li class="dates">
+              <h1 id="fittext6" class="navText">
+                <a href="" class="datesClick"><span class="headerCaps">D</span>ATES</a>
                 <!-- %= link_to "RADIO", radio_path % -->
               </h1>
             </li>
@@ -81,8 +86,8 @@
 <script type="text/javascript">
   $("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
   $("#fittext2").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-  $("#fittext3").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-  $("#fittext4").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+  $("#fittext3").fitText(1.05, { minFontSize: '10px', maxFontSize: '35px' });
+  $("#fittext4").fitText(1.05, { minFontSize: '10px', maxFontSize: '35px' });
   $("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
   $("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 </script>

@@ -52,24 +52,33 @@
 
 // ADD CLASSES TO SPECIFIC TYPES OF BLOG POSTS
 $(function() {
-	$(".blog_post:contains('mix')").addClass('tagMix');
+	 if ($(".filed_in:contains('mix')").length > 0) {
+	 	$('.blog_post').addClass('tagMix');
+	 };
+});
+
+// $(function() {
+// 	 if ($(".filed_in:contains('photo')").length > 0) {
+// 	 	$('.blog_post').addClass('tagPhoto');
+// 	 };
+// });
+
+// $(function() {
+// 	 if ($(".filed_in:contains('video')").length > 0) {
+// 	 	$('.blog_post').addClass('tagVideo');
+// 	 };
+// });
+
+$(function() {
+	$(".filed_in:contains('mix')").addClass('tagMix');
 });
 
 $(function() {
-	$(".blog_post:contains('tweet')").addClass('tagTweet');
-});
-
-$(function() {
-	$(".blog_post:contains('photo')").addClass('tagPhoto');
-});
-
-$(function() {
-	$(".blog_post:contains('video')").addClass('tagVideo');
-});
-
-
-$(function() {
-	$(".blog_post:contains('video')").addClass('tagVideo');
+	$('a.datesClick').click( function() {
+		$('.colEvents').fadeToggle(300), 
+		$('#blog_posts').fadeToggle(300)
+		return false;
+	});
 });
 
 //E X T R A  S H A I Z

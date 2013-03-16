@@ -18,8 +18,8 @@ module Refinery
     #  GET /pages/calendar
     #  GET /pages
     #
-    #   GET /pages/mission
-    #   GET /about/mission
+    #  GET /pages/mission
+    #  GET /about/mission
     #
     def show
       if current_user_can_view_page?

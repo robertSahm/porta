@@ -77,7 +77,6 @@ module Refinery
       end
 
       def canonical?
-        
       end
     end
   end

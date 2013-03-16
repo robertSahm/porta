@@ -47,7 +47,6 @@ gem 'refinerycms', '~> 2.0.0'
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
 gem 'refinerycms-blog', '~> 2.0.0'
-gem 'refinerycms-sl-calendar', '~> 2.0.6.3'
 gem "refinerycms-news", "~> 2.0.1"
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'

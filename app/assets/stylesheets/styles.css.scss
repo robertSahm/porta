@@ -145,12 +145,27 @@ $navLetterSpacing: .28em;
   font-size: 1.3em;
 }
 
+h1 {
+  font-weight: normal;
+  font-family: 'Code-Pro-Light-Demo', sans-serif;
+}
+
 h2 {
   color: $blue;
+  font-family: 'Code-Pro-Light-Demo', sans-serif;
+  font-weight: normal;
 }
 
 p {
-  color: #999;
+  color: #006080;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: .02em;
+  line-height: 1.6em;
+}
+
+ul {
+  font-family: 'Raleway', sans-serif;
+  padding-left: 20px;
 }
 
 // Fixes font display issues on webkit browsers
@@ -167,12 +182,12 @@ p {
 } 
 
 // blog type
-$blogH1Color: #863533;
+$blogH1Color: $red;
 $blogH1Font: "Code-Pro-Light-Demo";
 $blogH1Weight: normal;
-$blogH1size: .51em;
+$blogH1size: .56em;
 $blogH1lineheight: 1em;
-$blogH1LetterSpacing: .06em;
+$blogH1LetterSpacing: .07em;
 $blogH1HoverColor: $red;
 $blogH1fontstyle: normal;
 $blogH1padding: 0px;
@@ -210,7 +225,8 @@ $blogH1padding: 0px;
     }
 
     .details { // posted on..
-      color: #555;
+      font-family: 'Raleway', sans-serif;
+      color: #888;
       padding-top: 10px;
       line-height: 1.2em;
 
@@ -219,7 +235,7 @@ $blogH1padding: 0px;
       }
 
       .filed_in {
-
+        display: none;
       }
     }
   } // end header
@@ -227,12 +243,7 @@ $blogH1padding: 0px;
   .postContent {
 
     p {
-      color: white;
-
-      a {
-
-      }
-
+      //color: white;
       img {
         padding: 0;
         margin-bottom: -13px;
@@ -247,6 +258,7 @@ $blogH1padding: 0px;
     float: left;
     margin-bottom: 0;
     padding-bottom: 0;
+    width: 100%;
 
     .noComments {
       display: none;
@@ -254,23 +266,6 @@ $blogH1padding: 0px;
     .readMore {
         display: none;
       }
-
-    p { 
-      color: white;
-      width: 200px;
-      margin-bottom: 0;
-
-      a {
-        background-color: #292821;
-        color: #166788;
-        padding: 7px 10px 6px 10px;
-        font-size: 90%;
-
-        &:hover {
-          color: $blue;
-        }
-      }
-    }
 
     .comment_count {
       margin-top: 0;
@@ -280,13 +275,33 @@ $blogH1padding: 0px;
       font-size: 90%;
     }
 
+    // Tags
     aside.tagged {
       float: left;
-      color: white;
-      //width: 200px;
-      border: 1px solid #555;
-      padding:7px;
-      margin-bottom: 20px;
+      color: #666;
+      padding: 5px;
+      margin-bottom: 5px;
+      width: 100%;
+
+      p.tagText { 
+        color: #888;
+        font-size: 1.1em;
+        width: 100%;
+        margin-bottom: 0;
+        font-style: normal;
+        //font-weight: 100;
+        letter-spacing: .08em;
+  
+        a {
+          color: $blue;
+          font-style: normal;
+          //font-size: 2em;
+  
+          &:hover {
+            color: $red;
+          }
+        }
+      }
     }
   }
 }
@@ -387,7 +402,7 @@ $blogH1padding: 0px;
   border-top: 5px solid $red;
 
   iframe {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     //height: 100px !important;
   }
 }
@@ -403,7 +418,7 @@ $blogH1padding: 0px;
 
 .tagVideo {
   background-color: $bgColor1;
-  border-top: 5px solid $blue;
+  border-top: 5px solid green;
 
   .details {
     //display: none;
@@ -416,11 +431,6 @@ $blogH1padding: 0px;
     //min-height: 300px;
   }
 } 
-
-.tagTweet {
-  border-top: 5px solid $red;
-
-}
 
 //Twitter Font Settings
 $twitterDateFont: 'Raleway', sans-serif;
@@ -658,6 +668,10 @@ img.bgHome3 {
 // YM.    , YA.   ,A9 MM       ,-='    
 //  YMbmd'   `Ybmd9'.JMML.    Ammmmmmm
 
+.dates {
+  display: none;
+}
+
 .col2 {
   padding: 0;
   //position: fixed;
@@ -679,10 +693,12 @@ img.bgHome3 {
         letter-spacing: $navLetterSpacing;
         //color: $navTextColor;
         display: block;
+        text-align: right;
+        width: 100%;
         font-family: $navText;
         font-weight: $navTextWeight;
         line-height: $navLineHeight;
-        text-align: left;
+        //text-align: left;
         padding-left: 10px;
         color: $blue;
         // -webkit-transition: color .3s linear;  
@@ -745,6 +761,56 @@ img.bgHome3 {
   border: 2px solid $red;
 }
 
+// `7MM"""Mq`7MM"""Mq. `7MMF`7MMF'   `7MFMMP""MM""YMM 
+//   MM   `MM.MM   `MM.  MM   `MA     ,V P'   MM   `7 
+//   MM   ,M9 MM   ,M9   MM    VM:   ,V       MM      
+//   MMmmdM9  MMmmdM9    MM     MM.  M'       MM      
+//   MM       MM  YM.    MM     `MM A'        MM      
+//   MM       MM   `Mb.  MM      :MM;         MM      
+// .JMML.   .JMML. .JMM.JMML.     VF        .JMML.   
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+.privateWrapper {
+  max-width: 500px;
+
+  .redText {
+    color: $red;
+  }
+
+  .mackLink {
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 4em;
+    color: $red;
+    margin: 20px 0;
+  }
+
+  h2 {
+    color: $red;
+    font-size: 1.7em;
+    padding: 10px 0px 8px 0;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 1.15em;
+  }
+
+  ul {
+    list-style-type: circle;
+    color: $red;
+    margin-bottom: 15px;
+
+    li p {
+      color: $red;
+    }
+  }
+}
+
+
 //                            ,,        ,,   ,,          
 //                           *MM        db `7MM          
 //                            MM             MM          
@@ -756,19 +822,32 @@ img.bgHome3 {
 
 @media only screen and (max-width: 768px) {
 
+
+
+  .dates {
+    display: block;
+  }
+
+  .privateWrapper {
+    max-width: 100%;
+    margin: 10% 0 0 0;
+  }
+
   .col1 {
     position: absolute;
 
     img.logoImg {
       position: absolute !important;
-      top: -50px;
-      left: -22px;
-      width: 800px !important;
+      // top: -50px;
+      // left: -22px;
+      width:  85% !important;
     }
   }
 
   .colEvents {
-    display: none;
+    width: 100%;
+    border: 1px solid blue;
+    margin-top: 150%;
   }
 
   .col2 {
@@ -829,8 +908,7 @@ img.bgHome3 {
   }
 
   .blog_post {
-    margin: 20px 10px 0 0px;
-    width: 96%;
+    width: 100%;
 
     .tagVideo {
 
@@ -853,3 +931,10 @@ img.bgHome3 {
 //   }
 
 // }
+
+
+
+
+
+
+
