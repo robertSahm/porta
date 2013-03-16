@@ -51,11 +51,12 @@
 // });
 
 // ADD CLASSES TO SPECIFIC TYPES OF BLOG POSTS
-$(function() {
-	 if ($(".filed_in:contains('mix')").length > 0) {
-	 	$('.blog_post').addClass('tagMix');
-	 };
-});
+// $(function() {
+// 	 if ($(".filed_in:contains('mix')").length > 0) {
+// 	 	$('.blog_post').addClass('tagMix');
+// 	 	return false;
+// 	 };
+// });
 
 // $(function() {
 // 	 if ($(".filed_in:contains('photo')").length > 0) {
@@ -70,7 +71,21 @@ $(function() {
 // });
 
 $(function() {
-	$(".filed_in:contains('mix')").addClass('tagMix');
+soundcloud.addEventListener('onPlayerReady', function(player, data) {
+  console.log('player ready');
+});
+});
+
+$(function() {
+	if ($("aside.filed_in:contains('photo')").parent().parent().parent().addClass('tagPhoto'));
+	if ($("aside.filed_in:contains('video')").parent().parent().parent().addClass('tagVideo'));
+	if   ($("aside.filed_in:contains('mix')").parent().parent().parent().addClass('tagMix'));
+});
+
+$(function() {
+	$('a.clickHome').click( function() {
+		//$(this).css("color", "red")
+	});
 });
 
 $(function() {
@@ -80,6 +95,18 @@ $(function() {
 		return false;
 	});
 });
+
+$(function() {
+	$("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+	$("#fittext2").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+	$("#fittext3").fitText(.9, { minFontSize: '10px', maxFontSize: '35px' });
+	$("#fittext4").fitText(.9, { minFontSize: '10px', maxFontSize: '35px' });
+	$("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+	$("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
+});
+
+
+
 
 //E X T R A  S H A I Z
 

@@ -179,6 +179,13 @@ ul {
   h1.eventsHeaderText a {
     color: $red !important;
   }
+
+  h1 {
+    font-weight: 700 !important;
+  }
+  h2 {
+    font-weight: 700 !important;
+  }
 } 
 
 // blog type
@@ -209,7 +216,7 @@ $blogH1padding: 0px;
   header {
     margin-bottom: 0px;
     padding-bottom: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 
     h1 a {
       color: $blogH1Color;
@@ -231,12 +238,26 @@ $blogH1padding: 0px;
       line-height: 1.2em;
 
       time {
+        margin-bottom: 0px;
         //display: none;
       }
 
       .filed_in {
         display: none;
       }
+    }
+
+    .comment_count {
+      margin-top: -17px;
+      padding-top: 0;
+      padding-bottom: 15px;
+      color: #777;
+      font-size: 90%;
+      float: right;
+    }
+
+    .noComments {
+      display: none;
     }
   } // end header
 
@@ -260,19 +281,8 @@ $blogH1padding: 0px;
     padding-bottom: 0;
     width: 100%;
 
-    .noComments {
-      display: none;
-    }
     .readMore {
-        display: none;
-      }
-
-    .comment_count {
-      margin-top: 0;
-      padding-top: 0;
-      padding-bottom: 15px;
-      color: #777;
-      font-size: 90%;
+      display: none;
     }
 
     // Tags
@@ -401,6 +411,10 @@ $blogH1padding: 0px;
 .tagMix {
   border-top: 5px solid $red;
 
+  h1 a {
+    color: $blue !important;
+  }
+
   iframe {
     margin-bottom: 10px;
     //height: 100px !important;
@@ -408,8 +422,12 @@ $blogH1padding: 0px;
 }
 
 .tagPhoto {
-    border-top: 5px solid $blue;
+    border-top: 5px solid lighten( $blue, 90%);
     background-color: $bgColor1;
+
+    h1 {
+
+    }
 
   .details {
     
@@ -418,7 +436,11 @@ $blogH1padding: 0px;
 
 .tagVideo {
   background-color: $bgColor1;
-  border-top: 5px solid green;
+  border-top: 5px solid darken( $blue, 30%);
+
+  h1 a {
+    color: lighten( $red, 15%) !important;
+  }
 
   .details {
     //display: none;
@@ -426,6 +448,7 @@ $blogH1padding: 0px;
 
   iframe {
     width: 100%;
+    height: 100%;
     min-height: 330px;
     margin-bottom: 20px;
     //min-height: 300px;
@@ -477,31 +500,31 @@ blockquote.twitter-tweet {
 //                                    .JMML.              
 
 
-.isotope,
-.isotope .isotope-item {
-  /* change duration value to whatever you like */
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-}
+// .isotope,
+// .isotope .isotope-item {
+//   /* change duration value to whatever you like */
+//   -webkit-transition-duration: 0.8s;
+//      -moz-transition-duration: 0.8s;
+//       -ms-transition-duration: 0.8s;
+//        -o-transition-duration: 0.8s;
+//           transition-duration: 0.8s;
+// }
 
-.isotope {
-  -webkit-transition-property: height;
-     -moz-transition-property: height;
-      -ms-transition-property: height;
-       -o-transition-property: height;
-          transition-property: height;
-}
+// .isotope {
+//   -webkit-transition-property: height;
+//      -moz-transition-property: height;
+//       -ms-transition-property: height;
+//        -o-transition-property: height;
+//           transition-property: height;
+// }
 
-.isotope .isotope-item {
-  -webkit-transition-property: -webkit-transform, opacity;
-     -moz-transition-property:    -moz-transform, opacity;
-      -ms-transition-property:     -ms-transform, opacity;
-       -o-transition-property:         top, left, opacity;
-          transition-property:         transform, opacity;
-}
+// .isotope .isotope-item {
+//   -webkit-transition-property: -webkit-transform, opacity;
+//      -moz-transition-property:    -moz-transform, opacity;
+//       -ms-transition-property:     -ms-transform, opacity;
+//        -o-transition-property:         top, left, opacity;
+//           transition-property:         transform, opacity;
+// }
 
 ul {
   list-style: none;
@@ -668,14 +691,33 @@ img.bgHome3 {
 // YM.    , YA.   ,A9 MM       ,-='    
 //  YMbmd'   `Ybmd9'.JMML.    Ammmmmmm
 
+@-webkit-keyframes color_change {
+  from { color: $blue; }
+  to { color: $red; }
+}
+@-moz-keyframes color_change {
+  from { color: $blue; }
+  to { color: $red; }
+}
+@-ms-keyframes color_change {
+  from { color: $blue; }
+  to { color: $red; }
+}
+@-o-keyframes color_change {
+  from { color: $blue; }
+  to { color: $red; }
+}
+@keyframes color_change {
+  from { color: $blue; }
+  to { color: $red; }
+}
+
 .dates {
   display: none;
 }
 
 .col2 {
   padding: 0;
-  //position: fixed;
-  //margin-left: 26%;
 
   .navbar {
     padding: 0;
@@ -683,44 +725,47 @@ img.bgHome3 {
     li {
       margin-top: 30px;
       padding-right: 5px;
-      border-left: 0px solid $blue;
-      -webkit-transition: border .3s linear;  
-         -moz-transition: border .3s linear;  
-           -o-transition: border .3s linear;  
-          -ms-transition: border .3s linear;  
-              transition: border .3s linear; 
+      border-right: 0px solid $blue;
+       -webkit-transition: border .4s linear;  
+          -moz-transition: border .4s linear;  
+            -o-transition: border .4s linear;  
+           -ms-transition: border .4s linear;  
+               transition: border .4s linear;
+
+      &:hover {
+        border-right: 16px solid $red;
+      }
+
       a {
         letter-spacing: $navLetterSpacing;
-        //color: $navTextColor;
         display: block;
         text-align: right;
         width: 100%;
         font-family: $navText;
         font-weight: $navTextWeight;
         line-height: $navLineHeight;
-        //text-align: left;
         padding-left: 10px;
-        color: $blue;
-        // -webkit-transition: color .3s linear;  
-        //    -moz-transition: color .3s linear;  
-        //      -o-transition: color .3s linear;  
-        //     -ms-transition: color .3s linear;  
-        //         transition: color .3s linear;   
+        border-right: 0px solid $blue;
+       -webkit-transition: border .3s linear;  
+          -moz-transition: border .3s linear;  
+            -o-transition: border .3s linear;  
+           -ms-transition: border .3s linear;  
+               transition: border .3s linear;
 
-        &:hover, &:active, &:visited {
-          color: $red;
-          border-left: 25px solid $red;
-      //  -webkit-transition: color .3s linear;  
-      //     -moz-transition: color .3s linear;  
-      //       -o-transition: color .3s linear;  
-      //      -ms-transition: color .3s linear;  
-      //          transition: color .3s linear; 
-      // -webkit-transition: border .3s linear;  
-      //    -moz-transition: border .3s linear;  
-      //      -o-transition: border .3s linear;  
-      //     -ms-transition: border .3s linear;  
-      //         transition: border .3s linear; 
-          //font-size: 1.3em;
+        &:hover {
+          -webkit-animation: color_change .2s infinite alternate;
+           -moz-animation: color_change .2s infinite alternate;
+            -ms-animation: color_change .2s infinite alternate;
+             -o-animation: color_change .2s infinite alternate;
+                animation: color_change .2s infinite alternate;
+                //border-right: 20px solid $blue;
+                     border-right: 9px solid $blue;
+          -webkit-transition: border .4s linear;  
+          -moz-transition: border .4s linear;  
+            -o-transition: border .4s linear;  
+           -ms-transition: border .4s linear;  
+               transition: border .4s linear;
+
         }       
       }
     }
