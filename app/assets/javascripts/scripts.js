@@ -78,6 +78,20 @@
 
 
 $(function() {
+	$('.sc-player').addClass('twelve columns row');
+	$('ol.sc-artwork-list').addClass('three columns');
+	$('.sc-controls').addClass('one columns');
+	$('.sc-scrubber').addClass('nine mobile-three columns');
+});
+
+
+
+
+
+
+
+
+$(function() {
 	if ($("aside.filed_in:contains('photo')").parent().parent().parent().addClass('tagPhoto'));
 	if ($("aside.filed_in:contains('video')").parent().parent().parent().addClass('tagVideo'));
 	if   ($("aside.filed_in:contains('mix')").parent().parent().parent().addClass('tagMix'));
@@ -104,8 +118,8 @@ $(function() {
 $(function() {
 	$("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 	$("#fittext2").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext3").fitText(.9, { minFontSize: '10px', maxFontSize: '35px' });
-	$("#fittext4").fitText(.9, { minFontSize: '10px', maxFontSize: '35px' });
+	$("#fittext3").fitText(.71, { minFontSize: '10px', maxFontSize: '35px' });
+	$("#fittext4").fitText(.71, { minFontSize: '10px', maxFontSize: '35px' });
 	$("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 	$("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 });

@@ -234,7 +234,8 @@ $blogPfont: 'Raleway', sans-serif;
     .details { // posted on..
       font-family: 'Raleway', sans-serif;
       color: #888;
-      padding-top: 10px;
+      font-size: .9em;
+      padding-top: 7px;
       line-height: 1.2em;
 
       time {
@@ -410,26 +411,20 @@ $blogPfont: 'Raleway', sans-serif;
 
 .tagMix {
   border-top: 5px solid $red;
-  margin: 0;
-  padding: 0;
+  padding: 10px 0 0 10px;
 
   h1 a {
     color: $blue !important;
   }
-
-  iframe {
-    margin-bottom: 10px;
-    //height: 100px !important;
-  }
 }
 
 .tagPhoto {
-    border-top: 5px solid lighten( $blue, 90%);
-    background-color: $bgColor1;
+  border-top: 5px solid lighten( $blue, 90%);
+  background-color: $bgColor1;
 
-    h1 {
+  h1 {
 
-    }
+  }
 
   .details {
     
@@ -437,8 +432,13 @@ $blogPfont: 'Raleway', sans-serif;
 }
 
 .tagVideo {
-  background-color: $bgColor1;
+  //background-color: $bgColor1;
+  background-color: #555;
   border-top: 5px solid darken( $blue, 30%);
+
+  &:hover {
+    background-color: black;
+  }
 
   h1 a {
     color: lighten( $red, 15%) !important;

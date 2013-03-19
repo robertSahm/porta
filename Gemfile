@@ -18,10 +18,7 @@ group :assets do
 	gem 'zurb-foundation', '~> 3.2.5'
   # gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'soundcloud-custom-player-rails',
-    :require => 'soundcloud-custom-player-rails',
-    :git => 'git://github.com/thatdutchguy/soundcloud-custom-player-rails.git'
-
+  
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
