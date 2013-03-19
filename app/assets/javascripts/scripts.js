@@ -79,9 +79,9 @@
 
 $(function() {
 	$('.sc-player').addClass('twelve columns row');
-	$('ol.sc-artwork-list').addClass('three columns');
-	$('.sc-controls').addClass('one columns');
-	$('.sc-scrubber').addClass('nine mobile-three columns');
+	$('ol.sc-artwork-list').addClass('three mobile-one columns');
+	$('.sc-controls').addClass('one mobile-one columns');
+	$('.sc-scrubber').addClass('eight mobile-three columns');
 });
 
 

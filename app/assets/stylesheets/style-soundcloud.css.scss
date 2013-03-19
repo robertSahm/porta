@@ -23,6 +23,10 @@ $blogPfont: 'Raleway', sans-serif;
   display: none;
 }
 
+.sc-player-engine-container {
+  display: none;
+}
+
 //                            ,,                                  
 //                          `7MM                                  
 //                            MM                                  
@@ -40,10 +44,10 @@ $blogPfont: 'Raleway', sans-serif;
   //padding: 10px;
   top: 10px;
   left: 0;
-  margin-bottom: 52px;
+  margin-bottom: 20px !important;
   margin-right: 0;
   padding-right: 0;
-  width: 100%;
+  width: 80%;
 
 }
 
@@ -57,8 +61,6 @@ $blogPfont: 'Raleway', sans-serif;
   width: 100%;
   padding: 0;
   margin: 0;
-  margin-bottom: 20px;
-  
 
   .active {
 
@@ -189,9 +191,8 @@ a.sc-info-toggle {
 
 .sc-scrubber { // includes volume, wav image and time display
   position: relative;
-  top: -45px;
+  //top: -45px;
   left: 0;
-  float: right;
   margin-right: 0;
   padding-right: 0;
 }
@@ -204,7 +205,7 @@ a.sc-info-toggle {
 .sc-volume-slider {
   position: relative;
   top: 5px;
-  left: 0px;
+  left: -13%;
   float: left;
   height: 20px;
   //margin-bottom: -25px;
@@ -231,9 +232,10 @@ a.sc-info-toggle {
 .sc-time-span { // waveform color
   position: relative;
   top: 0;
-  left: 0px;
-  width: 100%;
+  left: -13%;
+  width: 113%;
   z-index: 0;
+  margin-bottom: 0;
   //height: 100px;
 
   .sc-waveform-container {
@@ -241,7 +243,7 @@ a.sc-info-toggle {
     
     img {
       //position: absolute;
-      min-height: 120px;
+      min-height: 100px;
       width: 100%;
       background-color: $red !important;
       opacity: 1;
@@ -256,13 +258,21 @@ a.sc-info-toggle {
 // ____\____(__) (__) (____(__\_)
 
 
-.sc-buffer {
-  background-color: blue !important;
+.sc-buffer  {
+  position: absolute;
+  height: 10%;
+  background-color: $blue;
+  opacity: .4;
+  bottom: 1px;
+  left: 0;
 }
 
 .sc-played { 
-  display: none;
-  // border: 1px solid white;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 98%;
+  border-right: 3px solid $blue;
   // min-height: 100px;
   // border-right: 2px solid $blue;
   // opacity: 1;
@@ -276,8 +286,12 @@ a.sc-info-toggle {
 // (__)(__\_)(_(____)
 
 .sc-time-indicators {
+  position: relative;
+  top: 0;
+  left: 0;
   color: $blue;
   float: left;
+  margin-left: -35px;
 }
 
 .sc-position {
@@ -313,39 +327,61 @@ float: left;
 @media only screen and (max-width: 768px) {
 
   .sc-artwork-list { // ol
-    float: left;
-    width: 120px !important;
-    border: 1px solid red;
+
   
     .active {
   
       img {
-        max-width: 162px;
-        width: 100%;
+
   
       }
     }
   }
 
   .sc-time-span { // waveform color
-    position: relative;
-    top: 0;
-    left: 0px;
-    width: 100%;
-    z-index: 0;
-    //height: 100px;
+    left: 0 !important;
+    top: -60px !important;
+    margin-bottom: -60px !important;
+    width: 98% !important;
+
   
     .sc-waveform-container {
-      width: 100%;
-      
+
+   
       img {
-        //position: absolute;
-        background-color: $red !important;
-        opacity: .5;
-        //height: 90px;
+
       }
     }
   }
+
+  .sc-volume-slider { 
+    left: 0 !important;
+  }
+
+  .sc-time-indicators {
+    margin-left: 5px;
+  }
 } // end 768 break rules
 
+// .sc-time-span { // waveform color
+//   position: relative;
+//   top: 0;
+//   left: -13%;
+//   width: 113%;
+//   z-index: 0;
+//   margin-bottom: 0;
+//   //height: 100px;
 
+//   .sc-waveform-container {
+//     width: 100%;
+    
+//     img {
+//       //position: absolute;
+//       min-height: 100px;
+//       width: 100%;
+//       background-color: $red !important;
+//       opacity: 1;
+//       //height: 90px;
+//     }
+//   }
+// }

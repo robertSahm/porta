@@ -134,10 +134,10 @@ $fontSmoothing: antialiased;
 // $navText: 'SS_Adec2.0_text', sans-serif;
 $navText: 'Code-Pro-Light-Demo';
 $navTextWeight: normal;
-$navTextColor: $blue;
+$navTextColor: $red;
 $navLetterSpacing: normal;
 $navLineHeight: 1em;
-$navLetterSpacing: .28em;
+$navLetterSpacing: .1em;
 
 .headerCaps {
   //font-family: 'SS_Adec2.0_main';
@@ -191,13 +191,16 @@ ul {
 $blogH1Color: $red;
 $blogH1Font: "Code-Pro-Light-Demo";
 $blogH1Weight: normal;
-$blogH1size: .56em;
+$blogH1size: .48em;
 $blogH1lineheight: 1em;
 $blogH1LetterSpacing: .07em;
 $blogH1HoverColor: $red;
 $blogH1fontstyle: normal;
 $blogH1padding: 0px;
 $blogPfont: 'Raleway', sans-serif;
+$bgColorMix: #28141F;
+$bgColorVideo: #001922;
+$bgHover: #444;
 
 .blog_post {
   max-width: 720px; //perfect width for initial mobile snap
@@ -209,7 +212,7 @@ $blogPfont: 'Raleway', sans-serif;
   //width: 95%;
 
   &:hover {
-    background-color: #111;
+    background-color: $bgHover;
     //width: 700px;
   }
 
@@ -412,6 +415,7 @@ $blogPfont: 'Raleway', sans-serif;
 .tagMix {
   border-top: 5px solid $red;
   padding: 10px 0 0 10px;
+  background-color: $bgColorMix;
 
   h1 a {
     color: $blue !important;
@@ -433,11 +437,11 @@ $blogPfont: 'Raleway', sans-serif;
 
 .tagVideo {
   //background-color: $bgColor1;
-  background-color: #555;
+  background-color: $bgColorVideo;
   border-top: 5px solid darken( $blue, 30%);
 
   &:hover {
-    background-color: black;
+    //background-color: black;
   }
 
   h1 a {
@@ -578,10 +582,18 @@ body {
 
 // BACKGROUNDS
 
+.bgImagesWrapper {
+
+  img {
+    display: block;
+    float: left;
+  }
+}
+
 img.bgHome {
   //position: fixed;
   margin-left: -5%;
-  margin-top: 80%;
+  margin-top: 20%;
   width: 44%;
   height: auto;
   opacity: .7;
@@ -602,9 +614,22 @@ img.bgHome2 {
 
 img.bgHome3 {
   position: absolute;
+  top: 0;
+  left: 0;
   margin-left: 40px;
   margin-top: 24%;
   width: 35%;
+  height: auto;
+  opacity: .7;
+  float: left;
+  z-index: -110;
+}
+
+img.bgHome4 {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 60%;
+  width: 42%;
   height: auto;
   opacity: .7;
   float: left;
@@ -643,6 +668,7 @@ img.bgHome3 {
 //  `Mbmmd'     W     `Mbmmd'.JMML  JMML`MbmoM9mmmP'
 
 .colEvents {
+  display: none;
   margin-top: 90%;
   margin-left: 10%;
   width: 170%;
@@ -719,7 +745,7 @@ img.bgHome3 {
 }
 
 .col2 {
-  padding: 0;
+  padding: 12px 0;
 
   .navbar {
     padding: 0;
@@ -741,7 +767,8 @@ img.bgHome3 {
       a {
         letter-spacing: $navLetterSpacing;
         display: block;
-        text-align: right;
+        text-align: left;
+        color: $red;
         width: 100%;
         font-family: $navText;
         font-weight: $navTextWeight;
@@ -831,7 +858,7 @@ img.bgHome3 {
 
   h1 {
     font-size: 4em;
-    color: $red;
+    color: $blue;
     margin: 20px 0;
   }
 
@@ -843,7 +870,7 @@ img.bgHome3 {
 
   p {
     font-weight: normal;
-    font-size: 1.15em;
+    font-size: 1em;
   }
 
   ul {
@@ -892,6 +919,7 @@ img.bgHome3 {
   }
 
   .colEvents {
+
     width: 100%;
     border: 1px solid blue;
     margin-top: 150%;
@@ -909,7 +937,7 @@ img.bgHome3 {
       margin-top: 4% !important;
 
       .navText {
-  
+
         a {
           //max-width: 50%;
           //border-right: 10px solid $blue;
@@ -953,6 +981,10 @@ img.bgHome3 {
     float: left;
     z-index: -100;
   }
+
+ img.bgHome4 {
+   display: none;
+ }
 
   .blog_post {
     width: 100%;
