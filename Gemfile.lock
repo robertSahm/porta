@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/thatdutchguy/soundcloud-custom-player-rails.git
+  revision: 78e2eaf2dac2b7efa6ee8f54d42973445063ede4
+  specs:
+    soundcloud-custom-player-rails (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -223,6 +229,7 @@ DEPENDENCIES
   refinerycms-blog (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
   refinerycms-news (~> 2.0.1)
+  soundcloud-custom-player-rails!
   sqlite3 (~> 1.3.5)
   uglifier (>= 1.0.3)
   zurb-foundation (~> 3.2.5)

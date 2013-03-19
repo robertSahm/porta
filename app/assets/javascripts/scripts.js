@@ -70,11 +70,12 @@
 // 	 };
 // });
 
-$(function() {
-soundcloud.addEventListener('onPlayerReady', function(player, data) {
-  console.log('player ready');
-});
-});
+// $(function() {
+// 	$('.sc-artwork-list').addClass('three columns');
+// 	$('.sc-info').addClass('eight columns');
+// 	$('.sc-controls').addClass('two columns');
+// });
+
 
 $(function() {
 	if ($("aside.filed_in:contains('photo')").parent().parent().parent().addClass('tagPhoto'));
@@ -87,6 +88,10 @@ $(function() {
 		//$(this).css("color", "red")
 	});
 });
+
+// $(function() {
+// 	$('.sc-controls').addClass('twelve columns');
+// });
 
 $(function() {
 	$('a.datesClick').click( function() {
@@ -104,6 +109,57 @@ $(function() {
 	$("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 	$("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
 });
+
+
+
+
+// $(function() {
+// 	$('a.sc-play').click( function() {
+// 		$(this).hide(0);
+// 		$('a.sc-pause').fadeToggle(500);
+// 	});
+
+// 	$('a.sc-pause').click( function() {
+// 		$(this).hide(0);
+// 		$('a.sc-play').fadeToggle(500);
+// 	});
+// });
+
+// $(document).bind('onPlayerPlay.scPlayer', function(event){
+//   $('a.sc-play').fadeOut(0);
+//   $('a.sc-pause').fadeIn(0);
+// });
+
+// $(document).bind('onPlayerPause.scPlayer', function(event){
+//   $('a.sc-pause').fadeOut(0);
+//   $('a.sc-play').fadeIn(0);
+// });
+
+// $(function() {
+// // sc-player remote control simulates the click on the play/pause button
+// 	$(document).on('click','a.sc-remote-link', function(event) {
+// 	  var $link = $(this),
+// 	      $pause = $('.playing a.sc-pause');
+	
+// 	  if ($pause.length) {
+// 	    $pause.click();
+// 	  }else{
+// 	    $('a.sc-play:first').click();
+// 	  }
+// 	  return false;
+// 	});
+
+// 	// update the remote buttons class, when changing player state
+// 	var toggleLink = function(event) {
+// 	  $('a.sc-remote-link').toggleClass('playing', event.type === 'scPlayer:onMediaPlay');
+// 	};
+
+// 	$(document)
+//   	.bind('scPlayer:onMediaPlay', toggleLink)
+//   	.bind('scPlayer:onMediaEnd', toggleLink)
+//   	.bind('scPlayer:onMediaPause', toggleLink);
+
+// });
 
 
 

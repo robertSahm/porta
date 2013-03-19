@@ -23,7 +23,7 @@
       }
       // re-dispatch SoundCloud events up in the DOM
       if(window.jQuery){
-        // if jQuery is available, trigger the custom event
+        // if jQuery is available, trigger the custom eventsc-
         jQuery(playerNode).trigger(customEventType, [data]);
       }else if(window.Prototype){
         // if Prototype.js is available, fire the custom event

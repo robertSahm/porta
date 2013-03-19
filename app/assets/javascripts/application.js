@@ -11,4 +11,6 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require soundcloud.player.api
+//= require sc-player
 //= require_directory .

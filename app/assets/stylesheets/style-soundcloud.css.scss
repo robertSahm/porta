@@ -1,0 +1,214 @@
+//  .M"""bgd `7MN.   `7MF`7MM"""Yb.     .g8"""bgd `7MMF'      `7MM"""Yb.   
+// ,MI    "Y   MMN.    M   MM    `Yb. .dP'     `M   MM          MM    `Yb. 
+// `MMb.       M YMb   M   MM     `Mb dM'       `   MM          MM     `Mb 
+//   `YMMNq.   M  `MN. M   MM      MM MM            MM          MM      MM 
+// .     `MM   M   `MM.M   MM     ,MP MM.           MM      ,   MM     ,MP 
+// Mb     dM   M     YMM   MM    ,dP' `Mb.     ,'   MM     ,M   MM    ,dP' 
+// P"Ybmmd"  .JML.    YM .JMMmmmdP'     `"bmmmd'  .JMMmmmmMMM .JMMmmmdP'  
+
+// colors
+$red: #BE4D4B;
+$blue: #00BFFF;
+$greenHot: #58F802;
+$grey1: #333333;
+$bgColor1: #161B1E;
+$bgColor2: #1B1519;
+
+// fonts
+$blogPfont: 'Raleway', sans-serif;
+
+// start soundcloud custom player
+
+.hidden {
+  display: none;
+}
+
+.sc-player {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: 50%;
+
+  .sc-artwork-list {
+    display: none;
+
+    .active {
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .sc-info {
+
+    position: relative;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 45px;
+ 
+    h3 {
+   
+      a {
+        display: block;
+        color: white;
+        font-family: $blogPfont;
+        font-weight: 100;
+        font-size: .65em;
+        //margin-top: 20px;
+      }
+    }
+
+    h4 {
+      display: none;
+
+      a {
+
+      }
+    }
+
+    p {
+      display: none;
+      color: white;
+      font-family: $blogPfont;
+      font-weight: 100;
+      font-size: .8em;
+    }
+
+    a.sc-info-close {
+      display: none;
+    }
+  }
+
+  .sc-controls {
+    position: relative;
+    top: -20px;
+    z-index: 100;
+    height: 20px;
+    
+    a.sc-play {
+      background-image: url('buttonPlayBig.png');
+      background-size: cover;
+      display: block;
+      width: 33px;
+      min-height: 50px;
+    }
+
+    a.sc-pause {
+      background-image: url('buttonPause.png');
+      background-size: cover;
+      display: block;
+      width: 33px;
+      min-height: 50px;
+      display: none;
+    }
+  }
+
+  .sc-trackslist {
+    display: none;
+
+    .active
+
+    a {
+
+    }
+
+    .sc-track-duration {
+
+    }
+  }
+
+  a.sc-info-toggle {
+    display: none;
+  }
+
+  .sc-scrubber { // includes volume, wav image and time display
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .sc-volume-slider {
+      float: right;
+      height: 20px;
+      //margin-bottom: -25px;
+      border: 2px solid $red;
+      opacity: 1;
+      width: 15%;
+      margin-bottom: 5px;
+     
+
+      .sc-volume-status {
+        height: 100%;
+        float: left;
+        width: 100%;
+        background-color: $blue;
+        border: 3px solid black;
+        width: 200px;
+      }
+    }
+
+    .sc-time-span { // waveform color
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 85px;
+
+      .sc-waveform-container {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        
+        img {
+          //position: absolute;
+          width: 100%;
+          background-color: $red !important;
+          opacity: .3;
+          height: 60px;
+        }
+      }
+
+      .sc-buffer {
+       background-color: blue !important;
+        
+      }
+
+      .sc-played { 
+        display: none;
+        // border: 1px solid white;
+        // min-height: 100px;
+        // border-right: 2px solid $blue;
+        // opacity: 1;
+        // z-index: -10;
+      }
+    }
+
+    .sc-time-indicators {
+      color: $red;
+      margin-top: -20px;
+ 
+    }
+  }
+}
+
+.playing {
+
+  a.sc-play {
+    display: none !important;
+  }
+
+  .sc-pause {
+    display: block !important;
+  }
+
+}
+
+// .sc-scrubber .sc-played {
+//     background-color: #999 !important;
+//     opacity: .3 !important;
+// }
+
