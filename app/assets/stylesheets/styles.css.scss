@@ -421,6 +421,10 @@ $bgHover: #444;
   //background-color: $bgColor1;
   background-color: $bgColorVideo;
   border-top: 7px solid darken( $blue, 30%);
+  background-image: url('iconVideo.png');
+  background-repeat: no-repeat;
+  background-size: 5.5% auto;
+  background-position: 97% 98%;
 
   &:hover {
     //background-color: black;
@@ -908,6 +912,36 @@ img.bgHome4 {
   }
 }
 
+//                             ,,           ,,  
+//                             db         `7MM  
+//                                          MM  
+// ,pP"Ybd  ,pW"Wq.   ,p6"bo `7MM  ,6"Yb.   MM  
+// 8I   `" 6W'   `Wb 6M'  OO   MM 8)   MM   MM  
+// `YMMMa. 8M     M8 8M        MM  ,pm9MM   MM  
+// L.   I8 YA.   ,A9 YM.    ,  MM 8M   MM   MM  
+// M9mmmP'  `Ybmd9'   YMbmd' .JMML`Moo9^Yo.JMML.
+
+.socialWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5%;
+  height: 300px;
+  border: 1px solid $blue;
+
+  .facebook {
+
+  }
+
+  .twitter {
+
+  }
+
+  .instagram {
+
+  }
+}
+
 
 //                            ,,        ,,   ,,          
 //                           *MM        db `7MM          
@@ -986,7 +1020,9 @@ and (max-width: 768px) {
 
   .column3 {
     //position: absolute !important;
-    margin-top: 70%;
+    position: relative;
+    margin-top: 73%;
+    left: 0;
     z-index: 100;
   }
 
