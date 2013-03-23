@@ -297,13 +297,7 @@ $bgHover: #444;
 #show_blog_post {
   padding: 10px 10px 0px 10px;
   margin-top: 20px;
-  background-color: $bgColor2;
-
-  p img {
-    width: 80%;
-    margin-bottom: 20px;
-    //max-width: 600px;
-  }
+  //background-color: $bgColor2;
 
   #blog_post {  
     margin: 0 auto;
@@ -311,7 +305,7 @@ $bgHover: #444;
     color: $red;
 
     .details {
-      margin-bottom: 20px;
+      margin: 20px;
       line-height: 1.3em;
     }
 
@@ -330,26 +324,36 @@ $bgHover: #444;
       letter-spacing: $blogH1LetterSpacing;
       font-style: $blogH1fontstyle;
       line-height: $blogH1lineheight;
-      margin-bottom: 15px;
+      margin: 15px;
     }
 
     p {
       color: #eee;
       font-size: 1.3em;
       font-weight: 200;
-      padding-bottom: 30px;
+      padding: 0 3% 0 3%;
+
+      img {
+        margin: 0;
+        padding-bottom: 3%;
+        width: 100%;
+        margin: 0 auto;
+        //max-width: 600px;
+      }
     }
   }
 }
 
 #next_prev_article {
   display: none;
-  margin-top: 100px;
+  //margin-top: 100px;
 }
 
 #comments {
-  margin-top: 100px;
+  margin-left: 2%;
   max-width: 400px;
+  border-top: 10px solid $blue;
+  padding: 3%;
 
   h2 {
     font-family: $blogH1Font;
@@ -405,10 +409,16 @@ $bgHover: #444;
 }
 
 .tagPhoto {
-  border-top: 7px solid lighten( $blue, 90%);
+  border-top: 7px solid lighten( $blue, 30%);
   background-color: $bgColor1;
 
-  h1 {
+  h1 a {
+    color: $blue !important;
+  }
+
+  p {
+    display: block;
+    margin-bottom: 25px;
 
   }
 
@@ -656,29 +666,32 @@ img.bgHome4 {
 
 .colEvents {
   //display: none;
-  margin-top: 75%;
+  margin-top: 79%;
   margin-left: 10%;
   width: 170%;
   //background-color: #222;
   padding: 10px;
 
   .eventsHeader {
-    background-color: #222s;
-    text-align: left;
-    margin-bottom: 20px;
+    text-align: center;
+    //background-color: #222;
+    margin-bottom: 0px;
     padding: 0 12px 12px 12px;
     max-width: 300px;
+    border-top: 5px solid $red;
     
     .eventsHeaderText a { //h1
-      //font-family: 'Raleway', sans-serif !important;
-      //font-weight: 100 !important;
+      //border-top: 5px solid white;
+      height: 50px;
+      padding-top: 7px;
+      margin-top: 10px;
       color: $blue;
-      //letter-spacing: .2em;
-      padding-bottom: 4%;
+      display: block;
       font-weight: normal;
       font-family: $navText;
-      font-size: .9em;
+      font-size: .5em;
       text-shadow: 3px 0px $red;
+      border-top: 5px solid $blue;
     }
   }
 
@@ -706,8 +719,9 @@ img.bgHome4 {
         padding: 0;
 
         li {
+          border-top: 4px solid #888;
           background-color: #333;
-          padding: 5%;
+          padding: 2% 5%;
 
           p {
             margin: 7px 0;
@@ -716,9 +730,10 @@ img.bgHome4 {
           }
 
           img {
-            padding: 0px 0;
+            padding: 0 0 3% 0;
             //width: 75%;
             display: block;
+            width: 100%;
             //margin: 0 auto;
 
             &:hover {
@@ -784,7 +799,7 @@ img.bgHome4 {
                transition: border .4s linear;
 
       &:hover {
-        border-left: 40px solid $red;
+        border-left: 22px solid $red;
       }
 
       a {
@@ -875,6 +890,7 @@ img.bgHome4 {
 
 .privateWrapper {
   max-width: 500px;
+  padding-right: 7%;
 
   .redText {
     color: $red;
