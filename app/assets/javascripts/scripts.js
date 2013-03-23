@@ -85,9 +85,9 @@
 
 $(function() {
 	$('.sc-player').addClass('twelve columns row');
-	$('ol.sc-artwork-list').addClass('three mobile-one columns');
+	$('ol.sc-artwork-list').addClass('three mobile-zero columns');
 	$('.sc-controls').addClass('one mobile-one columns');
-	$('.sc-scrubber').addClass('eight mobile-three columns');
+	$('.sc-scrubber').addClass('eight mobile-four columns');
 });
 
 $(function() {
@@ -99,7 +99,8 @@ $(function() {
 	});
 
 	$(document).bind('onPlayerInit.scPlayer', function(event){
-		$('.sc-player').delay(400).fadeIn(1500);	
+		$('.sc-player').delay(400).fadeIn(1500);
+		$('.sc-player').show(0);
 	});
 });
 

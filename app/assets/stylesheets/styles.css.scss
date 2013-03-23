@@ -59,45 +59,6 @@
 
 //Font imports
 
-@font-face {
-  font-family: 'Existence-Light';
-  src: url('fonts/Existence-Light.otf');
-}
-
-@font-face {
-  font-family: 'CaviarDreams';
-  src: url('fonts/CaviarDreams.ttf');
-}
-
-@font-face {
-  font-family: 'Metropolis1920';
-  src: url('fonts/Metropolis1920.otf');
-}
-
-@font-face {
-  font-family: 'SS_Adec2.0_main';
-  src: url('fonts/SS_Adec2.0_main.otf');
-}
-
-@font-face {
-  font-family: 'SS_Adec2.0_initials';
-  src: url('fonts/SS_Adec2.0_initials.otf');
-}
-
-@font-face {
-  font-family: 'SS_Adec2.0_text';
-  src: url('fonts/SS_Adec2.0_text.otf');
-}
-
-@font-face {
-  font-family: 'BonvenoCFLight';
-  src: url('fonts/BonvenoCF-Light-webfont.eot');
-  src: url('fonts/BonvenoCF-Light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/BonvenoCF-Light-webfont.woff') format('woff'),
-       url('fonts/BonvenoCF-Light-webfont.ttf') format('truetype'),
-       url('fonts/BonvenoCF-Light-webfont.svg#BonvenoCFLight') format('svg');
-}
-
 @font-face {font-family: 'Code-Pro-Light-Demo';
   src: url('fontsfonts/25FD00_0_0.eot');
   src: url('fontsfonts/25FD00_0_0.eot?#iefix') 
@@ -106,10 +67,6 @@
   format('woff'),
   url('fonts/25FD00_0_0.ttf') 
   format('truetype');}
-
-// @import url(http://fonts.googleapis.com/css?family=Raleway:100,200,300,400);
-
-// @import url(http://fonts.googleapis.com/css?family=Playfair+Display:900,900italic);
 
 // My Colors
 $red: #BE4D4B;
@@ -127,6 +84,13 @@ a:hover { color: #2795b6; }
 
 a:focus { color: #2795b6; }
 
+html {
+
+}
+
+body {
+background-color: black;
+}
 
 .container {
   padding-bottom: 25px;
@@ -189,7 +153,13 @@ ul {
   h2 {
     font-weight: 700 !important;
   }
-} 
+
+  .privateWrapper {
+    h1, h2, h3, p {
+      font-weight: 700 !important;
+    }
+  } 
+}
 
 // blog type
 $blogH1Color: $red;
@@ -304,7 +274,7 @@ $bgHover: #444;
       p.tagText { 
         color: #888;
         font-size: 1.1em;
-        width: 100%;
+        width: 90%;
         margin-bottom: 0;
         font-style: normal;
         //font-weight: 100;
@@ -417,17 +387,25 @@ $bgHover: #444;
 }
 
 .tagMix {
-  border-top: 5px solid $red;
+  border-top: 7px solid $red;
   padding: 10px 0 0 10px;
   background-color: $bgColorMix;
+  background-image: url('iconMix2.png');
+  background-repeat: no-repeat;
+  background-size: 5.5% auto;
+  background-position: 98% 95%;
 
   h1 a {
     color: $blue !important;
   }
+
+  iframe {
+    margin-bottom: 5%;
+  }
 }
 
 .tagPhoto {
-  border-top: 5px solid lighten( $blue, 90%);
+  border-top: 7px solid lighten( $blue, 90%);
   background-color: $bgColor1;
 
   h1 {
@@ -442,7 +420,7 @@ $bgHover: #444;
 .tagVideo {
   //background-color: $bgColor1;
   background-color: $bgColorVideo;
-  border-top: 5px solid darken( $blue, 30%);
+  border-top: 7px solid darken( $blue, 30%);
 
   &:hover {
     //background-color: black;
@@ -630,6 +608,7 @@ img.bgHome3 {
 }
 
 img.bgHome4 {
+  display: none;
   position: absolute;
   margin-left: 20px;
   margin-top: 60%;
@@ -672,32 +651,68 @@ img.bgHome4 {
 //  `Mbmmd'     W     `Mbmmd'.JMML  JMML`MbmoM9mmmP'
 
 .colEvents {
-  display: none;
-  margin-top: 90%;
+  //display: none;
+  margin-top: 75%;
   margin-left: 10%;
   width: 170%;
+  //background-color: #222;
+  padding: 10px;
 
   .eventsHeader {
+    background-color: #222s;
     text-align: left;
+    margin-bottom: 20px;
+    padding: 0 12px 12px 12px;
+    max-width: 300px;
     
     .eventsHeaderText a { //h1
-      color: $red;
+      //font-family: 'Raleway', sans-serif !important;
+      //font-weight: 100 !important;
+      color: $blue;
+      //letter-spacing: .2em;
+      padding-bottom: 4%;
       font-weight: normal;
       font-family: $navText;
-      font-size: .7em;
+      font-size: .9em;
+      text-shadow: 3px 0px $red;
     }
   }
 
   .eventsBox {
+    margin-top: 0px;
+    line-height: 1em;
+
+    ul {
+      line-height: 1em;
+    }
+
+    h2 a {
+      font-size: .55em;
+      margin: 0;
+      padding: 0;
+      letter-spacing: .07em;
+
+    }
 
     #recent_news_items {
+      max-width: 300px;
 
       ul {
+        margin: 0;
+        padding: 0;
 
         li {
+          background-color: #333;
+          padding: 5%;
+
+          p {
+            margin: 7px 0;
+            color: $red;
+            font-size: 1.2em;
+          }
 
           img {
-            padding: 20px 0;
+            padding: 0px 0;
             //width: 75%;
             display: block;
             //margin: 0 auto;
@@ -745,7 +760,7 @@ img.bgHome4 {
 }
 
 .dates {
-  display: none;
+  //display: none;
 }
 
 .col2 {
@@ -765,7 +780,7 @@ img.bgHome4 {
                transition: border .4s linear;
 
       &:hover {
-        border-left: 16px solid $red;
+        border-left: 40px solid $red;
       }
 
       a {
@@ -806,7 +821,6 @@ img.bgHome4 {
 }
 
 
-
 //                    ,,               
 //                  `7MM               
 //                    MM               
@@ -818,9 +832,6 @@ img.bgHome4 {
 //                            (O)  .M' 
 //                             bmmmd'  
 
-.sc-player {
- display: none;
-}
 
 .blogWrapper {
   margin-top: 2px;
@@ -907,9 +918,18 @@ img.bgHome4 {
 //   MM    MM    MM YA.   ,A9 MM.   ,M9 MM   MM YM.    , 
 // .JMML  JMML  JMML.`Ybmd9'  P^YbmdP'.JMML.JMML.`Mbmmd' 
 
-@media only screen and (max-width: 768px) {
+@media only screen 
+and (max-width: 768px) {
 
 
+  .sc-player {
+    margin-left: 0;
+    padding-left: 0;
+
+    ol.sc-artwork-list {
+      display: none !important;
+    }
+  }
 
   .dates {
     display: block;
@@ -935,6 +955,7 @@ img.bgHome4 {
     width: 100%;
     border: 1px solid blue;
     margin-top: 150%;
+    display: none !important;
   }
 
   .col2 {
@@ -965,7 +986,7 @@ img.bgHome4 {
 
   .column3 {
     //position: absolute !important;
-    margin-top: 67%;
+    margin-top: 70%;
     z-index: 100;
   }
 
@@ -1000,28 +1021,24 @@ img.bgHome4 {
 
   .blog_post {
     width: 100%;
-
-    .tagVideo {
-
-      iframe {
-
-      }
-    }
   } 
+
+  .tagMix {
+    padding-right: 3%;
+
+    iframe {
+      
+    }
+  }
 } // END 768 BREAK
 
+@media only screen and (max-width: 640px) {
 
+ h1 {
+  //display: none;
+ }
 
-// @media only screen and (max-width: 480px) {
-
-//     img.logoImg {
-//     position: fixed !important;
-//     top: 0px;
-//     left: 0px;
-//     width: 100px !important;
-//   }
-
-// }
+}
 
 
 

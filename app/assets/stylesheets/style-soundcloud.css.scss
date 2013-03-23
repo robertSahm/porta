@@ -23,9 +23,11 @@ $blogPfont: 'Raleway', sans-serif;
   display: none;
 }
 
-.sc-player-engine-container {
-  display: none;
+.sc-player-engine-container { //must not be hidden or tracks don't play!
+ height: 0px;
+ width: 0px;
 }
+
 
 //                            ,,                                  
 //                          `7MM                                  
@@ -39,8 +41,7 @@ $blogPfont: 'Raleway', sans-serif;
 //                 .JMML.              OOb"                     
 
 .sc-player {
-  display: block;
-  display: relative;
+  position: relative;
   //padding: 10px;
   top: 10px;
   left: 0;
@@ -48,7 +49,12 @@ $blogPfont: 'Raleway', sans-serif;
   margin-right: 0;
   padding-right: 0;
   width: 80%;
+  list-style-type: none !important;
+  color: red;
+}
 
+ol li {
+  list-style-type: none !important;
 }
 
 //   __  ____ ____ ____ _  _  __ ____ __ _ 
@@ -56,13 +62,16 @@ $blogPfont: 'Raleway', sans-serif;
 // /    \)   / )(  )   \ /\ (  O )   /)  ( 
 // \_/\_(__\_)(__)(__\_(_/\_)\__(__\_(__\_)
 
-.sc-artwork-list { // ol
+.sc-artwork-list { // ul
   float: left;
   width: 100%;
   padding: 0;
   margin: 0;
+  list-style-type: none !important;
+
 
   .active {
+    list-style-type: none !important;
 
     img {
       //max-width: 162px;
@@ -155,9 +164,9 @@ $blogPfont: 'Raleway', sans-serif;
   a.sc-pause {
     background-image: url('buttonPause.png');
     background-size: cover;
-    width: 30px;
-    min-height: 45px;
-    display: none;
+    width: 40px;
+    min-height: 60px;
+
   }
 }
 
@@ -247,6 +256,7 @@ a.sc-info-toggle {
       width: 100%;
       background-color: $red !important;
       opacity: 1;
+
       //height: 90px;
     }
   }
@@ -346,7 +356,7 @@ float: left;
 
   
     .sc-waveform-container {
-
+      width: 104%;
    
       img {
 
