@@ -33,6 +33,7 @@
         <div class="col2 two columns mobile-two">
           <ul class="navbar">
             <li class="active navHome">
+
               <h1 id="fittext1" class="navText">
                 <a href="/" class="clickHome"><span class="headerCaps">H</span>OME</a>
               </h1>
@@ -71,29 +72,64 @@
             </li>
           </ul>
         </div>
+
         <!-- close FIRST row -->
         <!-- BLOG ROW (IF FIXED POSITION) -->
+
         <div class="row siteWrapper">
           <div class="five columns">
           </div>
           <section id="page">
-
             <div class="seven columns column3 blogWrapper">
-              <div classs="mobile-four columns">
+              <!-- <div class="siteHeader eleven columns">
+                <div class="headerBlocker">
+                </div>
+                <p class="siteHeaderText">
+                  The home of all things
+                </p>
+                <div class="">
+                  <%= image_tag("logoSmall.png", :alt => "logoSmall", :class => "logoSmall") %>
+                </div>
+                <div class="socialWrapper">
+                  <a class="twitter">
+                    <i class="foundicon-twitter"></i>
+                  </a> 
+                  <a class="facebook">
+                      <i class="foundicon-facebook"></i>
+                  </a>
+                  <a class="instagram">
+                    <i class="foundicon-instagram"></i>
+                  </a> 
+                </div>
+              </div> -->
+              <div class="siteHeader ">
+                <div class="socialWrapper">
+                  <a class="twitter">
+                    <i class="foundicon-twitter"></i>
+                  </a> 
+                  <a class="facebook">
+                      <i class="foundicon-facebook"></i>
+                  </a>
+                  <a class="instagram">
+                    <i class="foundicon-instagram"></i>
+                  </a> 
+                </div>
+                
+                <div class="">
+                  <%= image_tag("logoSmall.png", :alt => "logoSmall", :class => "logoSmall") %>
+                </div>
 
+                <p class="siteHeaderText">
+                  The home of DJ
+                </p>
+              </div>
+              <div classs="mobile-four columns">
                 <%= render '/refinery/content_page' %>
               </div>
             </div>
           </section>  
         </div>
-        <div class="socialWrapper">
-          <div class="facebook">
-          </div>
-          <div class="twitter">
-          </div>
-          <div class="instagram">
-          </div>
-        </div>
+        
         <footer>
 
           <%#= render '/refinery/footer' %>

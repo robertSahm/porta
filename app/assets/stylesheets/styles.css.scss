@@ -33,40 +33,174 @@
 // 4. Isotope Defaults
 // 5. Custom, very funky, styles
 
-
-// Foundation Colors Settings
-// $mainColor: #2ba6cb;
-// $secondaryColor: #e9e9e9;
-// $alertColor: #c60f13;
-// $successColor: #5da423;
-// $txtColor: #90D8EE;
-// $highlightColor: #ffff99;
-// $black: #000;
-// $white: #fff;
-// $shinyEdge: rgba(#fff, .5);
-// $darkEdge: rgba(#000, .2);
-
-
-
-
-
-
-
-
-
-
-
-
 //Font imports
 
-@font-face {font-family: 'Code-Pro-Light-Demo';
-  src: url('fontsfonts/25FD00_0_0.eot');
-  src: url('fontsfonts/25FD00_0_0.eot?#iefix') 
+@font-face {
+  font-family: 'Code-Pro-Light-Demo';
+  src: url('fonts/25FD00_0_0.eot');
+  src: url('fonts/25FD00_0_0.eot?#iefix') 
   format('embedded-opentype'),
   url('fonts/25FD00_0_0.woff') 
   format('woff'),
   url('fonts/25FD00_0_0.ttf') 
-  format('truetype');}
+  format('truetype');
+}
+
+/* Zurb Foundation icon font (social only) */
+@font-face {
+  font-family: "SocialFoundicons";
+  src: url("fonts/social_foundicons.eot");
+  src: url("fonts/social_foundicons.eot?#iefix") 
+  format("embedded-opentype"), 
+  url("fonts/social_foundicons.woff") 
+  format("woff"), url("fonts/social_foundicons.ttf") 
+  format("truetype"), 
+  url("fonts/social_foundicons.svg#SocialFoundicons") 
+  format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+[class*="foundicon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+
+}
+
+[class*="foundicon-"]:before {
+  font-family: "SocialFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* icons */
+.foundicon-thumb-up:before {
+  content: "\f000";
+}
+
+.foundicon-thumb-down:before {
+  content: "\f001";
+}
+
+.foundicon-rss:before {
+  content: "\f002";
+}
+
+.foundicon-facebook:before {
+  content: "\f003";
+}
+
+.foundicon-twitter:before {
+  content: "\f004";
+}
+
+.foundicon-pinterest:before {
+  content: "\f005";
+}
+
+.foundicon-github:before {
+  content: "\f006";
+}
+
+.foundicon-path:before {
+  content: "\f007";
+}
+
+.foundicon-linkedin:before {
+  content: "\f008";
+}
+
+.foundicon-dribbble:before {
+  content: "\f009";
+}
+
+.foundicon-stumble-upon:before {
+  content: "\f00a";
+}
+
+.foundicon-behance:before {
+  content: "\f00b";
+}
+
+.foundicon-reddit:before {
+  content: "\f00c";
+}
+
+.foundicon-google-plus:before {
+  content: "\f00d";
+}
+
+.foundicon-youtube:before {
+  content: "\f00e";
+}
+
+.foundicon-vimeo:before {
+  content: "\f00f";
+}
+
+.foundicon-flickr:before {
+  content: "\f010";
+}
+
+.foundicon-slideshare:before {
+  content: "\f011";
+}
+
+.foundicon-picassa:before {
+  content: "\f012";
+}
+
+.foundicon-skype:before {
+  content: "\f013";
+}
+
+.foundicon-steam:before {
+  content: "\f014";
+}
+
+.foundicon-instagram:before {
+  content: "\f015";
+}
+
+.foundicon-foursquare:before {
+  content: "\f016";
+}
+
+.foundicon-delicious:before {
+  content: "\f017";
+}
+
+.foundicon-chat:before {
+  content: "\f018";
+}
+
+.foundicon-torso:before {
+  content: "\f019";
+}
+
+.foundicon-tumblr:before {
+  content: "\f01a";
+}
+
+.foundicon-video-chat:before {
+  content: "\f01b";
+}
+
+.foundicon-digg:before {
+  content: "\f01c";
+}
+
+.foundicon-wordpress:before {
+  content: "\f01d";
+}
 
 // My Colors
 $red: #BE4D4B;
@@ -183,6 +317,7 @@ $bgHover: #444;
   margin: 20px 20px 0px 5px;
   padding: 10px 20px 0px 20px;
   float: left;
+  border-top-left-radius: 7px;
   //width: 95%;
 
   &:hover {
@@ -297,16 +432,20 @@ $bgHover: #444;
 #show_blog_post {
   padding: 10px 10px 0px 10px;
   margin-top: 20px;
-  //background-color: $bgColor2;
+  position: relative;
+  //min-height: 600px;
 
   #blog_post {  
     margin: 0 auto;
     width: 100%;
     color: $red;
+    display: block;
+    float: left;
+    margin-bottom: 50px;
 
-    .details {
-      margin: 20px;
-      line-height: 1.3em;
+    .sc-player {
+      padding-bottom: 45px;
+      float: left;
     }
 
     iframe {
@@ -324,14 +463,25 @@ $bgHover: #444;
       letter-spacing: $blogH1LetterSpacing;
       font-style: $blogH1fontstyle;
       line-height: $blogH1lineheight;
-      margin: 15px;
+      margin: 0;
+      padding: 0;
+      word-spacing: -.08em !important;
+      margin-bottom: 10px;
+    }
+
+    .details {
+      margin-bottom: 10px;
+      color: $blue;
     }
 
     p {
       color: #eee;
       font-size: 1.3em;
       font-weight: 200;
-      padding: 0 3% 0 3%;
+      //padding: 0 3% 0 3%;
+      line-height: 1.3em;
+      padding-bottom: 15px;
+
 
       img {
         margin: 0;
@@ -354,6 +504,8 @@ $bgHover: #444;
   max-width: 400px;
   border-top: 10px solid $blue;
   padding: 3%;
+  display: block;
+  float: left;
 
   h2 {
     font-family: $blogH1Font;
@@ -411,6 +563,7 @@ $bgHover: #444;
 .tagPhoto {
   border-top: 7px solid lighten( $blue, 30%);
   background-color: $bgColor1;
+  //width: 30%;
 
   h1 a {
     color: $blue !important;
@@ -446,6 +599,10 @@ $bgHover: #444;
 
   .details {
     //display: none;
+  }
+
+  p {
+    color: #eee;
   }
 
   iframe {
@@ -573,9 +730,6 @@ body {
 // YA.   ,A9   VVV     MM       MM `Mb    MM YM.    , L.   I8 
 //  `Ybmd9'     W    .JMML.   .JMML.`Wbmd"MML.`Mbmmd' M9mmmP' 
 
-
-
-
 // BACKGROUNDS
 
 .bgImagesWrapper {
@@ -667,31 +821,32 @@ img.bgHome4 {
 .colEvents {
   //display: none;
   margin-top: 79%;
-  margin-left: 10%;
+  float: left;
   width: 170%;
   //background-color: #222;
-  padding: 10px;
+  padding-left: 70px;
+  // border-top: 5px solid $blue;
 
   .eventsHeader {
-    text-align: center;
-    //background-color: #222;
+    text-align: left;
     margin-bottom: 0px;
-    padding: 0 12px 12px 12px;
+    background-color: #555;
+    padding: 0;
     max-width: 300px;
-    border-top: 5px solid $red;
+    padding-left: 10px;
+
     
     .eventsHeaderText a { //h1
       //border-top: 5px solid white;
       height: 50px;
       padding-top: 7px;
       margin-top: 10px;
-      color: $blue;
+      color: $blue !important;
       display: block;
       font-weight: normal;
       font-family: $navText;
       font-size: .5em;
-      text-shadow: 3px 0px $red;
-      border-top: 5px solid $blue;
+      //text-shadow: 3px 0px $red;
     }
   }
 
@@ -789,6 +944,7 @@ img.bgHome4 {
     padding: 0;
 
     li {
+      //border-top-left-radius: 7%;
       margin-top: 30px;
       padding-left: 5px;
       border-left: 0px solid $blue;
@@ -803,6 +959,7 @@ img.bgHome4 {
       }
 
       a {
+
         letter-spacing: $navLetterSpacing;
         display: block;
         text-align: left;
@@ -937,19 +1094,59 @@ img.bgHome4 {
 // L.   I8 YA.   ,A9 YM.    ,  MM 8M   MM   MM  
 // M9mmmP'  `Ybmd9'   YMbmd' .JMML`Moo9^Yo.JMML.
 
-.socialWrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 5%;
-  height: 300px;
-  border: 1px solid $blue;
 
-  .facebook {
+
+.siteHeader {
+  // margin-top: 10px;
+  // margin-left: 10px;
+  // width: 100%;
+  // max-height: 80px;
+  // padding: 0;
+  // max-width: 720px;
+  // min-width: 0px;
+  max-width: 720px; //perfect width for initial mobile snap
+  min-width: 402px;
+  width: 92%;
+  //background-color: #1B1519;
+  margin: 20px 20px 0px 5px;
+  float: left;
+  border-top-left-radius: 7px;
+
+  p.siteHeaderText {
+    color: $blue;
+    font-size: 1.4em;
+    font-weight: 400;
+    float: right;
+    text-align: right;
+    padding-right: 0px;
+    padding-top: 56px;
+    max-height: 53px;
+  }
+
+  img.logoSmall {
+    float: right;
+    //width: 30%;
+    height: 80px;
+    text-align: right;
+  }
+
+  .socialWrapper {
+    margin-left: -117px;
+    float: right;
+    min-width: 114px;
+
+    i { // social icons
+      font-size: 2.5em;
+      color: $blue;
+      border: 0;
+    }
+  }
+
+  a.facebook {
 
   }
 
-  .twitter {
+  a.twitter {
 
   }
 
@@ -970,6 +1167,10 @@ img.bgHome4 {
 
 @media only screen 
 and (max-width: 768px) {
+
+  .siteHeader {
+    width: 100% !important;
+  }
 
 
   .sc-player {
