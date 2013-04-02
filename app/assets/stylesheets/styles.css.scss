@@ -1116,6 +1116,8 @@ img.bgHome4 {
     //width: 30%;
     height: 80px;
     text-align: right;
+    position: relative;
+    z-index: -100;
   }
 
   .socialWrapper {
@@ -1312,12 +1314,33 @@ and (max-width: 768px) {
   }
 } // END 768 BREAK
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 480px) {
 
- h1 {
-  //display: none;
- }
+  .siteHeader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 0 !important;
+    margin: 8px 8px 0 0 !important;
+    max-width: 42px !important;
+    // min-width: 120px !important;
+    // max-width: 120px !important;
 
+    .socialWrapper {
+      width: 52px !important;
+  
+      a {
+        display: block !important;
+        margin-bottom: 10px;
+  
+        i {
+          font-size: 1.65em !important;
+
+        } 
+      }
+    }
+  }
 }
 
 
