@@ -933,10 +933,6 @@ img.bgHome4 {
   to { color: $red; }
 }
 
-.dates {
-  //display: none;
-}
-
 .col2 {
   padding: 12px 0;
 
@@ -1097,20 +1093,12 @@ img.bgHome4 {
 
 
 .siteHeader {
-  // margin-top: 10px;
-  // margin-left: 10px;
-  // width: 100%;
-  // max-height: 80px;
-  // padding: 0;
-  // max-width: 720px;
-  // min-width: 0px;
   max-width: 720px; //perfect width for initial mobile snap
   min-width: 402px;
-  width: 92%;
-  //background-color: #1B1519;
   margin: 20px 20px 0px 5px;
-  float: left;
+  padding: 0;
   border-top-left-radius: 7px;
+  float: left;
 
   p.siteHeaderText {
     color: $blue;
@@ -1136,9 +1124,10 @@ img.bgHome4 {
     min-width: 114px;
 
     i { // social icons
-      font-size: 2.5em;
+      font-size: 2.65em;
       color: $blue;
       border: 0;
+
     }
   }
 
@@ -1155,6 +1144,10 @@ img.bgHome4 {
   }
 }
 
+  a.datesClick {
+    display: none !important;
+  }
+
 
 //                            ,,        ,,   ,,          
 //                           *MM        db `7MM          
@@ -1168,8 +1161,42 @@ img.bgHome4 {
 @media only screen 
 and (max-width: 768px) {
 
+  a.datesClick {
+    display:block !important;
+  }
+
   .siteHeader {
-    width: 100% !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 0 !important;
+    margin: 15px 20px 0 0 !important;
+    max-width: 42px !important;
+    // min-width: 120px !important;
+    // max-width: 120px !important;
+
+    .siteHeaderText {
+      display: none;
+    }
+  
+    img.logoSmall {
+      display: none;
+    }
+  
+    .socialWrapper {
+      width: 52px !important;
+  
+      a {
+        display: block !important;
+        margin-bottom: 20px;
+  
+        i {
+          //font-size: 2.3em;
+
+        } 
+      }
+    }
   }
 
 
@@ -1183,7 +1210,7 @@ and (max-width: 768px) {
   }
 
   .dates {
-    display: block;
+    
   }
 
   .privateWrapper {
