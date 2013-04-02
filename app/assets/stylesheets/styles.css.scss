@@ -1161,7 +1161,8 @@ img.bgHome4 {
 // .JMML  JMML  JMML.`Ybmd9'  P^YbmdP'.JMML.JMML.`Mbmmd' 
 
 @media only screen 
-and (max-width: 768px) {
+and (max-width: 768px) 
+and (orientation : portrait){
 
   a.datesClick {
     display:block !important;
@@ -1207,6 +1208,10 @@ and (max-width: 768px) {
     padding-left: 0;
 
     ol.sc-artwork-list {
+      display: none !important;
+    }
+
+    .sc-volume-slider {
       display: none !important;
     }
   }
@@ -1342,10 +1347,3 @@ and (max-width: 768px) {
     }
   }
 }
-
-
-
-
-
-
-
