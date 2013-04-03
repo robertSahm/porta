@@ -495,12 +495,22 @@
 
 
 
+
+
         // adding controls to the player
         $player
           .append('<a href="#info" class="sc-info-toggle">Info</a>')
           .find('.sc-controls')
             .append('<a href="#play" class="sc-play"></a> <a href="#pause" class="sc-pause hidden"></a>')
           .end()
+
+          .append('<a href="download" class="sc-download">Download song</a>')
+          
+      
+          //.append('<a href="'+ track.permalink_url"class=sc-download>Download song</a>')
+
+
+
           .append('<div class="sc-scrubber"></div>')
             .find('.sc-scrubber')
               .append('<div class="sc-time-span"><div class="sc-waveform-container"></div><div class="sc-buffer"></div><div class="sc-played"></div></div>')
@@ -566,7 +576,10 @@
     });
 
     return $player;
+
+    
   };
+
 
   // stop all players, might be useful, before replacing the player dynamically
   $.scPlayer.stopAll = function() {

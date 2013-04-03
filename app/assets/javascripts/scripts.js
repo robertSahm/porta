@@ -1,7 +1,29 @@
 
+// //initialize client with app credentials
+// SC.initialize({
+//   client_id: '9b8507a413b84206ba83f619f1f38037',
+//   redirect_uri: ''
+// });
+
+// // initiate auth popup
+// SC.connect(function() {
+//   SC.get('/me', function(me) { 
+//     alert('Hello, ' + me.username); 
+//   });
+// });
 
 
 
+// var connecter = false;
+// FB.getLoginStatus(function(response) {
+//     if (response.status === 'connected') {
+//         connecter = true;
+//         FB.api('/me', function(user) {
+//             alert(user.name);
+//         });
+//     }
+//     else connecter = false;
+// });​
 
 // adds classes/styles to soundcloud custom player on load
 $(function() {
@@ -39,8 +61,8 @@ $(function() {
 
 $(function() {
 	$('a.datesClick').click( function() {
-		$('.colEvents').fadeToggle(300), 
-		$('#blog_posts').fadeToggle(300)
+		$('.colEvents').fadeIn(300), 
+		$('#blog_posts').fadeOut(300)
 		return false;
 	});
 });
@@ -180,38 +202,7 @@ $(function() {
 // });
 
 
-$(function() {
-	$('.sc-player').addClass('twelve columns row');
-	$('ol.sc-artwork-list').addClass('three mobile-zero columns');
-	$('.sc-controls').addClass('one mobile-one columns');
-	$('.sc-scrubber').addClass('eight mobile-four columns');
-});
 
-$(function() {
-	$('.sc-player').hide(0);
-	$('iframe').hide(0);
-
-	$(function() {
-		$('iframe').delay(1000).fadeIn(1700);
-	});
-
-	$(document).bind('onPlayerInit.scPlayer', function(event){
-		$('.sc-player').delay(400).fadeIn(1500);
-		$('.sc-player').show(0);
-	});
-});
-
-$(function() {
-	if ($("aside.filed_in:contains('photo')").parent().parent().parent().addClass('tagPhoto'));
-	if ($("aside.filed_in:contains('video')").parent().parent().parent().addClass('tagVideo'));
-	if   ($("aside.filed_in:contains('mix')").parent().parent().parent().addClass('tagMix'));
-});
-
-$(function() {
-	$('a.clickHome').click( function() {
-		//$(this).css("color", "red")
-	});
-});
 
 // $(function() {
 // 	$('.sc-controls').addClass('twelve columns');
@@ -225,15 +216,7 @@ $(function() {
 // 	});
 // });
 
-$(function() {
-	$("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext2").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext3").fitText(.71, { minFontSize: '10px', maxFontSize: '35px' });
-	$("#fittext4").fitText(.71, { minFontSize: '10px', maxFontSize: '35px' });
-	$("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext7").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-});
+
 
 
 

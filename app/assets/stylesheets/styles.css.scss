@@ -218,10 +218,6 @@ a:hover { color: #2795b6; }
 
 a:focus { color: #2795b6; }
 
-html {
-
-}
-
 body {
 background-color: black;
 }
@@ -284,6 +280,7 @@ ul {
   h1 {
     font-weight: 700 !important;
   }
+
   h2 {
     font-weight: 700 !important;
   }
@@ -433,6 +430,7 @@ $bgHover: #444;
   padding: 10px 10px 0px 10px;
   margin-top: 20px;
   position: relative;
+  display: block;
   //min-height: 600px;
 
   #blog_post {  
@@ -819,13 +817,11 @@ img.bgHome4 {
 //  `Mbmmd'     W     `Mbmmd'.JMML  JMML`MbmoM9mmmP'
 
 .colEvents {
-  //display: none;
   margin-top: 79%;
   float: left;
   width: 170%;
-  //background-color: #222;
+  min-width: 320px;
   padding-left: 70px;
-  // border-top: 5px solid $blue;
 
   .eventsHeader {
     text-align: left;
@@ -1162,7 +1158,7 @@ img.bgHome4 {
 
 @media only screen 
 and (max-width: 768px) 
-and (orientation : portrait){
+and (orientation : portrait) {
 
   a.datesClick {
     display:block !important;
@@ -1202,7 +1198,6 @@ and (orientation : portrait){
     }
   }
 
-
   .sc-player {
     margin-left: 0;
     padding-left: 0;
@@ -1237,10 +1232,15 @@ and (orientation : portrait){
   }
 
   .colEvents {
-    width: 100%;
     border: 1px solid blue;
-    margin-top: 150%;
-    display: none !important;
+    margin: 170% 0 0 0;
+    padding: 0;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 480px;
+    //min-width: 100%;
+    display: none;
+    width: 100% !important;
   }
 
   .col2 {
