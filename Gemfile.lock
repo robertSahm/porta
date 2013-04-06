@@ -238,7 +238,6 @@ DEPENDENCIES
   compass-rails
   jquery-rails (~> 2.0.0)
   modular-scale
-  omniauth
   omniauth-facebook
   pg
   rails (= 3.2.11)

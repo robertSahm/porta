@@ -13,7 +13,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'omniauth'
+	# gem 'omniauth'
 	gem 'omniauth-facebook'
 	gem 'compass-rails'
 	gem 'modular-scale'
