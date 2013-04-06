@@ -1,29 +1,9 @@
 
-// //initialize client with app credentials
-// SC.initialize({
-//   client_id: '9b8507a413b84206ba83f619f1f38037',
-//   redirect_uri: ''
-// });
-
-// // initiate auth popup
-// SC.connect(function() {
-//   SC.get('/me', function(me) { 
-//     alert('Hello, ' + me.username); 
-//   });
-// });
 
 
 
-// var connecter = false;
-// FB.getLoginStatus(function(response) {
-//     if (response.status === 'connected') {
-//         connecter = true;
-//         FB.api('/me', function(user) {
-//             alert(user.name);
-//         });
-//     }
-//     else connecter = false;
-// });​
+
+
 
 // adds classes/styles to soundcloud custom player on load
 $(function() {
@@ -67,6 +47,8 @@ $(function() {
 	});
 });
 
+
+
 // $(function() {
 // 	$('.sc-controls').addClass('twelve columns');
 // });
@@ -91,6 +73,7 @@ $(function() {
 	//  $("#fittext9").fitText(.3, { minFontSize: '35px', maxFontSize: '75px' });
 	// $("#fittext10").fitText(.3, { minFontSize: '35px', maxFontSize: '75px' });
 });
+
 
 
 
