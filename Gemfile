@@ -14,7 +14,7 @@ end
 # in production environments by default.
 group :assets do
 	# gem 'omniauth'
-	gem 'omniauth-facebook'
+	
 	gem 'compass-rails'
 	gem 'modular-scale'
 	gem 'zurb-foundation', '~> 3.2.5'
