@@ -3,6 +3,15 @@
   <%= render '/refinery/head' %>
   <body>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <!-- Facebook authentication stuff -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=437884649637672";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div id="page_container" class="container">
       <header id="header">
       </header>
@@ -105,25 +114,17 @@
               <div class="siteHeader eleven mobile four columns">
                 <div class="likeButton">
                   <div id="fb-root"></div>
-                    <script>
-                      (function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=437884649637672";
-                        fjs.parentNode.insertBefore(js, fjs);
-                      }(document, 'script', 'facebook-jssdk'));
-                    </script>
-                      <div class="fb-like" data-href="https://www.facebook.com/DJPortaRock" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark"></div>
+                    <div class="fb-like" data-href="https://www.facebook.com/DJPortaRock" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark">
+                    </div>
                 </div>
                 <div class="likeToDownload">
-                  <p><a href="">Like for free downloads!</a></p>
+                  <p><a href="https://www.facebook.com/DJPortaRock/app_437884649637672">Like for free downloads!</a></p>
                 </div>
                 <div class="socialWrapper">
                   <a href="http://twitter.com/PortaRock" target="_blank" class="twitter">
                     <i class="foundicon-twitter"></i>
                   </a> 
-                  <a href="https://apps.facebook.com/portadev" target="_blank" class="facebook">
+                  <a href="https://www.facebook.com/DJPortaRock?v=app_437884649637672" target="_blank" class="facebook">
                     <i class="foundicon-facebook"></i>
                   </a>
                   <a href="http://instagram.com/djportarock" target="blank" class="instagram">
@@ -151,5 +152,13 @@
     </body>
   </html>
 
-
+ <script>
+   (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=437884649637672";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ </script>
 
