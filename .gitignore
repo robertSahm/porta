@@ -89,6 +89,8 @@ capybara-*html
 .rvmrc
 .rvmrc.*
 
+
 # vendor/extensions dummy applications.
 vendor/extensions/**/spec/dummy
 
+.env

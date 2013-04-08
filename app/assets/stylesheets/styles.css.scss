@@ -1091,7 +1091,12 @@ img.bgHome4 {
 // L.   I8 YA.   ,A9 YM.    ,  MM 8M   MM   MM  
 // M9mmmP'  `Ybmd9'   YMbmd' .JMML`Moo9^Yo.JMML.
 
+.likeButton {
 
+  iframe {
+    display: none;
+  }
+}
 
 .siteHeader {
   max-width: 720px; //perfect width for initial mobile snap
