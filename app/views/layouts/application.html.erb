@@ -4,7 +4,11 @@
   <body>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <!-- Facebook authentication stuff -->
-    <div id="fb-root"></div>
+
+    <div id="page_container" class="container">
+
+
+                <div id="fb-root"></div>
     <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -12,7 +16,9 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=437884649637672";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-    <div id="page_container" class="container">
+
+
+
       <header id="header">
       </header>
       <div class="bgImagesWrapper">
@@ -113,7 +119,7 @@
               </div> -->
               <div class="siteHeader eleven mobile four columns">
                 <div class="likeButton">
-                  <div id="fb-root"></div>
+
                     <div class="fb-like" data-href="https://www.facebook.com/DJPortaRock" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark">
                     </div>
                 </div>
