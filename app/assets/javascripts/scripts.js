@@ -15,10 +15,10 @@ $(function() {
 
 $(function() {
 	$('.sc-player').hide(0);
-	$('iframe').hide(0);
+	//$('iframe').hide(0);
 
 	$(function() {
-		$('iframe').delay(1000).fadeIn(1700);
+		//$('iframe').delay(1000).fadeIn(1700);
 	});
 
 	$(document).bind('onPlayerInit.scPlayer', function(event){

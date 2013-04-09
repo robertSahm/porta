@@ -715,11 +715,8 @@ body {
   margin: 0;
 }
 
-.fb-like {
-  height: 50px;
-  width: 100px;
-  border: 2px solid red;
-  display: block;
+.likeButton {
+  border: 1px solid red;
 }
 
 // .row {
@@ -1093,12 +1090,16 @@ img.bgHome4 {
 // L.   I8 YA.   ,A9 YM.    ,  MM 8M   MM   MM  
 // M9mmmP'  `Ybmd9'   YMbmd' .JMML`Moo9^Yo.JMML.
 
-.likeButton {
 
-  iframe {
-    display: none;
-  }
+.fbAppFrame {
+  width: 100%;
+  height: 1200px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border: 0;
 }
+
+
 
 .siteHeader {
   max-width: 720px; //perfect width for initial mobile snap

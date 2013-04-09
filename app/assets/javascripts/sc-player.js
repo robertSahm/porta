@@ -504,10 +504,10 @@
             .append('<a href="#play" class="sc-play"></a> <a href="#pause" class="sc-pause hidden"></a>')
           .end()
 
-          .append('<a href="download" class="sc-download">Download song</a>')
+          //.append('<a href=" + track.permalink_url +">Download song</a>')
           
       
-          //.append('<a href="'+ track.permalink_url"class=sc-download>Download song</a>')
+          // .append('<a href="'+ track.permalink_url'" class='sc-download>Download song</a>')
 
 
 
