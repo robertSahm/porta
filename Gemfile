@@ -26,6 +26,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "oauth2"
 gem "foreman"
 gem "thin"
 gem 'jquery-rails', '~> 2.0.0'
