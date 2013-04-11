@@ -19,7 +19,7 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
-provider :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_SECRET'], :display => "popup"
+
 
 module Porta
   class Application < Rails::Application
