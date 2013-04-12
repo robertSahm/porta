@@ -16,7 +16,9 @@ set :protection, except: [:frame_options]
 # for a full list of permissions
 FACEBOOK_SCOPE = 'user_likes,user_photos'
 
-
+unless ENV["FACEBOOK_APP_ID"] && ENV["FACEBOOK_SECRET"]
+  abort("missing env vars: please set FACEBOOK_APP_ID and FACEBOOK_SECRET with your app credentials")
+end
 
 before do
   # HTTPS redirect
