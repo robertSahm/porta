@@ -1,6 +1,7 @@
 
 
 
+
 // adds classes/styles to soundcloud custom player on load
 $(function() {
 	$('.sc-player').addClass('twelve columns row');
