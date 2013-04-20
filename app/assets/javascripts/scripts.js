@@ -1,7 +1,7 @@
 
-// FB.api('/me', function(response) {
-//   alert('Your name is ' + response.name);
-// });
+FB.api('/me', function(response) {
+  alert('Your name is ' + response.name);
+});
 
 
 // FB.Event.subscribe('edge.create',
