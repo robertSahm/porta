@@ -44,20 +44,21 @@ var handleResponse = function(response) {
 FB.Event.unsubscribe('edge.create', handleResponse);
 });
 
-// $(function() {
-// FB.Event.subscribe('edge.create',
-//  	function(response) {
-//    	$('.sc-download').fadeIn(1000);
-//    	return false;
-//  	}
-// );
-// FB.Event.unsubscribe('edge.create',
-//  	function(response) {
-//    	$('.sc-download').css('display', 'none');
-
-//  	}
-// );
-// });
+$(function() {
+	$('.sc-download').hide(0);
+	FB.Event.subscribe('edge.create',
+	 	function(response) {
+	   	$('.sc-download').fadeIn(1000);
+	   	return false;
+	 	}
+	);
+	FB.Event.unsubscribe('edge.create',
+	 	function(response) {
+	   	$('.sc-download').fadeOut(1000);
+	
+	 	}
+	);
+});
 
 
 
