@@ -1,18 +1,63 @@
 
-FB.api('/me', function(response) {
-  alert('Your name is ' + response.name);
+
+// $('.sc-download').hide(0);
+
+
+$(function() {
+	FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    // the user is logged in and has authenticated your
+    // app, and response.authResponse supplies
+    // the user's ID, a valid access token, a signed
+    // request, and the time the access token 
+    // and signed request each expire
+
+
+    //$('.sc-download').fadeIn(2000);
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+  } else if (response.status === 'not_authorized') {
+    // the user is logged in to Facebook, 
+    // but has not authenticated your app
+
+
+    //$('.sc-download').fadeOut(2000);
+  } else {
+    // the user isn't logged in to Facebook.
+
+
+   //$('.sc-download').fadeOut(2000);
+  }
+ });
 });
 
+$(function() {
+// Attach the handler using FB.Event.subscribe
+FB.Event.unsubscribe('edge.create', handleResponse);
 
+// Function to handle the response
+var handleResponse = function(response) {
+   alert ('You unliked the URL: ' + response);
+};
+
+// At some point, you no longer want to be notified, and unsubscribe
+FB.Event.unsubscribe('edge.create', handleResponse);
+});
+
+// $(function() {
 // FB.Event.subscribe('edge.create',
 //  	function(response) {
 //    	$('.sc-download').fadeIn(1000);
+//    	return false;
 //  	}
 // );
+// FB.Event.unsubscribe('edge.create',
+//  	function(response) {
+//    	$('.sc-download').css('display', 'none');
 
-
-
-
+//  	}
+// );
+// });
 
 
 

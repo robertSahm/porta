@@ -110,17 +110,41 @@
                 <div class="likeButton">
                   <div id="fb-root"></div>
                     <script>
-                    (function(d, s, id) {
-                      var js, fjs = d.getElementsByTagName(s)[0];
-                      if (d.getElementById(id)) return;
-                      js = d.createElement(s); js.id = id;
-                      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=507587485968858";
-                      fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '156548891181150', // App ID
+      channelUrl : '//porta.herokuapp.com/channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+    // Additional initialization code here
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+
+                    // (function(d, s, id) {
+                    //   var js, fjs = d.getElementsByTagName(s)[0];
+                    //   if (d.getElementById(id)) return;
+                    //   js = d.createElement(s); js.id = id;
+                    //   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=507587485968858";
+                    //   fjs.parentNode.insertBefore(js, fjs);
+                    // }(document, 'script', 'facebook-jssdk'));
                     </script>
 
-                    <div class="fb-like" data-href="https://www.facebook.com/djportarock" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-colorscheme="dark">
+<div class="fb-like" data-href="https://www.facebook.com/djportarock" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-colorscheme="dark">
                     </div>
+
+
 
                 </div>
                 <div class="likeToDownload">
