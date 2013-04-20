@@ -1,4 +1,18 @@
 
+// FB.api('/me', function(response) {
+//   alert('Your name is ' + response.name);
+// });
+
+
+// FB.Event.subscribe('edge.create',
+//  	function(response) {
+//    	$('.sc-download').fadeIn(1000);
+//  	}
+// );
+
+
+
+
 
 
 

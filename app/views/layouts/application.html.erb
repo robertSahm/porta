@@ -3,12 +3,6 @@
   <%= render '/refinery/head' %>
   <body>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <!-- Facebook authentication stuff -->
-
-    <div id="fb-root"></div>
-    <script type="text/javascript">
-      
-    </script>
 
     <div id="page_container" class="container">
       <header id="header">
@@ -114,8 +108,20 @@
               </div> -->
               <div class="siteHeader eleven mobile four columns">
                 <div class="likeButton">
-                  <!-- <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FDJPortaRock&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=dark&amp;action=like&amp;height=21&amp;appId=437884649637672" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true">
-                  </iframe> -->
+                  <div id="fb-root"></div>
+                    <script>
+                    (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=507587485968858";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                    </script>
+
+                    <div class="fb-like" data-href="https://www.facebook.com/djportarock" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-colorscheme="dark">
+                    </div>
+
                 </div>
                 <div class="likeToDownload">
                   <p><a href="https://www.facebook.com/DJPortaRock/app_437884649637672">Like for free downloads!</a></p>
