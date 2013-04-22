@@ -111,6 +111,25 @@ $(function() {
 });
 
 
+// Hide header on booking link click
+
+// $(function() {
+// 	//if ($(".header h1 a:contains('jamaica')").length);
+// 			$(".blog_post:contains('no comments')").addClass('displayNone');
+// });
+
+// $(function() {
+// 	$('div.privateIntro').find(function() {
+// 		$('.siteHeader').hide(0);
+// 		//return false;
+// 	})
+// });
+
+// show header after clicking on booking page 
+// $('.clickMix, .clickPhoto, .clickRadio, .clickHome').click( function () {
+// 	$('.siteHeader').fadeIn(1000);
+// });
+
 
 // $(function() {
 // 	$('.sc-controls').addClass('twelve columns');
