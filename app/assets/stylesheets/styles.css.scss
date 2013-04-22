@@ -852,7 +852,7 @@ img.bgHome4 {
   .eventsHeader {
     text-align: left;
     margin-bottom: 0px;
-    background-color: #555;
+    //background-color: #555;
     padding: 0;
     max-width: 300px;
     padding-left: 10px;
@@ -897,13 +897,14 @@ img.bgHome4 {
 
         li {
           border-top: 4px solid #888;
-          background-color: #333;
+          //background-color: #333;
           padding: 2% 5%;
+          border-bottom: 4px solid #888;
 
           p {
             margin: 7px 0;
             color: $red;
-            font-size: 1.2em;
+            font-size: 1em;
           }
 
           img {
@@ -1212,6 +1213,10 @@ and (max-width: 768px)
 and (orientation : portrait) {
 
   .likeButton {
+    display: none !important;
+  }
+
+  .sc-download {
     display: none !important;
   }
 
