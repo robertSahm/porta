@@ -13,20 +13,24 @@ $(function() {
     // and signed request each expire
 
 
-    //$('.sc-download').fadeIn(2000);
+    
     var uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
+		$(function() {
+			$('.sc-download').fadeIn(2000);
+		});
+
   } else if (response.status === 'not_authorized') {
     // the user is logged in to Facebook, 
     // but has not authenticated your app
 
 
-    //$('.sc-download').fadeOut(2000);
+    $('.sc-download').fadeOut(2000);
   } else {
     // the user isn't logged in to Facebook.
 
 
-   //$('.sc-download').fadeOut(2000);
+   $('.sc-download').fadeOut(2000);
   }
  });
 });
