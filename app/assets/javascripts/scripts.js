@@ -24,13 +24,15 @@ $(function() {
     // the user is logged in to Facebook, 
     // but has not authenticated your app
 
-
-    $('.sc-download').fadeOut(2000);
+$(function() {
+    $('.sc-download').hide(0);
+    	});
   } else {
     // the user isn't logged in to Facebook.
 
-
-   $('.sc-download').fadeOut(2000);
+$(function() {
+   $('.sc-download').hide(0);
+   	});
   }
  });
 });

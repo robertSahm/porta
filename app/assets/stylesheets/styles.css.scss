@@ -373,6 +373,13 @@ $bgHover: #444;
 
   .postContent {
 
+    .sc-download {
+      margin-right: 20px;
+      text-transform: uppercase;
+      float: right;
+
+    }
+
     p {
       //color: white;
       img {
@@ -444,6 +451,8 @@ $bgHover: #444;
     .sc-player {
       padding-bottom: 45px;
       float: left;
+
+
     }
 
     iframe {
@@ -537,6 +546,22 @@ $bgHover: #444;
         color: $red;
       }
     }
+  }
+}
+
+.pagination {
+  font-size: 2em;
+  margin-top: 160px;
+  line-height: 1.2em;
+
+  a {
+    color: $red;
+  }
+
+  .current {
+    color: darken( $red, 25% );
+    text-decoration: underline;
+
   }
 }
 
@@ -715,9 +740,6 @@ body {
   margin: 0;
 }
 
-.likeButton {
-  border: 1px solid red;
-}
 
 // .row {
 //   max-width: 1300px;
@@ -1091,12 +1113,24 @@ img.bgHome4 {
 // M9mmmP'  `Ybmd9'   YMbmd' .JMML`Moo9^Yo.JMML.
 
 
-.fbAppFrame {
+
+.likeButton {
+  margin-top: 10px;
+  display: block;
   width: 100%;
-  height: 1200px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  border: 0;
+  float: right;
+
+  .fbLikeText {
+    color: $red;
+    font-size: 1.2;
+    float: right;
+    padding-right: 8px;
+    padding-top: 3px;
+  }
+
+  .fb-like {
+    float: right;
+  }
 }
 
 

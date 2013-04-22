@@ -106,50 +106,7 @@
                   </a> 
                 </div>
               </div> -->
-              <div class="siteHeader eleven mobile four columns">
-                <div class="likeButton">
-                  <div id="fb-root"></div>
-                    <script>
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '156548891181150', // App ID
-      channelUrl : '//porta.herokuapp.com/channel.html', // Channel File
-      status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
-      xfbml      : true  // parse XFBML
-    });
-
-    // Additional initialization code here
-  };
-
-  // Load the SDK Asynchronously
-  (function(d){
-     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     ref.parentNode.insertBefore(js, ref);
-   }(document));
-
-                    // (function(d, s, id) {
-                    //   var js, fjs = d.getElementsByTagName(s)[0];
-                    //   if (d.getElementById(id)) return;
-                    //   js = d.createElement(s); js.id = id;
-                    //   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=507587485968858";
-                    //   fjs.parentNode.insertBefore(js, fjs);
-                    // }(document, 'script', 'facebook-jssdk'));
-                    </script>
-
-<div class="fb-like" data-href="https://www.facebook.com/djportarock" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-colorscheme="dark">
-                    </div>
-
-
-
-                </div>
-                <div class="likeToDownload">
-                  <p><a href="https://www.facebook.com/DJPortaRock/app_437884649637672">Like for free downloads!</a></p>
-                </div>
+              <div class="siteHeader eleven mobile four columns"> <!-- Start Site Header -->
                 <div class="socialWrapper">
                   <a href="http://twitter.com/PortaRock" target="_blank" class="twitter">
                     <i class="foundicon-twitter"></i>
@@ -161,14 +118,53 @@
                     <i class="foundicon-instagram"></i>
                   </a> 
                 </div>
+
                 <div class="">
                   <%= image_tag("logoSmall.png", :alt => "logoSmall", :class => "logoSmall") %>
                 </div>
                 <p class="siteHeaderText">
                   The home of DJ
                 </p>
-              </div>
+                <div class="likeButton">
+                  
+                  <div id="fb-root"></div>
+                  <script>
+                    window.fbAsyncInit = function() {
+                      FB.init({
+                        appId      : '156548891181150', // App ID
+                        channelUrl : '//porta.herokuapp.com/channel.html', // Channel File
+                        status     : true, // check login status
+                        cookie     : true, // enable cookies to allow the server to access the session
+                        xfbml      : true  // parse XFBML
+                      });
+                      
+                    // Additional initialization code here
+                    };
+                    // Load the SDK Asynchronously
+                    (function(d){
+                       var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+                       if (d.getElementById(id)) {return;}
+                       js = d.createElement('script'); js.id = id; js.async = true;
+                       js.src = "//connect.facebook.net/en_US/all.js";
+                       ref.parentNode.insertBefore(js, ref);
+                     }(document));
+                   </script>
+
+                  <div 
+                  class="fb-like" 
+                  data-href="https://www.facebook.com/djportarock" 
+                  data-send="false" 
+                  data-layout="button_count" 
+                  data-width="0" 
+                  data-show-faces="false" 
+                  data-colorscheme="dark">
+                  </div>
+                  <p class="fbLikeText">Like for free downloads</p>
+                </div> <!-- End Like Button stuff -->
+              </div> <!-- End Site Header -->
+
               <div classs="mobile-four columns">
+
                 <%= render '/refinery/content_page' %>
               </div>
             </div>
