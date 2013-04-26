@@ -110,7 +110,12 @@ $(function() {
 	});
 });
 
+$(function() {
+	$('.clickPhoto').click( function() {
+		$('.tagPhoto').css('width', "250");
 
+	});
+});
 // Hide header on booking link click
 
 // $(function() {

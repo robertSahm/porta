@@ -8,6 +8,9 @@ require "active_resource/railtie"
 require "sprockets/railtie"
 # require "zurb-foundation"
 # require "rails/test_unit/railtie"
+ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
+ENV['S3_SECRET']='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'
+ENV['S3_BUCKET']='portaphotos'
 
 
 
