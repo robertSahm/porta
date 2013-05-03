@@ -22,7 +22,7 @@ Porta::Application.configure do
 
 
 
-  Refinery::Core.config.s3_backend = true
+ #  Refinery::Core.config.s3_backend = true
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
