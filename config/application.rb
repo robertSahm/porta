@@ -82,4 +82,3 @@ module Porta
   end
 end
 
-Refinery.s3_backend = true
