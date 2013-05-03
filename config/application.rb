@@ -81,3 +81,5 @@ module Porta
     config.assets.version = '1.0'
   end
 end
+
+Refinery.s3_backend = true
