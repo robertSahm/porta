@@ -11,7 +11,7 @@ require "sprockets/railtie"
 ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
 ENV['S3_SECRET']='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'
 ENV['S3_BUCKET']='portaphotos'
-S3_REGION='Oregon'
+S3_REGION='us-east-1'
 
 
 
