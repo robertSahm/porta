@@ -265,32 +265,9 @@ ul {
   padding-left: 20px;
 }
 
-// Fixes font display issues on webkit browsers
-@media screen and (-webkit-min-device-pixel-ratio:0) {
 
-  h1 a {
-    font-weight: 700 !important;
-    color: $blue !important;
-  }
 
-  h1.eventsHeaderText a {
-    color: $red !important;
-  }
 
-  h1 {
-    font-weight: 700 !important;
-  }
-
-  h2 {
-    font-weight: 700 !important;
-  }
-
-  .privateWrapper {
-    h1, h2, h3, p {
-      font-weight: 700 !important;
-    }
-  } 
-}
 
 // blog type
 $blogH1Color: $red;
@@ -761,58 +738,22 @@ body {
 
 .bgImagesWrapper {
 
-  img {
-    display: block;
+
+    img.bgHome3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10%;
+    margin-top: 24%;
+    width: 35%;
+    height: auto;
+    opacity: .7;
     float: left;
+    z-index: -110;
   }
 }
 
-img.bgHome {
-  //position: fixed;
-  margin-left: -5%;
-  margin-top: 20%;
-  width: 44%;
-  height: auto;
-  opacity: .7;
-  float: left;
-  z-index: -110;
-}
 
-img.bgHome2 {
-  position: absolute;
-  margin-left: 10%;
-  margin-top: 25%;
-  width: 44%;
-  height: auto;
-  opacity: .7;
-  float: left;
-  z-index: -100;
-}
-
-img.bgHome3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 40px;
-  margin-top: 24%;
-  width: 35%;
-  height: auto;
-  opacity: .7;
-  float: left;
-  z-index: -110;
-}
-
-img.bgHome4 {
-  display: none;
-  position: absolute;
-  margin-left: 20px;
-  margin-top: 60%;
-  width: 42%;
-  height: auto;
-  opacity: .7;
-  float: left;
-  z-index: -110;
-}
 
 //                    ,,            
 //                  `7MM            
@@ -1349,34 +1290,30 @@ and (orientation : portrait) {
     z-index: 100;
   }
 
-  img.bgHome {
-    display: none;
-    position: absolute;
-    margin-left: 0%;
-    margin-top: 50%;
-    width: 50%;
-    height: auto;
-    opacity: .3;
-    float: left;
-    z-index: -100;
-  }
+  // img.bgHome {
+  //   display: none;
+  //   position: absolute;
+  //   margin-left: 0%;
+  //   margin-top: 50%;
+  //   width: 50%;
+  //   height: auto;
+  //   opacity: .3;
+  //   float: left;
+  //   z-index: -100;
+  // }
 
   img.bgHome3 {
     //display: none;
     //position: absolute;
-    //display: block;
-    margin-top: 40%;
-    margin-left: 90px;
+    display: block;
+    margin-top: 24% !important;
+    margin-left: 18% !important;
     width: 45%;
     height: auto;
     //opacity: .9;
     float: left;
     z-index: -100;
   }
-
- img.bgHome4 {
-   display: none;
- }
 
   .blog_post {
     width: 100%;
@@ -1418,4 +1355,59 @@ and (orientation : portrait) {
       }
     }
   }
+}
+
+// Fixes font display issues on webkit browsers
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  // -webkit-font-smoothing: optimizeLegibility;
+ //-webkit-text-rendering: optimizeLegibility; 
+
+.bgImagesWrapper {
+
+
+    img.bgHome3 {
+    position: absolute;
+    //width: 35%;
+    top: 9%;
+    left: 1%;
+    margin-left: 20px;
+    margin-top: 0;
+    width: 35%;
+    height: auto;
+    opacity: .7;
+    float: left;
+    z-index: -110;
+  }
+}
+
+  h1 a {
+    font-weight: 700 !important;
+    color: $blue !important;
+  }
+
+  h1.eventsHeaderText a {
+    color: $red !important;
+  }
+
+  h1 {
+    font-weight: 700 !important;
+  }
+
+  h2 {
+    font-weight: 700 !important;
+
+    a {
+      color: $blue !important;
+      line-height: 1.1em !important;
+      font-weight: 700 !important; 
+      font-style: normal !important;   
+    }
+  }
+
+  .privateWrapper {
+    h1, h2, h3, p {
+      font-weight: 700 !important;
+    }
+  } 
 }
