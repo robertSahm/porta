@@ -77,6 +77,10 @@ $(function() {
 });
 
 $(function() {
+	$('.radioSCwrapper .sc-player').show(0);
+});
+
+$(function() {
 	$('.sc-player').hide(0);
 	//$('iframe').hide(0);
 
