@@ -737,7 +737,9 @@ body {
 // BACKGROUNDS
 
 .bgImagesWrapper {
-
+  position: relative;
+  top: 0;
+  left: 0;
 
     img.bgHome3 {
     position: absolute;
