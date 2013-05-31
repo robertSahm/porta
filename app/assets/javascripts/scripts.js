@@ -153,16 +153,14 @@ $(function() {
 // });
 
 $(function() {
-	$("#fittext1").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext2").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext3").fitText(.71, { minFontSize: '10px', maxFontSize: '35px' });
-	$("#fittext4").fitText(.71, { minFontSize: '10px', maxFontSize: '35px' });
-	$("#fittext5").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext6").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	$("#fittext7").fitText(.71, { minFontSize: '17px', maxFontSize: '35px' });
-	//  $("#fittext8").fitText(.3, { minFontSize: '35px', maxFontSize: '75px' });
-	//  $("#fittext9").fitText(.3, { minFontSize: '35px', maxFontSize: '75px' });
-	// $("#fittext10").fitText(.3, { minFontSize: '35px', maxFontSize: '75px' });
+	$("#fittext1").fitText(.71, { minFontSize: '24px', maxFontSize: '35px' });
+	$("#fittext2").fitText(.71, { minFontSize: '24px', maxFontSize: '35px' });
+	$("#fittext3").fitText(.71, { minFontSize: '24px', maxFontSize: '35px' });
+	$("#fittext4").fitText(.71, { minFontSize: '24px', maxFontSize: '35px' });
+	$("#fittext5").fitText(.71, { minFontSize: '22px', maxFontSize: '35px' });
+	$("#fittext6").fitText(.71, { minFontSize: '24px', maxFontSize: '35px' });
+	$("#fittext7").fitText(.71, { minFontSize: '24px', maxFontSize: '35px' });
+
 });
 
 
