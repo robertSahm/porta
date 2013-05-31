@@ -419,7 +419,7 @@ iframe.iframeRadio {
   margin-bottom: 10px;
 }
 
-.blockerRadio{
+.blockerRadio {
   width: 100%;
   height: 20px;
   float: left;
@@ -430,3 +430,9 @@ iframe.iframeRadio {
   margin-bottom: 13px;
 }
 
+.radioWrapper {
+
+  h2 {
+    color: $blue !important;
+  }
+}
