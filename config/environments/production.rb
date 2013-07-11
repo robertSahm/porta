@@ -2,14 +2,14 @@ Porta::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
-  config.cache_classes = false
+  config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -74,10 +74,10 @@ end
 
 
 
-# Refinery::Core.configure do |config|
-#   config.s3_backend = true
-#   config.s3_access_key_id = 'AKIAJXRGVLJTXEXHMEWQ'
-#   config.s3_secret_access_key = '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'
-#   config.s3_bucket_name = 'portaphotos'
-#   #config.s3_region = 'Oregon' # this one's not always required, default is 'us-east-1'
-# end
+Refinery::Core.configure do |config|
+  config.s3_backend = true
+  config.s3_bucket_name = 'portaphotos'
+  config.s3_access_key_id = 'AKIAJXRGVLJTXEXHMEWQ'
+  config.s3_secret_access_key = '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'
+  config.s3_region = 'us-west' # this one's not always required.
+end
