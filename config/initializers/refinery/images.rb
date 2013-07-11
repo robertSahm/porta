@@ -44,8 +44,3 @@ Refinery::Images.configure do |config|
 
 end
 
-module Excon
-  class Connection
-     VALID_CONNECTION_KEYS << :url
-  end 
-end
