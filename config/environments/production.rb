@@ -72,10 +72,10 @@ end
 
 
 
-Refinery::Core.configure do |config|
-  config.s3_backend = true
-  config.s3_bucket_name = 'portaphotos2'
-  config.s3_access_key_id = 'AKIAJXRGVLJTXEXHMEWQ'
-  config.s3_secret_access_key = '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'
-  config.s3_region = 'us-east-1' # this one's not always required.
-end
+# Refinery::Core.configure do |config|
+#   config.s3_backend = true
+#   config.s3_bucket_name = 'portaphotos2'
+#   config.s3_access_key_id = 'AKIAJXRGVLJTXEXHMEWQ'
+#   config.s3_secret_access_key = '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'
+#   config.s3_region = 'us-east-1' # this one's not always required.
+# end
