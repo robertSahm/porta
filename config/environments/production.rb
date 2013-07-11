@@ -77,5 +77,5 @@ Refinery::Core.configure do |config|
   config.s3_access_key_id = 'AKIAJXRGVLJTXEXHMEWQ'
   config.s3_secret_access_key = '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'
   config.s3_bucket_name = 'portaphotos'
-  config.s3_region = 'Oregon' # this one's not always required, default is 'us-east-1'
+  #config.s3_region = 'Oregon' # this one's not always required, default is 'us-east-1'
 end
