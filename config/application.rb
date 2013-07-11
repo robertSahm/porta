@@ -81,8 +81,8 @@ module Porta
   end
 end
 
-ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
-ENV['S3_SECRET']='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'
-ENV['S3_BUCKET']='portaphotos'
-#ENV['S3_REGION']='Oregon'
-Refinery::Core.config.s3_backend = true
+# ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
+# ENV['S3_SECRET']='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'
+# ENV['S3_BUCKET']='portaphotos'
+# #ENV['S3_REGION']='Oregon'
+# Refinery::Core.config.s3_backend = true
