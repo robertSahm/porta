@@ -10,6 +10,11 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 
+ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
+ENV['S3_SECRET']='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'
+ENV['S3_BUCKET']='portaphotos'
+S3_REGION='Oregon'
+Refinery::Core.config.s3_backend = true
 
 
 
@@ -81,8 +86,3 @@ module Porta
   end
 end
 
-    ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
-    ENV['S3_SECRET']='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'
-    ENV['S3_BUCKET']='portaphotos'
-    S3_REGION='Oregon'
-    Refinery::Core.config.s3_backend = true
