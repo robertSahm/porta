@@ -3,39 +3,7 @@
 // $('.sc-download').hide(0);
 
 
-$(function() {
-	FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    // the user is logged in and has authenticated your
-    // app, and response.authResponse supplies
-    // the user's ID, a valid access token, a signed
-    // request, and the time the access token 
-    // and signed request each expire
 
-
-    
-    var uid = response.authResponse.userID;
-    var accessToken = response.authResponse.accessToken;
-		$(function() {
-			$('.sc-download').fadeIn(2000);
-		});
-
-  } else if (response.status === 'not_authorized') {
-    // the user is logged in to Facebook, 
-    // but has not authenticated your app
-
-$(function() {
-    $('.sc-download').hide(0);
-    	});
-  } else {
-    // the user isn't logged in to Facebook.
-
-$(function() {
-   $('.sc-download').hide(0);
-   	});
-  }
- });
-});
 
 $(function() {
 // Attach the handler using FB.Event.subscribe
@@ -165,7 +133,39 @@ $(function() {
 
 
 
+$(function() {
+	FB.getLoginStatus(function(response) {
+  if (response.status === 'connected') {
+    // the user is logged in and has authenticated your
+    // app, and response.authResponse supplies
+    // the user's ID, a valid access token, a signed
+    // request, and the time the access token 
+    // and signed request each expire
 
+
+    
+    var uid = response.authResponse.userID;
+    var accessToken = response.authResponse.accessToken;
+		$(function() {
+			$('.sc-download').fadeIn(2000);
+		});
+
+  } else if (response.status === 'not_authorized') {
+    // the user is logged in to Facebook, 
+    // but has not authenticated your app
+
+$(function() {
+    $('.sc-download').hide(0);
+    	});
+  } else {
+    // the user isn't logged in to Facebook.
+
+$(function() {
+   $('.sc-download').hide(0);
+   	});
+  }
+ });
+});
 
 
 

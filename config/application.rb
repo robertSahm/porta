@@ -72,7 +72,7 @@ module Porta
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
@@ -81,8 +81,8 @@ module Porta
   end
 end
 
-    ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
-    ENV['S3_SECRET']='uNGz3PaFECZQyrLU26zNLBeRjL0WGeYijhD/QUn/'
-    ENV['S3_BUCKET']='portaphotos'
-    S3_REGION='Oregon'
-    Refinery::Core.config.s3_backend = true
+ENV['S3_KEY']='AKIAJXRGVLJTXEXHMEWQ'
+ENV['S3_SECRET']='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'
+ENV['S3_BUCKET']='portaphotos'
+ENV['S3_REGION']='Oregon'
+Refinery::Core.config.s3_backend = true
