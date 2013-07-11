@@ -41,6 +41,6 @@ $stdout.sync = true
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  Refinery::Core.config.s3_backend = true
+  # Refinery::Core.config.s3_backend = true
 
 end

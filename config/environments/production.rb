@@ -18,7 +18,7 @@ Porta::Application.configure do
   config.assets.compile = true
 
   # Generate digests for assets URLs
-  config.assets.digest = false
+  config.assets.digest = true
 
 
 
@@ -67,9 +67,7 @@ Porta::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  
-
-
+  Refinery::Core.config.s3_backend = true
 end
 
 
