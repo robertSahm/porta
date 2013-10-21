@@ -309,5 +309,4 @@ DEPENDENCIES
   thin
   uglifier (>= 1.0.3)
   unicorn
-  will_paginate (= 3.0.2)
   zurb-foundation (~> 3.2.5)
