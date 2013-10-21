@@ -47,6 +47,8 @@ gem "httparty"
 gem "thin"
 gem "rack"
 
+gem "will_paginate", "= 3.0.2"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
